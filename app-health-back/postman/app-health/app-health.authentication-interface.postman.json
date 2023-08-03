@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/authentication-interface",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateAuthenticationInterface",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateAuthenticationInterfaceInput!)\n{\n\tappHealthCreateAuthenticationInterface (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Rustic Cotton Shoes\", \n\t\t\"score\": 80486\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateAuthenticationInterfaces",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateAuthenticationInterfaceInput]!)\n{\n\tappHealthCreateAuthenticationInterfaces (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"36a359c1-6644-4790-bac5-cac474ae9dd9\", \n\t\t\t\"name\": \"Gorgeous Fresh Sausages\", \n\t\t\t\"score\": 45077\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"82833705-b6c7-44ac-affb-a04c72ec6fad\", \n\t\t\t\"name\": \"Intelligent Rubber Hat\", \n\t\t\t\"score\": 60688\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"11b9ce86-4085-4a88-a2c6-90e7dead79a7\", \n\t\t\t\"name\": \"Intelligent Rubber Chair\", \n\t\t\t\"score\": 48456\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"9140b96b-2e45-4333-929e-9f54d70f47c1\", \n\t\t\t\"name\": \"Fantastic Wooden Chicken\", \n\t\t\t\"score\": 98411\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"e1bc5e83-7c46-450c-93d2-7a440c06ce13\", \n\t\t\t\"name\": \"Handcrafted Frozen Chair\", \n\t\t\t\"score\": 62759\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"d27ad250-f7cd-47d7-a2c7-329b2413e5fa\", \n\t\t\t\"name\": \"Fantastic Frozen Gloves\", \n\t\t\t\"score\": 50029\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"317fd87a-08a9-40a1-90c4-d723fa737880\", \n\t\t\t\"name\": \"Unbranded Plastic Soap\", \n\t\t\t\"score\": 30621\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"2c55d552-cb8f-4c76-8ec8-f12265aa85f3\", \n\t\t\t\"name\": \"Licensed Cotton Computer\", \n\t\t\t\"score\": 71434\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"3ad795ce-54ba-4dab-bd00-7c2f62801e91\", \n\t\t\t\"name\": \"Sleek Metal Chair\", \n\t\t\t\"score\": 40359\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"0d198428-2680-459a-8b7f-a0a31297e3a5\", \n\t\t\t\"name\": \"Sleek Plastic Cheese\", \n\t\t\t\"score\": 85126\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateAuthenticationInterfaces",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateAuthenticationInterfaces (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetAuthenticationInterfaces",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetAuthenticationInterfaces (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindAuthenticationInterface",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindAuthenticationInterface (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindAuthenticationInterfaceById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindAuthenticationInterfaceById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateAuthenticationInterface",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateAuthenticationInterfaceInput!)\n{\n\tappHealthUpdateAuthenticationInterface (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Handcrafted Granite Computer\", \n\t\t\"score\": 77584\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteAuthenticationInterfaceById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteAuthenticationInterfaceById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteAuthenticationInterfaces",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteAuthenticationInterfaces (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interface/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Ergonomic Metal Gloves\", \n\t\"score\": 17419\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interface/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interface",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interfaces/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"90e60b23-19e8-4f8e-80ae-d31dfde7ed57\", \n\t\t\"name\": \"Handcrafted Metal Gloves\", \n\t\t\"score\": 43819\n\t}, \n\t{\n\t\t\"id\": \"326cd3fd-9d45-4c8f-b937-1f366dda34a7\", \n\t\t\"name\": \"Rustic Soft Tuna\", \n\t\t\"score\": 64993\n\t}, \n\t{\n\t\t\"id\": \"8144b686-af8b-4a33-864f-122ef23bd1e1\", \n\t\t\"name\": \"Refined Granite Chips\", \n\t\t\"score\": 48386\n\t}, \n\t{\n\t\t\"id\": \"d5c2d3a2-9c7d-40fa-aed5-b4ec390933a4\", \n\t\t\"name\": \"Handcrafted Steel Fish\", \n\t\t\"score\": 69048\n\t}, \n\t{\n\t\t\"id\": \"4bc4ec56-8df3-4f23-9868-6891772be0c7\", \n\t\t\"name\": \"Fantastic Frozen Pants\", \n\t\t\"score\": 72719\n\t}, \n\t{\n\t\t\"id\": \"dbde89cc-023a-41ba-8e29-71e26049686f\", \n\t\t\"name\": \"Incredible Soft Tuna\", \n\t\t\"score\": 72426\n\t}, \n\t{\n\t\t\"id\": \"5a416374-6b91-4781-abd6-c9a4eb734ea3\", \n\t\t\"name\": \"Sleek Steel Hat\", \n\t\t\"score\": 26589\n\t}, \n\t{\n\t\t\"id\": \"bef55bd5-f39c-4cc7-9c52-87a1ac09a272\", \n\t\t\"name\": \"Practical Cotton Cheese\", \n\t\t\"score\": 24551\n\t}, \n\t{\n\t\t\"id\": \"6185894f-1e52-4e0f-8c3e-3ddc4f2c51cc\", \n\t\t\"name\": \"Licensed Wooden Keyboard\", \n\t\t\"score\": 56614\n\t}, \n\t{\n\t\t\"id\": \"2aafebc1-e1a7-409f-ad6f-cd30439c394d\", \n\t\t\"name\": \"Handcrafted Steel Soap\", \n\t\t\"score\": 41584\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interfaces/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interfaces",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interfaces/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interfaces/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "authentication-interfaces",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interfaces/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interfaces/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interfaces",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interface/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interface/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interface",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interface/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interface/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interface",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interface/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Gorgeous Wooden Chicken\", \n\t\"score\": 14277\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interface/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interface",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/authentication-interface/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interface/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interface",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/authentication-interfaces/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/authentication-interfaces/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"authentication-interfaces",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

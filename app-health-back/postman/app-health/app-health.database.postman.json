@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/database",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateDatabase",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateDatabaseInput!)\n{\n\tappHealthCreateDatabase (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Rustic Concrete Tuna\", \n\t\t\"type\": 'KEY_VALUE', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateDatabases",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateDatabaseInput]!)\n{\n\tappHealthCreateDatabases (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"12e61df5-2acb-45f5-bbff-c3c398dad36c\", \n\t\t\t\"name\": \"Intelligent Rubber Bacon\", \n\t\t\t\"type\": 'KEY_VALUE', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"77cdb0db-272f-4f8c-bee9-55be01cd2b68\", \n\t\t\t\"name\": \"Awesome Plastic Fish\", \n\t\t\t\"type\": 'NO_SQL', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"382df279-8896-4fee-b837-90efd4374328\", \n\t\t\t\"name\": \"Small Metal Shoes\", \n\t\t\t\"type\": 'KEY_VALUE', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"86aaf14a-71eb-4672-a02a-6e245579a090\", \n\t\t\t\"name\": \"Small Fresh Chips\", \n\t\t\t\"type\": 'RELATIONAL', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"bc8bf029-adc7-4c66-8e61-48a9d0e89871\", \n\t\t\t\"name\": \"Unbranded Rubber Hat\", \n\t\t\t\"type\": 'RELATIONAL', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"b18e1ca5-1177-4c25-9f27-8f95f0dd3fcb\", \n\t\t\t\"name\": \"Unbranded Rubber Towels\", \n\t\t\t\"type\": 'GRAPH', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"68d26807-6c2e-41e4-af5f-78690205c3cd\", \n\t\t\t\"name\": \"Intelligent Steel Chips\", \n\t\t\t\"type\": 'KEY_VALUE', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"ac24c2f6-b5a7-4e51-aaa5-b052c66caed5\", \n\t\t\t\"name\": \"Small Rubber Pizza\", \n\t\t\t\"type\": 'RELATIONAL', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"9f583b3e-98c5-4b57-a09b-3e2814969331\", \n\t\t\t\"name\": \"Intelligent Frozen Chicken\", \n\t\t\t\"type\": 'RELATIONAL', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"79961ec8-5c66-4f70-98ce-13fd67e2aa62\", \n\t\t\t\"name\": \"Refined Granite Chips\", \n\t\t\t\"type\": 'NO_SQL', \n\t\t\t\"versions\": { \"foo\" : \"bar\" }\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateDatabases",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateDatabases (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetDatabases",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetDatabases (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindDatabase",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindDatabase (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindDatabaseById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindDatabaseById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateDatabase",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateDatabaseInput!)\n{\n\tappHealthUpdateDatabase (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Generic Plastic Car\", \n\t\t\"type\": 'RELATIONAL', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteDatabaseById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteDatabaseById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteDatabases",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteDatabases (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\ttype\n\t\tversions\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/database/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Sleek Granite Chips\", \n\t\"type\": 'NO_SQL', \n\t\"versions\": { \"foo\" : \"bar\" }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/database/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"database",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/databases/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"8e464151-1d4f-4309-bc32-7cc1efa414c7\", \n\t\t\"name\": \"Incredible Rubber Hat\", \n\t\t\"type\": 'RELATIONAL', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"0f33d593-e202-430e-adf5-d74fec457fc4\", \n\t\t\"name\": \"Generic Plastic Chips\", \n\t\t\"type\": 'KEY_VALUE', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"d65a1f18-bfa0-4c72-afd5-3f8d6799ec9c\", \n\t\t\"name\": \"Generic Plastic Computer\", \n\t\t\"type\": 'KEY_VALUE', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"14b329b5-5f32-43ce-9af8-412973f4aa97\", \n\t\t\"name\": \"Ergonomic Granite Salad\", \n\t\t\"type\": 'KEY_VALUE', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"e80dfac8-bbca-4b0b-b289-583f993c9b79\", \n\t\t\"name\": \"Sleek Soft Chair\", \n\t\t\"type\": 'RELATIONAL', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"b1fbdce0-2ab2-4783-9389-265eb392acbc\", \n\t\t\"name\": \"Handmade Fresh Keyboard\", \n\t\t\"type\": 'RELATIONAL', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"9f81caed-d621-4646-b076-83cb8c75d8de\", \n\t\t\"name\": \"Refined Plastic Chair\", \n\t\t\"type\": 'RELATIONAL', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"ae82d83e-6d2f-4fee-b41c-792140d9e927\", \n\t\t\"name\": \"Refined Frozen Sausages\", \n\t\t\"type\": 'NO_SQL', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"a3c6fdf7-ea63-4faf-87f7-a167d18154a4\", \n\t\t\"name\": \"Fantastic Plastic Ball\", \n\t\t\"type\": 'KEY_VALUE', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}, \n\t{\n\t\t\"id\": \"10b7582e-e229-4960-a37a-5ead43802c07\", \n\t\t\"name\": \"Licensed Steel Shirt\", \n\t\t\"type\": 'KEY_VALUE', \n\t\t\"versions\": { \"foo\" : \"bar\" }\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/databases/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"databases",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/databases/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/databases/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "databases",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/databases/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/databases/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"databases",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/database/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/database/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"database",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/database/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/database/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"database",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/database/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Tasty Granite Cheese\", \n\t\"type\": 'NO_SQL', \n\t\"versions\": { \"foo\" : \"bar\" }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/database/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"database",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/database/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/database/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"database",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/databases/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/databases/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"databases",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

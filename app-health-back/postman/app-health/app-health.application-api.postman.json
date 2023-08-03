@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/application-api",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateApplicationApi",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateApplicationApiInput!)\n{\n\tappHealthCreateApplicationApi (payload:$payload)\n\t{\n\t\tid\n\t\tapplicationId\n\t\tapiInterfaceTypeId\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"score\": 49506, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 444657957\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateApplicationApis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateApplicationApiInput]!)\n{\n\tappHealthCreateApplicationApis (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"e6e840b0-bb3c-4148-bde4-fc13160debc2\", \n\t\t\t\"applicationId\": \"85b41e43-2552-4379-bf27-b3a1d47a7690\", \n\t\t\t\"apiInterfaceTypeId\": \"dd435d65-dfa5-4bd1-a81b-f07a5f52b84e\", \n\t\t\t\"score\": 95277, \n\t\t\t\"documentations\": 'HTML', \n\t\t\t\"requestsPerDay\": 588161617\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"3ce89c7f-50f6-4e8f-8f8f-d1dd6e708668\", \n\t\t\t\"applicationId\": \"adcc49f0-680b-4268-a094-1370348d866e\", \n\t\t\t\"apiInterfaceTypeId\": \"1530ab46-2b75-41ba-814b-6071f70d21f1\", \n\t\t\t\"score\": 83454, \n\t\t\t\"documentations\": 'HTML', \n\t\t\t\"requestsPerDay\": 712291667\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"d8c8f041-3d9c-47e0-ab37-527055ec1bbc\", \n\t\t\t\"applicationId\": \"7fb48c99-89f2-4d74-8334-3b7d9d4ad6f3\", \n\t\t\t\"apiInterfaceTypeId\": \"81d66900-5480-4d23-90a2-896e874052e4\", \n\t\t\t\"score\": 60336, \n\t\t\t\"documentations\": 'DOCS', \n\t\t\t\"requestsPerDay\": 590095081\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"6ef77d7b-dc43-44c1-aeb6-0e2230153cf8\", \n\t\t\t\"applicationId\": \"e31e67e9-7b17-4385-8f9e-fa7d253cb696\", \n\t\t\t\"apiInterfaceTypeId\": \"119a8b07-bd00-4dc1-9da1-f55941820ec9\", \n\t\t\t\"score\": 99406, \n\t\t\t\"documentations\": 'GRAPGQL', \n\t\t\t\"requestsPerDay\": 869644767\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"f9379e9a-382d-48fd-8be4-34714955bf0a\", \n\t\t\t\"applicationId\": \"ffdde84f-7275-4561-b49d-83289afe8e75\", \n\t\t\t\"apiInterfaceTypeId\": \"bc36057d-6e10-4453-9b05-40909605fb56\", \n\t\t\t\"score\": 77997, \n\t\t\t\"documentations\": 'GRAPGQL', \n\t\t\t\"requestsPerDay\": 142221171\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"ef242a95-fb50-464b-84cd-255129dceb01\", \n\t\t\t\"applicationId\": \"c8b545bc-7a63-4eeb-86b7-87cd868c5b70\", \n\t\t\t\"apiInterfaceTypeId\": \"6aa3f880-bf10-48b5-94c4-75fa6bccce50\", \n\t\t\t\"score\": 79880, \n\t\t\t\"documentations\": 'DOCS', \n\t\t\t\"requestsPerDay\": 932203793\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"77441cb3-07f5-44be-b35a-7a5daf3d812a\", \n\t\t\t\"applicationId\": \"413f7543-3512-4df9-a7c4-5b02b9275cf0\", \n\t\t\t\"apiInterfaceTypeId\": \"ecc76c02-fe1f-4694-898a-a1842f297be9\", \n\t\t\t\"score\": 89215, \n\t\t\t\"documentations\": 'GRAPGQL', \n\t\t\t\"requestsPerDay\": 493102615\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"cbd4393e-065e-480e-8624-4a6f1f4ea6ab\", \n\t\t\t\"applicationId\": \"0dea3dc6-b553-4fab-8608-3571f660407d\", \n\t\t\t\"apiInterfaceTypeId\": \"cc846174-5e7a-4336-9977-ddf76fadda4d\", \n\t\t\t\"score\": 33154, \n\t\t\t\"documentations\": 'OPENAPI', \n\t\t\t\"requestsPerDay\": 229481261\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"fa02146f-d9e4-4284-92a7-cd011a811b3f\", \n\t\t\t\"applicationId\": \"bdbabafb-af1d-4a27-a06d-7ab35145080e\", \n\t\t\t\"apiInterfaceTypeId\": \"8658a362-b108-4540-a9d2-6ed8d3b95787\", \n\t\t\t\"score\": 50375, \n\t\t\t\"documentations\": 'OPENAPI', \n\t\t\t\"requestsPerDay\": 809828992\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a72278d9-915b-4f83-ac45-ddfe36fd2563\", \n\t\t\t\"applicationId\": \"427bfd72-c574-4662-ab17-1afd0014a0de\", \n\t\t\t\"apiInterfaceTypeId\": \"5dde2788-a852-483b-87f9-c2cf499971e0\", \n\t\t\t\"score\": 66152, \n\t\t\t\"documentations\": 'DOCS', \n\t\t\t\"requestsPerDay\": 956402940\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateApplicationApis",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateApplicationApis (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetApplicationApis",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetApplicationApis (query: $query)\n\t{\n\t\tid\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationApi",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindApplicationApi (query: $query)\n\t{\n\t\tid\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationApiById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindApplicationApiById (id:$id)\n\t{\n\t\tid\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateApplicationApi",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateApplicationApiInput!)\n{\n\tappHealthUpdateApplicationApi (payload:$payload)\n\t{\n\t\tid\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"score\": 73681, \n\t\t\"documentations\": 'HTML', \n\t\t\"requestsPerDay\": 529096793\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationApiById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteApplicationApiById (id:$id)\n\t{\n\t\tid\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationApis",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteApplicationApis (query: $query)\n\t{\n\t\tid\n\t\tscore\n\t\tdocumentations\n\t\trequestsPerDay\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-api/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"score\": 77141, \n\t\"documentations\": 'HTML', \n\t\"requestsPerDay\": 904816343\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-api/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-api",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-apis/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"2d62867e-5676-4a58-95dc-90a6e08cd2a8\", \n\t\t\"applicationId\": \"93f9362c-521c-46cb-80d0-7981550ad576\", \n\t\t\"apiInterfaceTypeId\": \"40e37535-9bbc-42af-a70c-1b379cd53f69\", \n\t\t\"score\": 22093, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 254796565\n\t}, \n\t{\n\t\t\"id\": \"44ea976a-69ca-4a8e-abf8-13559c95c7a9\", \n\t\t\"applicationId\": \"78806544-5735-412e-b75e-90622daa0e32\", \n\t\t\"apiInterfaceTypeId\": \"bebf7d7b-077a-4298-a955-ce9101510ed2\", \n\t\t\"score\": 70916, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 276161797\n\t}, \n\t{\n\t\t\"id\": \"f866aa28-1a52-4a27-8a38-0de9ceb6e4a6\", \n\t\t\"applicationId\": \"5e4b8cb3-1caa-4dca-9abd-314547503b2f\", \n\t\t\"apiInterfaceTypeId\": \"ad6c360d-07bd-4040-b394-cb317c3d6232\", \n\t\t\"score\": 58078, \n\t\t\"documentations\": 'HTML', \n\t\t\"requestsPerDay\": 425142737\n\t}, \n\t{\n\t\t\"id\": \"bb9fa02e-3d40-49f0-a143-3ad4474e5d73\", \n\t\t\"applicationId\": \"69f95040-2514-4f63-86af-5d0ad18d1d4b\", \n\t\t\"apiInterfaceTypeId\": \"1877cd60-0cc8-4c5b-8c69-aacd8e290930\", \n\t\t\"score\": 91403, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 605678142\n\t}, \n\t{\n\t\t\"id\": \"bd315be2-7f36-4fef-a415-28637d910630\", \n\t\t\"applicationId\": \"4afaf200-eb29-4bf0-a350-ab8b5c4e046b\", \n\t\t\"apiInterfaceTypeId\": \"3010fc85-f585-4a87-9d2c-a4c11d453882\", \n\t\t\"score\": 26371, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 321514623\n\t}, \n\t{\n\t\t\"id\": \"adc48931-afdf-4c23-af12-80d94a566a11\", \n\t\t\"applicationId\": \"16bc84ba-9c7e-4da4-859e-7db042c0d85e\", \n\t\t\"apiInterfaceTypeId\": \"a4e0fe55-9335-42cf-b6fb-11c8cbfb84f7\", \n\t\t\"score\": 60687, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 406254293\n\t}, \n\t{\n\t\t\"id\": \"a3be1cc1-e51c-420c-b312-1142757886eb\", \n\t\t\"applicationId\": \"9a4f12f9-c4fa-4c82-911d-c4ca91d96e9e\", \n\t\t\"apiInterfaceTypeId\": \"d5c5823f-7d0c-4ce9-a398-d73b66437bb9\", \n\t\t\"score\": 60757, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 598450931\n\t}, \n\t{\n\t\t\"id\": \"a82a06d6-4f70-4244-9ee7-21f88e70c7d9\", \n\t\t\"applicationId\": \"aad1cf30-7a9d-4365-82b2-3f7ba2308cc2\", \n\t\t\"apiInterfaceTypeId\": \"27b3c7e6-8ab9-4af6-9348-9f8fe2f5e99b\", \n\t\t\"score\": 41561, \n\t\t\"documentations\": 'GRAPGQL', \n\t\t\"requestsPerDay\": 553066171\n\t}, \n\t{\n\t\t\"id\": \"6cb51725-dc81-438b-b094-c2ed8f8d59e7\", \n\t\t\"applicationId\": \"95ae3c1b-cc60-4227-80f4-ff1e2340e18a\", \n\t\t\"apiInterfaceTypeId\": \"6da685b1-2a99-4949-8480-168f5af3ab49\", \n\t\t\"score\": 75052, \n\t\t\"documentations\": 'OPENAPI', \n\t\t\"requestsPerDay\": 249697841\n\t}, \n\t{\n\t\t\"id\": \"33b47c4c-77f3-41a8-88a9-709879707ac2\", \n\t\t\"applicationId\": \"45afea5a-6a8f-4893-8e53-521e7808419c\", \n\t\t\"apiInterfaceTypeId\": \"4272c15f-c919-4fe7-aed1-0a7b01b1cad7\", \n\t\t\"score\": 78449, \n\t\t\"documentations\": 'HTML', \n\t\t\"requestsPerDay\": 335688973\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-apis/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-apis",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-apis/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-apis/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "application-apis",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-apis/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-apis/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-apis",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-api/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-api/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-api",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-api/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-api/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-api",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-api/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"score\": 34403, \n\t\"documentations\": 'OPENAPI', \n\t\"requestsPerDay\": 100707235\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-api/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-api",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-api/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-api/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-api",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/application-apis/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-apis/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-apis",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

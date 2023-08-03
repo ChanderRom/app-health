@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/application-infrastructure-service",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateApplicationInfrastructureService",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateApplicationInfrastructureServiceInput!)\n{\n\tappHealthCreateApplicationInfrastructureService (payload:$payload)\n\t{\n\t\tid\n\t\tapplicationId\n\t\tinfrastructureServiceId\n\t\tavarageCostPerYear\n\t\tscore\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"infrastructureServiceId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"avarageCostPerYear\": 460782721, \n\t\t\"score\": 41737\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateApplicationInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateApplicationInfrastructureServiceInput]!)\n{\n\tappHealthCreateApplicationInfrastructureServices (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"528d14fc-f46e-43a9-a104-ee7aa0a058c0\", \n\t\t\t\"applicationId\": \"314c4590-3b43-40a1-9842-38c7231f718a\", \n\t\t\t\"infrastructureServiceId\": \"8c5107de-14a8-4e7d-9345-3b6f5441ff44\", \n\t\t\t\"avarageCostPerYear\": 128086830, \n\t\t\t\"score\": 62972\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"80c5567b-be7e-4052-a658-00bfc95e06e0\", \n\t\t\t\"applicationId\": \"dd6c75a4-eeda-4bd9-b975-e0855647509a\", \n\t\t\t\"infrastructureServiceId\": \"6f29c797-237b-4281-be39-57871485a37a\", \n\t\t\t\"avarageCostPerYear\": 153030664, \n\t\t\t\"score\": 15933\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"758b8681-a935-478b-8798-92087897924c\", \n\t\t\t\"applicationId\": \"920e69d1-01b0-45f5-841e-d59f0fb70d91\", \n\t\t\t\"infrastructureServiceId\": \"0c11e15c-4f03-4e5f-b8ff-9c5e0ce7382d\", \n\t\t\t\"avarageCostPerYear\": 466672828, \n\t\t\t\"score\": 50634\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"8d465cb0-16b6-4060-87d6-0cba3a810a38\", \n\t\t\t\"applicationId\": \"d2b226a4-513f-4cd2-bb9e-f3f1043090db\", \n\t\t\t\"infrastructureServiceId\": \"7309006b-4a70-4cfd-aad4-8ef7dd1c3cfe\", \n\t\t\t\"avarageCostPerYear\": 907062422, \n\t\t\t\"score\": 73491\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"8d920677-bbf3-4b37-83bb-aeddc533c061\", \n\t\t\t\"applicationId\": \"fb4c801b-4d81-43b7-81d3-2c7872b60fa7\", \n\t\t\t\"infrastructureServiceId\": \"4baf3430-20b8-4982-b131-88b974ddd657\", \n\t\t\t\"avarageCostPerYear\": 966241358, \n\t\t\t\"score\": 35745\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"9d36d535-b3a8-4186-8fed-e80e5a8ae0ab\", \n\t\t\t\"applicationId\": \"ae6e5869-a933-49f3-a049-6c5d81fcf24e\", \n\t\t\t\"infrastructureServiceId\": \"16256983-5d3d-4eeb-ab81-fafb509c6c67\", \n\t\t\t\"avarageCostPerYear\": 819376338, \n\t\t\t\"score\": 66453\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"ea72eb50-2b6d-4b69-be91-26d0fbfaf557\", \n\t\t\t\"applicationId\": \"ecbc8a91-06ed-4f2f-b7be-191b6d5fe503\", \n\t\t\t\"infrastructureServiceId\": \"7233e78e-3a19-43c3-a44e-a13fa2267502\", \n\t\t\t\"avarageCostPerYear\": 780359126, \n\t\t\t\"score\": 70385\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a0655083-d37a-49c2-ab79-504dd62e13fd\", \n\t\t\t\"applicationId\": \"e681cbf4-095f-46e0-92fa-447180c7810c\", \n\t\t\t\"infrastructureServiceId\": \"18276a68-a1ae-4e1d-8def-e0fd30ac8194\", \n\t\t\t\"avarageCostPerYear\": 543884786, \n\t\t\t\"score\": 61099\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"b00fe9df-d73a-4e59-8e13-0a422179b129\", \n\t\t\t\"applicationId\": \"853fb2e2-58a3-4e16-b8f3-1318b9c87a48\", \n\t\t\t\"infrastructureServiceId\": \"5c3a0a94-5d58-4b6c-a9a8-4444b73c675b\", \n\t\t\t\"avarageCostPerYear\": 460239074, \n\t\t\t\"score\": 82740\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"37ae1d49-15cc-4549-b421-f059144bcd82\", \n\t\t\t\"applicationId\": \"a660a2aa-a462-4def-8b46-eabedb04cc79\", \n\t\t\t\"infrastructureServiceId\": \"7a16eaaf-eca7-44ad-8b0e-a330a3f13b3d\", \n\t\t\t\"avarageCostPerYear\": 796034332, \n\t\t\t\"score\": 14029\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateApplicationInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateApplicationInfrastructureServices (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetApplicationInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetApplicationInfrastructureServices (query: $query)\n\t{\n\t\tid\n\t\tavarageCostPerYear\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationInfrastructureService",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindApplicationInfrastructureService (query: $query)\n\t{\n\t\tid\n\t\tavarageCostPerYear\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationInfrastructureServiceById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindApplicationInfrastructureServiceById (id:$id)\n\t{\n\t\tid\n\t\tavarageCostPerYear\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateApplicationInfrastructureService",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateApplicationInfrastructureServiceInput!)\n{\n\tappHealthUpdateApplicationInfrastructureService (payload:$payload)\n\t{\n\t\tid\n\t\tavarageCostPerYear\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"infrastructureServiceId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"avarageCostPerYear\": 167026779, \n\t\t\"score\": 30093\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationInfrastructureServiceById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteApplicationInfrastructureServiceById (id:$id)\n\t{\n\t\tid\n\t\tavarageCostPerYear\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteApplicationInfrastructureServices (query: $query)\n\t{\n\t\tid\n\t\tavarageCostPerYear\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-service/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"infrastructureServiceId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"avarageCostPerYear\": 484963971, \n\t\"score\": 93892\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-service/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-service",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-services/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"38d914ad-fbff-48a2-adb6-3d6a0197b2d8\", \n\t\t\"applicationId\": \"4d504307-f80d-4c4b-bf4d-930e6139f1a6\", \n\t\t\"infrastructureServiceId\": \"33aadf36-13c8-4526-b025-388828f11b7c\", \n\t\t\"avarageCostPerYear\": 488876847, \n\t\t\"score\": 98868\n\t}, \n\t{\n\t\t\"id\": \"869a5861-0bec-4cea-9fd9-654c9cd610eb\", \n\t\t\"applicationId\": \"8d69b3e2-0abd-4f58-ac8b-c2bc9f62eea1\", \n\t\t\"infrastructureServiceId\": \"192aa4bf-287d-4070-a299-77ea7292695a\", \n\t\t\"avarageCostPerYear\": 808592131, \n\t\t\"score\": 54494\n\t}, \n\t{\n\t\t\"id\": \"887165e7-aa16-4532-8e22-ee4aa7193c95\", \n\t\t\"applicationId\": \"e65b31d0-c619-4d4c-9e76-c3c3a9a8208b\", \n\t\t\"infrastructureServiceId\": \"23f524fb-b840-4498-bc15-fc887a7814e6\", \n\t\t\"avarageCostPerYear\": 814436463, \n\t\t\"score\": 65688\n\t}, \n\t{\n\t\t\"id\": \"7afcb5e1-98d9-4f54-adae-54fbd36acbb6\", \n\t\t\"applicationId\": \"db6a1eff-5087-4d36-bc4e-1970ef7535c0\", \n\t\t\"infrastructureServiceId\": \"8b6a0ecc-48cc-40f2-b0d7-7df9629c58c2\", \n\t\t\"avarageCostPerYear\": 136652426, \n\t\t\"score\": 32289\n\t}, \n\t{\n\t\t\"id\": \"8816b2c9-35e7-493f-a25d-76fd2610ea14\", \n\t\t\"applicationId\": \"def50acc-4587-47ba-867f-779aafc04f47\", \n\t\t\"infrastructureServiceId\": \"97a92377-f664-4cff-bfd3-8a6d54080783\", \n\t\t\"avarageCostPerYear\": 141815664, \n\t\t\"score\": 14272\n\t}, \n\t{\n\t\t\"id\": \"80f2a266-7db2-42eb-9d46-951126291e20\", \n\t\t\"applicationId\": \"0435d7b3-da53-44c7-90da-bbb940c3d526\", \n\t\t\"infrastructureServiceId\": \"4a03a9cd-86cd-473f-aabf-3784bde4b44a\", \n\t\t\"avarageCostPerYear\": 320890879, \n\t\t\"score\": 93513\n\t}, \n\t{\n\t\t\"id\": \"2e6daef0-b16f-4a7c-ba3e-f0201bb59d45\", \n\t\t\"applicationId\": \"3b995fe7-bc4e-4754-b2ec-3607976f01fd\", \n\t\t\"infrastructureServiceId\": \"67732730-7bc1-4019-81a4-f92c68d2e3d4\", \n\t\t\"avarageCostPerYear\": 317445175, \n\t\t\"score\": 48407\n\t}, \n\t{\n\t\t\"id\": \"09939faa-1fbc-40dd-8174-083e9fecbe80\", \n\t\t\"applicationId\": \"af15e230-590b-4396-a1cf-c8557ae5a9c9\", \n\t\t\"infrastructureServiceId\": \"92b98255-5044-4e2d-827a-1d122ee503d5\", \n\t\t\"avarageCostPerYear\": 700457546, \n\t\t\"score\": 16003\n\t}, \n\t{\n\t\t\"id\": \"36948be6-df2b-436a-93a4-0ab1e61028ca\", \n\t\t\"applicationId\": \"9a993095-0eee-4661-ab56-c4238914e42f\", \n\t\t\"infrastructureServiceId\": \"65f8d977-a8f7-4ab0-b253-52ba87164033\", \n\t\t\"avarageCostPerYear\": 244181348, \n\t\t\"score\": 44326\n\t}, \n\t{\n\t\t\"id\": \"ec9e6fa8-1427-4bd1-b416-b3ee12372663\", \n\t\t\"applicationId\": \"bd752511-acb0-496b-a26d-57c5b50a3db6\", \n\t\t\"infrastructureServiceId\": \"d9499475-e890-4d3a-84af-00ef5c4fed04\", \n\t\t\"avarageCostPerYear\": 107094474, \n\t\t\"score\": 39582\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-services/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-services",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-services/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-services/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "application-infrastructure-services",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-services/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-services/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-services",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-service/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-service/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-service",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-service/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-service/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-service",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-service/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"infrastructureServiceId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"avarageCostPerYear\": 651075805, \n\t\"score\": 88736\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-service/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-service",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-infrastructure-service/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-service/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-service",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/application-infrastructure-services/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-infrastructure-services/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-infrastructure-services",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

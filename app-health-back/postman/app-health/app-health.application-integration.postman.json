@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/application-integration",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateApplicationIntegration",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateApplicationIntegrationInput!)\n{\n\tappHealthCreateApplicationIntegration (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tsourceApplicationId\n\t\tapiInterfaceTypeId\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Sleek Plastic Mouse\", \n\t\t\"description\": \"Suscipit libero qui magni veritatis. Fugiat optio laboriosam dicta iure veritatis consequatur aliquid iure nostrum. Iste sit est et.\", \n\t\t\"sourceApplicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"interfaceNumbers\": 300906147, \n\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\"score\": 24346, \n\t\t\"documentations\": 'DOCS'\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateApplicationIntegrations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateApplicationIntegrationInput]!)\n{\n\tappHealthCreateApplicationIntegrations (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"c9aedd9e-ed5d-4417-b9f3-10dce3712f5b\", \n\t\t\t\"name\": \"Generic Granite Computer\", \n\t\t\t\"description\": \"Voluptas officiis et. Et vel nulla a accusantium dolores consequatur explicabo architecto. Nesciunt accusantium aut quaerat qui aspernatur nihil. Eligendi assumenda molestias est doloremque esse vitae. Veritatis sed amet. Excepturi sit blanditiis ullam quibusdam aliquam et labore.\", \n\t\t\t\"sourceApplicationId\": \"fd267099-ba56-4fb0-9866-7e38e04d51f3\", \n\t\t\t\"apiInterfaceTypeId\": \"f7dca682-6039-4877-a1b3-33e375f6d10c\", \n\t\t\t\"interfaceNumbers\": 523979376, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 42700, \n\t\t\t\"documentations\": 'GRAPHQL'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"e06bb8e6-79fd-451c-a7a2-559dd7605a64\", \n\t\t\t\"name\": \"Incredible Steel Towels\", \n\t\t\t\"description\": \"Qui accusamus velit explicabo et. Fugit quo dolorum enim distinctio tenetur est natus. Rerum sint architecto placeat. Eum reiciendis autem asperiores tempora vitae fugit rerum.\", \n\t\t\t\"sourceApplicationId\": \"daf8e25e-bb28-4e99-91ee-6821763e4bdc\", \n\t\t\t\"apiInterfaceTypeId\": \"00446642-184d-4508-9548-66f3f98ea135\", \n\t\t\t\"interfaceNumbers\": 504194061, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 89387, \n\t\t\t\"documentations\": 'GRAPHQL'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"10869157-15bb-4d48-b5ff-4dfe3b75a54d\", \n\t\t\t\"name\": \"Incredible Metal Mouse\", \n\t\t\t\"description\": \"Dolorem tempora dolorum sit quo est eos consequatur sit occaecati. Magnam modi omnis sapiente non exercitationem ad dolor non omnis. Unde molestias dolores et unde a rem at sed. Cumque voluptas rerum modi. Eos nisi unde ipsam repellendus error voluptatem natus.\", \n\t\t\t\"sourceApplicationId\": \"f8e98b27-42ef-4923-8488-fb2fdcc5f8a4\", \n\t\t\t\"apiInterfaceTypeId\": \"c2730c03-b755-4fd5-8fd3-a8d0f5ff5683\", \n\t\t\t\"interfaceNumbers\": 802206857, \n\t\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\t\"score\": 54057, \n\t\t\t\"documentations\": 'GRAPHQL'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"07c9854b-9736-4ea5-a707-ecc73c44da01\", \n\t\t\t\"name\": \"Handcrafted Cotton Gloves\", \n\t\t\t\"description\": \"Earum culpa autem unde magni. Hic totam voluptatibus natus. Inventore magni voluptate dignissimos facilis omnis corporis voluptas est sit. Quaerat facilis commodi rerum voluptatem necessitatibus. Quia dolorem exercitationem et.\", \n\t\t\t\"sourceApplicationId\": \"018b6cd7-7e5d-4aee-b3f6-b8d7dbdf4602\", \n\t\t\t\"apiInterfaceTypeId\": \"e29edd3a-6fe4-419f-96dd-a346f980e50a\", \n\t\t\t\"interfaceNumbers\": 332069836, \n\t\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\t\"score\": 87659, \n\t\t\t\"documentations\": 'OPENAPI'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"8a19be12-b977-4f28-9cdf-e0ad1fe716fb\", \n\t\t\t\"name\": \"Incredible Metal Sausages\", \n\t\t\t\"description\": \"Dicta quae aut eligendi fugiat eveniet et est qui rerum. Praesentium dolorem et eius. Et temporibus ab hic officiis quibusdam. Maxime commodi ipsam dignissimos consequuntur.\", \n\t\t\t\"sourceApplicationId\": \"5edbb3be-8493-4ab3-952e-490944e89456\", \n\t\t\t\"apiInterfaceTypeId\": \"8eab6fc7-93b4-4644-b738-8ff09d917248\", \n\t\t\t\"interfaceNumbers\": 292005550, \n\t\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\t\"score\": 53892, \n\t\t\t\"documentations\": 'OPENAPI'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"bf750943-2a01-434e-b5ce-72295100789b\", \n\t\t\t\"name\": \"Generic Concrete Soap\", \n\t\t\t\"description\": \"Laborum unde consequatur pariatur unde est recusandae eum voluptatibus voluptatem. Deleniti repellendus natus asperiores consequuntur nesciunt ab illo hic neque. Asperiores et enim facilis voluptatem deleniti. Et eum deleniti aut. Aut voluptatibus consequatur consectetur quia ab reiciendis odio voluptatem et.\", \n\t\t\t\"sourceApplicationId\": \"967f11b6-0df8-4753-96f0-2df8d5522f1f\", \n\t\t\t\"apiInterfaceTypeId\": \"862def1a-7c67-4e3d-87da-c5ab9c51120c\", \n\t\t\t\"interfaceNumbers\": 135587356, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 24603, \n\t\t\t\"documentations\": 'HTML'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"95771310-9870-4d76-821e-92c99fb8a76d\", \n\t\t\t\"name\": \"Incredible Concrete Chicken\", \n\t\t\t\"description\": \"In molestiae libero dicta. Mollitia hic quaerat voluptatum at deleniti temporibus debitis unde. Rerum nemo facere. Necessitatibus sunt fugiat rerum ratione molestiae quo nostrum mollitia.\", \n\t\t\t\"sourceApplicationId\": \"757628bf-c374-4ab3-a73f-fa9f14c17370\", \n\t\t\t\"apiInterfaceTypeId\": \"921b4386-6493-427b-8c87-a0baddec4a79\", \n\t\t\t\"interfaceNumbers\": 457383709, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 74840, \n\t\t\t\"documentations\": 'OPENAPI'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"1b0f63d0-8ae0-4b05-a1b9-3f14774b2da5\", \n\t\t\t\"name\": \"Unbranded Soft Tuna\", \n\t\t\t\"description\": \"Aut omnis et et modi quia delectus et. Voluptatem molestiae dolores. Enim quisquam quia quia eos et sunt autem voluptatem blanditiis.\", \n\t\t\t\"sourceApplicationId\": \"9f6833b6-f20d-4aaa-8920-8269132daae7\", \n\t\t\t\"apiInterfaceTypeId\": \"64d29348-bf01-453f-a65c-f9732db14fec\", \n\t\t\t\"interfaceNumbers\": 102332145, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 93678, \n\t\t\t\"documentations\": 'GRAPHQL'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"af21c41a-4edb-46d1-abf6-58771d359f82\", \n\t\t\t\"name\": \"Tasty Frozen Chair\", \n\t\t\t\"description\": \"Voluptatem aspernatur rem nesciunt enim aut neque explicabo architecto doloribus. Dolorem aut aut enim perferendis rerum est. Nesciunt sunt necessitatibus ea vel temporibus ea quo corporis repellat.\", \n\t\t\t\"sourceApplicationId\": \"754c3e60-5de8-43ae-9f73-29f15862e6e5\", \n\t\t\t\"apiInterfaceTypeId\": \"d8478380-f1a6-4aa8-9b35-e7daaf758bd3\", \n\t\t\t\"interfaceNumbers\": 951362167, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 91215, \n\t\t\t\"documentations\": 'DOCS'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a02173e1-c094-4be0-a118-4635ea03673a\", \n\t\t\t\"name\": \"Small Fresh Tuna\", \n\t\t\t\"description\": \"Impedit totam tempora voluptatem molestiae vero. Quam distinctio quaerat architecto. Eum eum ipsam minima laudantium adipisci excepturi. Qui id similique est dolor nihil quia libero est quia.\", \n\t\t\t\"sourceApplicationId\": \"6a1dcdd0-65be-409f-9d1e-d1add003e6a0\", \n\t\t\t\"apiInterfaceTypeId\": \"4977ea99-b4d8-4ace-bee4-b81ae7aca29f\", \n\t\t\t\"interfaceNumbers\": 283501580, \n\t\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\t\"score\": 41317, \n\t\t\t\"documentations\": 'HTML'\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateApplicationIntegrations",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateApplicationIntegrations (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetApplicationIntegrations",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetApplicationIntegrations (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationIntegration",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindApplicationIntegration (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationIntegrationById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindApplicationIntegrationById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateApplicationIntegration",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateApplicationIntegrationInput!)\n{\n\tappHealthUpdateApplicationIntegration (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Practical Wooden Salad\", \n\t\t\"description\": \"Assumenda deserunt architecto cupiditate exercitationem corrupti saepe nobis voluptatem. Perferendis ratione beatae dolorem beatae sed non ad ut consequuntur. Quam adipisci quia iure voluptate.\", \n\t\t\"sourceApplicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"interfaceNumbers\": 903310846, \n\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\"score\": 27516, \n\t\t\"documentations\": 'GRAPHQL'\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationIntegrationById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteApplicationIntegrationById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationIntegrations",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteApplicationIntegrations (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tdescription\n\t\tinterfaceNumbers\n\t\tmodality\n\t\tscore\n\t\tdocumentations\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integration/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Intelligent Plastic Cheese\", \n\t\"description\": \"Vitae mollitia voluptate dolores aut doloribus id esse. Rerum tempore sunt suscipit facilis rerum explicabo qui qui qui. Consequatur est debitis eos quia sequi quos provident et.\", \n\t\"sourceApplicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"interfaceNumbers\": 141910791, \n\t\"modality\": 'BIDIRECTIONAL', \n\t\"score\": 20115, \n\t\"documentations\": 'OPENAPI'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integration/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integration",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integrations/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"6fb2d983-8a5a-4fac-8474-5f9f6d992954\", \n\t\t\"name\": \"Fantastic Cotton Towels\", \n\t\t\"description\": \"Aut enim quibusdam. In sint placeat repudiandae consequatur accusamus et earum. Consequuntur sequi sit ratione rerum libero.\", \n\t\t\"sourceApplicationId\": \"f35431b8-92e4-4b22-b668-2349d5d7e451\", \n\t\t\"apiInterfaceTypeId\": \"2fa99bdf-2e55-44e1-aa96-4a71ba3e621e\", \n\t\t\"interfaceNumbers\": 916015138, \n\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\"score\": 46137, \n\t\t\"documentations\": 'DOCS'\n\t}, \n\t{\n\t\t\"id\": \"27ab5bbb-9b9b-425e-a30d-4a9576c05a5b\", \n\t\t\"name\": \"Incredible Cotton Sausages\", \n\t\t\"description\": \"Aut a cum dignissimos et. Consequatur quaerat et quis repellendus nobis aut. Molestiae magni rerum ut consequatur rem itaque consectetur. Sit ipsum repellat provident nulla occaecati eum quaerat blanditiis.\", \n\t\t\"sourceApplicationId\": \"5ead3be3-a75e-4363-a625-ea743bf3d8b2\", \n\t\t\"apiInterfaceTypeId\": \"0f6a6c39-a22d-42e6-98cd-ba169e89ff43\", \n\t\t\"interfaceNumbers\": 357284408, \n\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\"score\": 69906, \n\t\t\"documentations\": 'OPENAPI'\n\t}, \n\t{\n\t\t\"id\": \"80d32578-40c3-4f30-9399-4c30945bbca7\", \n\t\t\"name\": \"Generic Plastic Tuna\", \n\t\t\"description\": \"Aperiam et ipsa aut accusantium. Perspiciatis quibusdam dignissimos et iusto. Mollitia in et voluptatem voluptatem et temporibus iste aliquam aperiam. Explicabo placeat animi modi libero perferendis et consequatur impedit quam. Est asperiores sapiente explicabo soluta omnis ullam.\", \n\t\t\"sourceApplicationId\": \"b7b64529-7129-4444-ad5e-f5a308e3e570\", \n\t\t\"apiInterfaceTypeId\": \"07d6e6d7-eb9e-43cc-9e5a-27f264678167\", \n\t\t\"interfaceNumbers\": 607397087, \n\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\"score\": 12056, \n\t\t\"documentations\": 'GRAPHQL'\n\t}, \n\t{\n\t\t\"id\": \"fce726f0-08b9-4432-9561-cae0634bbc9d\", \n\t\t\"name\": \"Refined Metal Salad\", \n\t\t\"description\": \"Quis iure magni placeat maxime nihil ducimus ut. Ut itaque rerum aspernatur ipsum non inventore voluptatem modi. Esse qui ullam qui omnis cum earum. Nihil cumque exercitationem recusandae qui eius dicta omnis enim quia. Quaerat hic eveniet cumque. Consequatur aut atque voluptas quia rem quibusdam.\", \n\t\t\"sourceApplicationId\": \"6555debd-0a6f-401d-9207-bab29c7ea30e\", \n\t\t\"apiInterfaceTypeId\": \"ecaef49c-0a18-404b-8a55-02125f38b9e0\", \n\t\t\"interfaceNumbers\": 930838839, \n\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\"score\": 61868, \n\t\t\"documentations\": 'DOCS'\n\t}, \n\t{\n\t\t\"id\": \"050a6df6-bce8-46ee-a870-179df1bc82bb\", \n\t\t\"name\": \"Fantastic Frozen Pants\", \n\t\t\"description\": \"Nam aspernatur ad voluptas et laborum dicta. Iste id earum fugit et magni. Nam ipsam in in.\", \n\t\t\"sourceApplicationId\": \"d6277451-9a9b-4dbe-8aac-b80473ef751e\", \n\t\t\"apiInterfaceTypeId\": \"f4968a63-186c-4604-ab46-90ea81a0d0d4\", \n\t\t\"interfaceNumbers\": 197841023, \n\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\"score\": 28700, \n\t\t\"documentations\": 'HTML'\n\t}, \n\t{\n\t\t\"id\": \"e53c63c8-39d8-4439-b9d7-5529150c9a2c\", \n\t\t\"name\": \"Handmade Metal Tuna\", \n\t\t\"description\": \"Voluptatibus dicta architecto enim et. Nobis dolorem est similique. Nobis perspiciatis voluptas neque nisi ullam sed. Consectetur error eveniet eveniet eos quae perferendis. Minima qui totam.\", \n\t\t\"sourceApplicationId\": \"1017dc29-e780-4ed6-9622-001f773343d3\", \n\t\t\"apiInterfaceTypeId\": \"f15d1be9-7d39-484b-9d53-60055247417e\", \n\t\t\"interfaceNumbers\": 152671063, \n\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\"score\": 55431, \n\t\t\"documentations\": 'DOCS'\n\t}, \n\t{\n\t\t\"id\": \"2f92da13-a6b1-46d8-bd81-f6a8d3887159\", \n\t\t\"name\": \"Intelligent Plastic Shoes\", \n\t\t\"description\": \"Quia porro perspiciatis laborum nobis id ad voluptas. Rerum aspernatur veritatis quia cupiditate animi pariatur incidunt ullam. Non dolor exercitationem necessitatibus nemo maiores saepe. Ullam error officiis alias in. Repudiandae aliquam nemo aut vel vitae repellendus. Consequuntur autem exercitationem veniam autem saepe.\", \n\t\t\"sourceApplicationId\": \"19077c4e-13b4-4dd9-9834-0a6c7b395740\", \n\t\t\"apiInterfaceTypeId\": \"b75b17c7-acad-425d-9458-bf2d015a5145\", \n\t\t\"interfaceNumbers\": 320840968, \n\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\"score\": 63508, \n\t\t\"documentations\": 'DOCS'\n\t}, \n\t{\n\t\t\"id\": \"43d9170d-4f1b-48e0-8b88-d9ebe5f3cd83\", \n\t\t\"name\": \"Incredible Metal Cheese\", \n\t\t\"description\": \"Quo aperiam quos ipsa debitis asperiores aut nam nisi autem. Qui et et nesciunt aut in enim est explicabo. Rerum sed ex praesentium voluptates qui maiores. Ut cupiditate enim in molestias omnis.\", \n\t\t\"sourceApplicationId\": \"d51f5eb7-0c1d-48a9-bcde-53d8d54dd13f\", \n\t\t\"apiInterfaceTypeId\": \"4cbae566-1987-41de-9ab0-71f1ce6eec95\", \n\t\t\"interfaceNumbers\": 267803107, \n\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\"score\": 95222, \n\t\t\"documentations\": 'GRAPHQL'\n\t}, \n\t{\n\t\t\"id\": \"a85d633f-a37b-41a2-83f3-4d7d9b5abf0c\", \n\t\t\"name\": \"Sleek Steel Hat\", \n\t\t\"description\": \"Laborum nihil officiis. Ea sunt dolores consectetur et maiores. Autem quis deleniti laboriosam illum. Porro quae qui corrupti nisi voluptatem. Consequatur veritatis culpa aperiam dolores reprehenderit blanditiis rerum quia. Fuga alias asperiores.\", \n\t\t\"sourceApplicationId\": \"415eaa3e-9861-41e3-a6b6-8f4054fbee80\", \n\t\t\"apiInterfaceTypeId\": \"cc95063a-17be-460d-bf0e-9a437e85453f\", \n\t\t\"interfaceNumbers\": 818092064, \n\t\t\"modality\": 'UNIDERECTIONAL', \n\t\t\"score\": 20057, \n\t\t\"documentations\": 'GRAPHQL'\n\t}, \n\t{\n\t\t\"id\": \"73f4da25-619d-439b-9d23-e6d1e66b9fa7\", \n\t\t\"name\": \"Rustic Frozen Car\", \n\t\t\"description\": \"Voluptatem non qui. Adipisci autem quia quaerat. Fuga quis adipisci. Est provident repellendus tenetur dicta nobis quia minus.\", \n\t\t\"sourceApplicationId\": \"e6e085af-f0dd-4e6e-bf4f-a7f2eda935bf\", \n\t\t\"apiInterfaceTypeId\": \"009e364b-3bf7-40a3-87b7-682fbe9bfe52\", \n\t\t\"interfaceNumbers\": 400968478, \n\t\t\"modality\": 'BIDIRECTIONAL', \n\t\t\"score\": 24492, \n\t\t\"documentations\": 'OPENAPI'\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integrations/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integrations",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integrations/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integrations/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "application-integrations",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integrations/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integrations/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integrations",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integration/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integration/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integration",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integration/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integration/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integration",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integration/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Incredible Granite Shoes\", \n\t\"description\": \"Maxime ea corporis neque non incidunt. Facilis corporis eaque vero. Eos nulla adipisci voluptate cum nemo sed consectetur exercitationem voluptas.\", \n\t\"sourceApplicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"apiInterfaceTypeId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"interfaceNumbers\": 241369523, \n\t\"modality\": 'UNIDERECTIONAL', \n\t\"score\": 32609, \n\t\"documentations\": 'OPENAPI'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integration/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integration",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-integration/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integration/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integration",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/application-integrations/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-integrations/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-integrations",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

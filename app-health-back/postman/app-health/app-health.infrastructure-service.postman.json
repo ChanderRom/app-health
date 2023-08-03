@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/infrastructure-service",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateInfrastructureService",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateInfrastructureServiceInput!)\n{\n\tappHealthCreateInfrastructureService (payload:$payload)\n\t{\n\t\tid\n\t\tproviderId\n\t\tname\n\t\tscore\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"providerId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Tasty Frozen Fish\", \n\t\t\"score\": 81956\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateInfrastructureServiceInput]!)\n{\n\tappHealthCreateInfrastructureServices (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"01ac345f-7a9d-4c60-81b2-4124f8d4d4e2\", \n\t\t\t\"providerId\": \"f5a83b90-f037-4fa4-8630-ec81f8788a66\", \n\t\t\t\"name\": \"Gorgeous Cotton Shoes\", \n\t\t\t\"score\": 98449\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"806ea5b7-4bf8-4b7e-ab54-5cae09f1c06f\", \n\t\t\t\"providerId\": \"2bf6e76d-20da-4d62-b1bb-9feb0a3c22a0\", \n\t\t\t\"name\": \"Rustic Concrete Bike\", \n\t\t\t\"score\": 72211\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"0ffb811b-1a15-4cc6-865b-90326eda2ee6\", \n\t\t\t\"providerId\": \"171a990d-df9f-4fda-b506-5a8401b3f4cf\", \n\t\t\t\"name\": \"Incredible Steel Ball\", \n\t\t\t\"score\": 20767\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"f9f7cd80-53ce-4cec-be2f-7a3cccacab7a\", \n\t\t\t\"providerId\": \"c99a4176-b063-4cb0-a613-36e25aec2d9c\", \n\t\t\t\"name\": \"Ergonomic Wooden Car\", \n\t\t\t\"score\": 42368\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"0b0db337-6291-42c0-920d-57906f887c94\", \n\t\t\t\"providerId\": \"1bf860d6-9c64-4754-a135-92ce316d7428\", \n\t\t\t\"name\": \"Unbranded Soft Salad\", \n\t\t\t\"score\": 42509\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"b878c027-9797-42a5-9c92-448f6e140af4\", \n\t\t\t\"providerId\": \"2d1eb926-4e29-400b-9c5f-1aac5496ccfa\", \n\t\t\t\"name\": \"Fantastic Plastic Keyboard\", \n\t\t\t\"score\": 65977\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"4dec8e5d-ed18-4fdc-8ee0-157c887b5d44\", \n\t\t\t\"providerId\": \"1b1934c7-867e-4742-b107-2c8616adcc8d\", \n\t\t\t\"name\": \"Practical Rubber Bacon\", \n\t\t\t\"score\": 13982\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"9a531ea1-136d-4bb8-b977-8541115109d6\", \n\t\t\t\"providerId\": \"4d03f2f2-79dc-4893-9de0-66b5c1dda659\", \n\t\t\t\"name\": \"Fantastic Wooden Cheese\", \n\t\t\t\"score\": 37942\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"6e779991-fbf7-4245-88aa-80823df6a54b\", \n\t\t\t\"providerId\": \"a3070397-b333-4b31-a6b1-7df8b33ff774\", \n\t\t\t\"name\": \"Fantastic Metal Computer\", \n\t\t\t\"score\": 75935\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"3ae816c5-8430-46ec-87e4-0b1fece97aba\", \n\t\t\t\"providerId\": \"199bcb2f-0b6c-4173-90a2-48d5571d807c\", \n\t\t\t\"name\": \"Gorgeous Frozen Chips\", \n\t\t\t\"score\": 25663\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateInfrastructureServices (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetInfrastructureServices (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindInfrastructureService",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindInfrastructureService (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindInfrastructureServiceById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindInfrastructureServiceById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateInfrastructureService",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateInfrastructureServiceInput!)\n{\n\tappHealthUpdateInfrastructureService (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"providerId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Tasty Frozen Keyboard\", \n\t\t\"score\": 24606\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteInfrastructureServiceById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteInfrastructureServiceById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteInfrastructureServices",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteInfrastructureServices (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-service/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"providerId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Handcrafted Cotton Bike\", \n\t\"score\": 40794\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-service/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-service",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-services/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"09bcd00d-d1d6-437b-8f04-5ccfc392308e\", \n\t\t\"providerId\": \"5a4032b0-6967-48da-b2f7-5ef3d26dd81f\", \n\t\t\"name\": \"Refined Granite Chips\", \n\t\t\"score\": 79849\n\t}, \n\t{\n\t\t\"id\": \"960d23b8-0759-4556-811c-961c0be3b005\", \n\t\t\"providerId\": \"6d1a5844-fbe6-4ef7-ae04-c0a88669b0af\", \n\t\t\"name\": \"Practical Wooden Sausages\", \n\t\t\"score\": 88312\n\t}, \n\t{\n\t\t\"id\": \"351b765f-6873-438a-baa4-cac953e5fc89\", \n\t\t\"providerId\": \"fb9b9aee-9227-4322-9f0a-27e66bec5104\", \n\t\t\"name\": \"Practical Soft Pants\", \n\t\t\"score\": 16992\n\t}, \n\t{\n\t\t\"id\": \"02dde1a7-4e40-46fd-856c-c7024a7d441c\", \n\t\t\"providerId\": \"918b84d0-0287-4c44-9a39-2171654fabe1\", \n\t\t\"name\": \"Licensed Concrete Shoes\", \n\t\t\"score\": 78047\n\t}, \n\t{\n\t\t\"id\": \"82fae85b-4b0f-4c79-93cb-bf3184fa710e\", \n\t\t\"providerId\": \"12bb5bf1-77e9-4597-a971-ffafdeb9a682\", \n\t\t\"name\": \"Sleek Steel Keyboard\", \n\t\t\"score\": 97646\n\t}, \n\t{\n\t\t\"id\": \"dede9c05-9495-41e3-80f7-69c51fc50b84\", \n\t\t\"providerId\": \"331e29e5-7a8f-47ac-bede-89956c473bae\", \n\t\t\"name\": \"Licensed Rubber Chips\", \n\t\t\"score\": 74822\n\t}, \n\t{\n\t\t\"id\": \"048c7044-a2b8-413b-beeb-dbb5c864d929\", \n\t\t\"providerId\": \"ee4f639d-521f-4f7a-bb49-fe1af4d1082b\", \n\t\t\"name\": \"Incredible Steel Cheese\", \n\t\t\"score\": 75206\n\t}, \n\t{\n\t\t\"id\": \"2cb5f67f-dc2c-4dd2-a78f-42d3674b645b\", \n\t\t\"providerId\": \"8f60f0f3-e328-481f-82c5-37bc324dc37d\", \n\t\t\"name\": \"Handcrafted Concrete Sausages\", \n\t\t\"score\": 46078\n\t}, \n\t{\n\t\t\"id\": \"d5663693-5d58-4a19-9f68-7b1f9f996f87\", \n\t\t\"providerId\": \"be0d5082-eebf-4f03-a768-250eb49c6152\", \n\t\t\"name\": \"Handcrafted Steel Computer\", \n\t\t\"score\": 64131\n\t}, \n\t{\n\t\t\"id\": \"71953b50-6c90-4ba8-9670-03fcd25736e3\", \n\t\t\"providerId\": \"05a48821-8441-4759-8701-66c70bf1113b\", \n\t\t\"name\": \"Tasty Fresh Shoes\", \n\t\t\"score\": 72466\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-services/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-services",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-services/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-services/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "infrastructure-services",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-services/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-services/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-services",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-service/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-service/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-service",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-service/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-service/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-service",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-service/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"providerId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Generic Concrete Keyboard\", \n\t\"score\": 24567\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-service/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-service",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/infrastructure-service/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-service/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-service",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/infrastructure-services/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/infrastructure-services/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"infrastructure-services",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
