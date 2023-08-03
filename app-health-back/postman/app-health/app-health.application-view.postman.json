@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/application-view",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateApplicationView",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateApplicationViewInput!)\n{\n\tappHealthCreateApplicationView (payload:$payload)\n\t{\n\t\tid\n\t\tapplicationId\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"totalViews\": 775950184, \n\t\t\"complexity\": 'MEDIUM', \n\t\t\"description\": 58006, \n\t\t\"score\": 19478\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateApplicationViews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateApplicationViewInput]!)\n{\n\tappHealthCreateApplicationViews (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"9dbb75d4-ac85-4afd-bab3-2b0c1b14866a\", \n\t\t\t\"applicationId\": \"706c5d68-3bca-4d78-8812-aa6225c55bb9\", \n\t\t\t\"totalViews\": 239178829, \n\t\t\t\"complexity\": 'LOW', \n\t\t\t\"description\": 97738, \n\t\t\t\"score\": 82954\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a24dcffd-6076-49f6-b6e1-7246bd518abd\", \n\t\t\t\"applicationId\": \"e006f650-2865-4f51-9f07-b0dab248f83f\", \n\t\t\t\"totalViews\": 513534645, \n\t\t\t\"complexity\": 'MEDIUM', \n\t\t\t\"description\": 74994, \n\t\t\t\"score\": 13064\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"f5d1b5f5-5c2d-43a7-b8ea-dfe0d985dae2\", \n\t\t\t\"applicationId\": \"300898a6-4ed6-4557-b42f-b18cafaf1d94\", \n\t\t\t\"totalViews\": 865005966, \n\t\t\t\"complexity\": 'HIGH', \n\t\t\t\"description\": 40970, \n\t\t\t\"score\": 46362\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"de699cac-0a49-432b-a979-fdfeef7d3acd\", \n\t\t\t\"applicationId\": \"e860f2c5-2c9d-4592-973e-fa6567d06130\", \n\t\t\t\"totalViews\": 254532369, \n\t\t\t\"complexity\": 'LOW', \n\t\t\t\"description\": 52943, \n\t\t\t\"score\": 30961\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"821e60d8-a49b-4ea1-8aae-befe18b38666\", \n\t\t\t\"applicationId\": \"61840bb3-9168-4535-a1a0-c537eadc0ea8\", \n\t\t\t\"totalViews\": 992344196, \n\t\t\t\"complexity\": 'HIGH', \n\t\t\t\"description\": 28189, \n\t\t\t\"score\": 48628\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"e495ca0a-6780-44f5-9781-b16ff957c02f\", \n\t\t\t\"applicationId\": \"af687dc5-090d-4f8e-8663-e0f71d5a5cc9\", \n\t\t\t\"totalViews\": 151746926, \n\t\t\t\"complexity\": 'LOW', \n\t\t\t\"description\": 75356, \n\t\t\t\"score\": 77535\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"38fab3e0-3ba1-4124-a499-6df3bf4cfca2\", \n\t\t\t\"applicationId\": \"bde7a881-50f7-4df2-a648-2c19cce9690c\", \n\t\t\t\"totalViews\": 852826299, \n\t\t\t\"complexity\": 'LOW', \n\t\t\t\"description\": 52596, \n\t\t\t\"score\": 51156\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"5527d471-a0f1-4f59-bd2f-d7e3fef0d2be\", \n\t\t\t\"applicationId\": \"1e71eda4-84b1-45ff-bcc3-aa32078860e3\", \n\t\t\t\"totalViews\": 968029783, \n\t\t\t\"complexity\": 'MEDIUM', \n\t\t\t\"description\": 28753, \n\t\t\t\"score\": 31639\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"944247d8-44ff-41c4-adc1-713a19187220\", \n\t\t\t\"applicationId\": \"e793e5c5-59e1-4c0e-94c8-5832d7bd9ec7\", \n\t\t\t\"totalViews\": 178713942, \n\t\t\t\"complexity\": 'HIGH', \n\t\t\t\"description\": 63433, \n\t\t\t\"score\": 99237\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"07609c79-ac47-49d5-8d2e-08560aa67224\", \n\t\t\t\"applicationId\": \"18717895-a4d1-44a8-b2cd-0f5eade9b25b\", \n\t\t\t\"totalViews\": 526203020, \n\t\t\t\"complexity\": 'HIGH', \n\t\t\t\"description\": 56709, \n\t\t\t\"score\": 53506\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateApplicationViews",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateApplicationViews (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetApplicationViews",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetApplicationViews (query: $query)\n\t{\n\t\tid\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationView",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindApplicationView (query: $query)\n\t{\n\t\tid\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationViewById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindApplicationViewById (id:$id)\n\t{\n\t\tid\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateApplicationView",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateApplicationViewInput!)\n{\n\tappHealthUpdateApplicationView (payload:$payload)\n\t{\n\t\tid\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"totalViews\": 101763820, \n\t\t\"complexity\": 'MEDIUM', \n\t\t\"description\": 95873, \n\t\t\"score\": 94858\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationViewById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteApplicationViewById (id:$id)\n\t{\n\t\tid\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationViews",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteApplicationViews (query: $query)\n\t{\n\t\tid\n\t\ttotalViews\n\t\tcomplexity\n\t\tdescription\n\t\tscore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-view/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"totalViews\": 848952344, \n\t\"complexity\": 'MEDIUM', \n\t\"description\": 29156, \n\t\"score\": 29844\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-view/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-view",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-views/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"62631ae1-d29e-4f57-b9c2-97faae690672\", \n\t\t\"applicationId\": \"404b012f-70c9-4cd3-a0a3-7e841ea7a2b4\", \n\t\t\"totalViews\": 104623598, \n\t\t\"complexity\": 'MEDIUM', \n\t\t\"description\": 99096, \n\t\t\"score\": 12903\n\t}, \n\t{\n\t\t\"id\": \"78c4e667-8c55-4343-9b49-50873ad391b6\", \n\t\t\"applicationId\": \"1097a062-9669-47e6-b986-e2bb4d77bec6\", \n\t\t\"totalViews\": 212102702, \n\t\t\"complexity\": 'MEDIUM', \n\t\t\"description\": 74642, \n\t\t\"score\": 62339\n\t}, \n\t{\n\t\t\"id\": \"fe3c8a5a-0889-41a4-bdbb-c7c0b549de3f\", \n\t\t\"applicationId\": \"7a2e0b9f-de93-4e4c-978e-23593d046169\", \n\t\t\"totalViews\": 750150257, \n\t\t\"complexity\": 'HIGH', \n\t\t\"description\": 16225, \n\t\t\"score\": 84815\n\t}, \n\t{\n\t\t\"id\": \"8a3a4b0f-7332-40c5-998d-d365fac46029\", \n\t\t\"applicationId\": \"a4d891f0-c9df-40fe-92ff-914e38b8bc0f\", \n\t\t\"totalViews\": 515698376, \n\t\t\"complexity\": 'LOW', \n\t\t\"description\": 42843, \n\t\t\"score\": 19504\n\t}, \n\t{\n\t\t\"id\": \"75bd6490-5f39-4627-8bdf-8037da5e0757\", \n\t\t\"applicationId\": \"cf585abc-b622-49c1-8407-3f319ea9ff16\", \n\t\t\"totalViews\": 619255048, \n\t\t\"complexity\": 'HIGH', \n\t\t\"description\": 33203, \n\t\t\"score\": 27687\n\t}, \n\t{\n\t\t\"id\": \"d17cb753-d025-46b4-8c2f-597e9837b39f\", \n\t\t\"applicationId\": \"e8833bd1-cc98-4a3c-844b-23763a044117\", \n\t\t\"totalViews\": 881458343, \n\t\t\"complexity\": 'HIGH', \n\t\t\"description\": 22200, \n\t\t\"score\": 28280\n\t}, \n\t{\n\t\t\"id\": \"9a0332ad-ba26-4a8a-8419-619207ab8ee1\", \n\t\t\"applicationId\": \"9bbe52c2-181d-4ac1-b0c9-5de9bc0289e8\", \n\t\t\"totalViews\": 160666525, \n\t\t\"complexity\": 'MEDIUM', \n\t\t\"description\": 52445, \n\t\t\"score\": 85699\n\t}, \n\t{\n\t\t\"id\": \"cda3b28b-61c4-4b53-8d11-c76f43b0f534\", \n\t\t\"applicationId\": \"97288028-0172-425d-913b-f114252a444e\", \n\t\t\"totalViews\": 506102094, \n\t\t\"complexity\": 'HIGH', \n\t\t\"description\": 25128, \n\t\t\"score\": 66786\n\t}, \n\t{\n\t\t\"id\": \"1604f593-bb1b-42b6-ba86-de378c26bb0f\", \n\t\t\"applicationId\": \"2f4ec9c0-3fd5-4b91-b311-f5e8fbdedb61\", \n\t\t\"totalViews\": 739068832, \n\t\t\"complexity\": 'HIGH', \n\t\t\"description\": 91661, \n\t\t\"score\": 52958\n\t}, \n\t{\n\t\t\"id\": \"86531955-9568-41f3-b531-88d9fcba2328\", \n\t\t\"applicationId\": \"bd576cf9-e4b6-46b4-8442-58cab5252d93\", \n\t\t\"totalViews\": 756983391, \n\t\t\"complexity\": 'HIGH', \n\t\t\"description\": 88020, \n\t\t\"score\": 90704\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-views/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-views",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-views/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-views/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "application-views",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-views/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-views/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-views",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-view/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-view/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-view",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-view/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-view/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-view",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-view/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"totalViews\": 870933270, \n\t\"complexity\": 'MEDIUM', \n\t\"description\": 95542, \n\t\"score\": 97934\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-view/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-view",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-view/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-view/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-view",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/application-views/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-views/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-views",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

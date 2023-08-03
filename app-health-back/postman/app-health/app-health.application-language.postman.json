@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - app-health/application-language",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - appHealthCreateApplicationLanguage",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthCreateApplicationLanguageInput!)\n{\n\tappHealthCreateApplicationLanguage (payload:$payload)\n\t{\n\t\tid\n\t\tapplicationId\n\t\tlanguageId\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"languageId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"version\": \"9fkbii654259qfhqgr2\", \n\t\t\"score\": 73779, \n\t\t\"codeQualityScore\": 39918\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthCreateApplitacionLanguages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[AppHealthCreateApplicationLanguageInput]!)\n{\n\tappHealthCreateApplitacionLanguages (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"a6efe32d-9948-4e53-b532-80346201e7cb\", \n\t\t\t\"applicationId\": \"be578709-24e0-4992-9989-836a0bb7cad7\", \n\t\t\t\"languageId\": \"12ee145d-50cb-44d1-ba72-e72c5fabcc41\", \n\t\t\t\"version\": \"qoze9o22zz77dxxsenl\", \n\t\t\t\"score\": 62901, \n\t\t\t\"codeQualityScore\": 86388\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"238f2578-0183-449b-9855-f60b54e3e411\", \n\t\t\t\"applicationId\": \"abfc7f36-a56f-4a18-9316-19bc12a07726\", \n\t\t\t\"languageId\": \"8085aa16-df7d-4d3a-b1aa-2280fc9ee9cb\", \n\t\t\t\"version\": \"cijajrww085aq1l2qjc\", \n\t\t\t\"score\": 86890, \n\t\t\t\"codeQualityScore\": 64469\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"0ccce138-06a4-4b98-9f02-b985be5804ae\", \n\t\t\t\"applicationId\": \"a19fd050-f7a0-454c-a361-b16ed4851ae0\", \n\t\t\t\"languageId\": \"cf02fb3f-67e0-42b2-a6a7-13abf95eeaa0\", \n\t\t\t\"version\": \"lihfayjut78s3h94sqw\", \n\t\t\t\"score\": 85587, \n\t\t\t\"codeQualityScore\": 77010\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"11cfedbe-7dcd-4dd2-884a-79ea63c0018c\", \n\t\t\t\"applicationId\": \"ef7b7eb8-8628-404d-ab00-957ec118e859\", \n\t\t\t\"languageId\": \"b1cd34de-fbe7-42a8-b67b-c4efe63cab57\", \n\t\t\t\"version\": \"2ap9rha049fcceai4hs\", \n\t\t\t\"score\": 40794, \n\t\t\t\"codeQualityScore\": 43172\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"bda7be34-7461-484a-a03b-2287686028da\", \n\t\t\t\"applicationId\": \"884dfdd8-9b6e-46b7-abbb-269a2bcf7b6a\", \n\t\t\t\"languageId\": \"d329b5f2-1eec-42f0-9b99-99baf4ca1a36\", \n\t\t\t\"version\": \"mcwsfpimhyd8wmfe5ef\", \n\t\t\t\"score\": 83818, \n\t\t\t\"codeQualityScore\": 25875\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"86602dc0-da7b-4f67-a145-a099041fdf85\", \n\t\t\t\"applicationId\": \"a4b69e10-1667-465f-ad54-5abea886306d\", \n\t\t\t\"languageId\": \"0d122033-409f-437a-b55a-fa1fcc76c841\", \n\t\t\t\"version\": \"teip0knzwz826j1ktqy\", \n\t\t\t\"score\": 46951, \n\t\t\t\"codeQualityScore\": 33018\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"c268875c-81a0-4ec5-aa5d-652c51e07b62\", \n\t\t\t\"applicationId\": \"37e12046-e6c6-4735-b5a6-e4ed63cf199f\", \n\t\t\t\"languageId\": \"90a94535-a8a4-445c-8bca-8eaa2aae75cf\", \n\t\t\t\"version\": \"arjd027wl0khxr2zeaw\", \n\t\t\t\"score\": 36503, \n\t\t\t\"codeQualityScore\": 30383\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"d6c3ca96-bd8c-49c6-8d67-dd756316f39a\", \n\t\t\t\"applicationId\": \"b79f5b16-0468-40a0-99f2-00f5ae79d3d8\", \n\t\t\t\"languageId\": \"fc715c42-1c34-4632-bff0-50126dfcae48\", \n\t\t\t\"version\": \"b2721j6atg14hc3vgr9\", \n\t\t\t\"score\": 64916, \n\t\t\t\"codeQualityScore\": 28633\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"71f8edf4-f0be-4e6a-82a5-95c1c2c75f1e\", \n\t\t\t\"applicationId\": \"343877cd-c087-4de8-92cf-fd1edbe5da85\", \n\t\t\t\"languageId\": \"38c8e37c-4d00-4dfe-9e7e-5169f8e93adc\", \n\t\t\t\"version\": \"lh909z54h52tb8ri6x6\", \n\t\t\t\"score\": 45081, \n\t\t\t\"codeQualityScore\": 21593\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"fb1f4613-2039-4bbd-b4c4-4ad9fc272091\", \n\t\t\t\"applicationId\": \"830d9cdd-1c92-46e5-a9e2-c247d03aed41\", \n\t\t\t\"languageId\": \"4a186a8f-b308-4c0b-8a9d-9feddc366bd3\", \n\t\t\t\"version\": \"l7c76p45lki4jkapu5o\", \n\t\t\t\"score\": 88012, \n\t\t\t\"codeQualityScore\": 54809\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthPaginateApplitacionLanguages",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tappHealthPaginateApplitacionLanguages (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthGetApplitacionLanguages",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthGetApplitacionLanguages (query: $query)\n\t{\n\t\tid\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationLanguage",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tappHealthFindApplicationLanguage (query: $query)\n\t{\n\t\tid\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthFindApplicationLanguageById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tappHealthFindApplicationLanguageById (id:$id)\n\t{\n\t\tid\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthUpdateApplicationLanguage",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:AppHealthUpdateApplicationLanguageInput!)\n{\n\tappHealthUpdateApplicationLanguage (payload:$payload)\n\t{\n\t\tid\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"languageId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"version\": \"ehr9sldc75z2to7n0tq\", \n\t\t\"score\": 60708, \n\t\t\"codeQualityScore\": 14138\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplicationLanguageById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tappHealthDeleteApplicationLanguageById (id:$id)\n\t{\n\t\tid\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - appHealthDeleteApplitacionLanguages",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tappHealthDeleteApplitacionLanguages (query: $query)\n\t{\n\t\tid\n\t\tversion\n\t\tscore\n\t\tcodeQualityScore\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-language/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"languageId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"version\": \"yalnpl3hml5guwnmw8k\", \n\t\"score\": 70966, \n\t\"codeQualityScore\": 86775\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-language/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-language",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/applitacion-languages/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"7f5a0088-b5bb-47cc-a3f5-a1601dc03354\", \n\t\t\"applicationId\": \"dfc94917-c001-4fad-9e5b-fcac013ded9b\", \n\t\t\"languageId\": \"47c2bdd0-aaa0-4031-84e9-8c45e0d1c4c2\", \n\t\t\"version\": \"kzykmuyiydlacr8jwtg\", \n\t\t\"score\": 56309, \n\t\t\"codeQualityScore\": 12908\n\t}, \n\t{\n\t\t\"id\": \"f5a897af-e2a0-4ac7-8ce0-5f227fe52458\", \n\t\t\"applicationId\": \"518e8bf6-89ba-4d55-9321-0be6750c32fd\", \n\t\t\"languageId\": \"70047854-3e70-4d1a-821c-47b22cdb7c49\", \n\t\t\"version\": \"eg5grye7jxlgo0fi9jd\", \n\t\t\"score\": 30422, \n\t\t\"codeQualityScore\": 98181\n\t}, \n\t{\n\t\t\"id\": \"966b079c-7cfd-4893-b47d-ed4d102e2f79\", \n\t\t\"applicationId\": \"c9019c38-0787-4948-90b6-19db90c322e7\", \n\t\t\"languageId\": \"0c459120-a390-47b4-8a55-34b6feb3b1ca\", \n\t\t\"version\": \"ropbuosiujg48j17csj\", \n\t\t\"score\": 41448, \n\t\t\"codeQualityScore\": 95212\n\t}, \n\t{\n\t\t\"id\": \"51811351-4cb3-41ff-bc77-575d30a4a70c\", \n\t\t\"applicationId\": \"fb5d08db-11e6-4a1a-b7d8-686635ba20c6\", \n\t\t\"languageId\": \"0c13f024-d7f0-42af-bf28-a71269469394\", \n\t\t\"version\": \"yw0etn1jl9dsc84mgfs\", \n\t\t\"score\": 47410, \n\t\t\"codeQualityScore\": 15020\n\t}, \n\t{\n\t\t\"id\": \"25a742ff-f7d4-472f-9faa-1f8aecd07268\", \n\t\t\"applicationId\": \"26ac1c14-82e8-45cf-9971-a73b94a9a2e1\", \n\t\t\"languageId\": \"71802327-bc8a-463b-9c09-e4492fa8d5b1\", \n\t\t\"version\": \"e6rsxthmilwv4bbuhkq\", \n\t\t\"score\": 94148, \n\t\t\"codeQualityScore\": 51479\n\t}, \n\t{\n\t\t\"id\": \"96305552-08c2-4040-9f79-c70ceb57c6e5\", \n\t\t\"applicationId\": \"f1e71e28-4e91-4c90-ab5a-0ee4b5cf3571\", \n\t\t\"languageId\": \"7c3acb2c-2bc1-436c-ad53-4cbff6ba7433\", \n\t\t\"version\": \"jun7dc63o7s9q1lpgay\", \n\t\t\"score\": 46932, \n\t\t\"codeQualityScore\": 68137\n\t}, \n\t{\n\t\t\"id\": \"e3d3ebfd-b97a-442d-9ab3-4f1fe3803b50\", \n\t\t\"applicationId\": \"c09ce9e3-38cf-48bb-b892-bb3338abad6d\", \n\t\t\"languageId\": \"e6bdeb18-2db1-46be-ae94-ed1804304b42\", \n\t\t\"version\": \"uon5td4xyn1p839ue7t\", \n\t\t\"score\": 71497, \n\t\t\"codeQualityScore\": 11298\n\t}, \n\t{\n\t\t\"id\": \"fa4f914c-5e38-490e-98cf-29c1dd22354e\", \n\t\t\"applicationId\": \"ea897b57-9c9a-4543-b3cf-516e359c9412\", \n\t\t\"languageId\": \"62ddf1d3-00c0-454b-9d27-9e5743c78def\", \n\t\t\"version\": \"qj41985okuo79r9re6s\", \n\t\t\"score\": 44211, \n\t\t\"codeQualityScore\": 47590\n\t}, \n\t{\n\t\t\"id\": \"11bfa395-19f9-4cae-96f1-ed7c27dbed40\", \n\t\t\"applicationId\": \"f6589419-e582-4bb9-ab9d-30e22771a234\", \n\t\t\"languageId\": \"20dc36a0-529d-4319-8ea3-df32d4f02369\", \n\t\t\"version\": \"4nageq4tu3ryvq1c1rq\", \n\t\t\"score\": 60680, \n\t\t\"codeQualityScore\": 27215\n\t}, \n\t{\n\t\t\"id\": \"3c827f3c-699b-4a2e-b223-7524387ff847\", \n\t\t\"applicationId\": \"ce23dd42-15a9-4301-8503-ad497b68c8b8\", \n\t\t\"languageId\": \"1a189292-9002-4f31-a798-bbf4eaec9749\", \n\t\t\"version\": \"kxclmm4h5t8fwkby4xi\", \n\t\t\"score\": 89278, \n\t\t\"codeQualityScore\": 58972\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/applitacion-languages/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"applitacion-languages",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/applitacion-languages/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/applitacion-languages/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+                        "applitacion-languages",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/applitacion-languages/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/applitacion-languages/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"applitacion-languages",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-language/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-language/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-language",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-language/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-language/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-language",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-language/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"applicationId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"languageId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"version\": \"s2y87lbs8rj8z8bxurs\", \n\t\"score\": 44670, \n\t\"codeQualityScore\": 37492\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-language/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-language",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - app-health/application-language/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/application-language/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"application-language",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - app-health/applitacion-languages/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app-health/applitacion-languages/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app-health",
+						"applitacion-languages",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

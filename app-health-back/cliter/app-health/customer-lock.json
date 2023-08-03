@@ -1,0 +1,677 @@
+{
+    "version": "0.0.1",
+    "files": [
+        {
+            "path": "src/@app/app-health/app-health.seed.ts",
+            "integrity": "sha1:4c2894632c219082a918b974e6c5c3dd98247f15"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customers.command-handler.spec.ts",
+            "integrity": "sha1:4996ddac6f9398cd3a19bce1e859bcb3307d2fbc"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customers.command-handler.ts",
+            "integrity": "sha1:5b6e4c805f28bd19046e6bdd7b60dc11d359a6d4"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customers.command.ts",
+            "integrity": "sha1:963171ecd11568a9188cdb480a12db55bd0c67ac"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customers.service.spec.ts",
+            "integrity": "sha1:1526c007d4654bd479e9894fa8a5f83a53900636"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customers.service.ts",
+            "integrity": "sha1:11d35b49f418e4e20d6e8ca41afcec6ed3135de6"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customer.command-handler.spec.ts",
+            "integrity": "sha1:7c155311bb7a60a12e34b9bc60f73633c5d59d47"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customer.command-handler.ts",
+            "integrity": "sha1:c1ab0819091b758686d8c9704fc3b4ed805dad7d"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customer.command.ts",
+            "integrity": "sha1:d3cc32ee09aa4af2f783f02daf1e6a4bf725732c"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customer.service.spec.ts",
+            "integrity": "sha1:2c863a95664787938239b861948f1e25d18dbc95"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/create/app-health-create-customer.service.ts",
+            "integrity": "sha1:d5fc06648368d4fb825df87631576bb2bbc23336"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customers.command-handler.spec.ts",
+            "integrity": "sha1:d233d96353e4477ad163a3b4e502e66e3aa9eaa0"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customers.command-handler.ts",
+            "integrity": "sha1:b78eb457002cb9a213fd5f887cc6857d16b56f9f"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customers.command.ts",
+            "integrity": "sha1:85285b63e628c28d0ec3b3639cc5649e754632f0"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customers.service.spec.ts",
+            "integrity": "sha1:a8b383b590459cb77e30a9ea75afd1b24f32006e"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customers.service.ts",
+            "integrity": "sha1:0a5e3fd8aa91b7de4a295b1828f73a3bd50bafe5"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customer-by-id.command-handler.spec.ts",
+            "integrity": "sha1:4baa2d6a3e42448b04479e99d3551833a1cd2bfa"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customer-by-id.command-handler.ts",
+            "integrity": "sha1:8ce04b55e69ebd7319094d54b5f91727dd332585"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customer-by-id.command.ts",
+            "integrity": "sha1:fa1c44bd33988e5f103f14b042fd84760ab5cd27"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customer-by-id.service.spec.ts",
+            "integrity": "sha1:8759d4893e3f5c96eeddc31fd886a5537a1f4858"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/delete/app-health-delete-customer-by-id.service.ts",
+            "integrity": "sha1:9809d47e6cfcdca3d4fe4d8533503eba1f062c59"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-add-customers-context.event.ts",
+            "integrity": "sha1:197e1bc93aadb0012f0e16b31873b00f3acea6b0"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-created-customers.event-handler.ts",
+            "integrity": "sha1:8b61332406090fa5aa2def6ed170ed7ea33f2072"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-created-customers.event.ts",
+            "integrity": "sha1:049efe8950270baf5041b56445b743099c9c8519"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-created-customer.event-handler.ts",
+            "integrity": "sha1:9b17a568f75a9e15876aabe19dcc54e5373a7e78"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-created-customer.event.ts",
+            "integrity": "sha1:9d851822eecf63b32f8208295386f5782646df36"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-deleted-customers.event-handler.ts",
+            "integrity": "sha1:1ca47d3b53002485a77588f418bd0007abc258b7"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-deleted-customers.event.ts",
+            "integrity": "sha1:b6dffcf01135c0b828c73d25445b0b9fc9e84588"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-deleted-customer.event-handler.ts",
+            "integrity": "sha1:d318f27220abda6a9e04ef9e5b4f869cd12ee785"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-deleted-customer.event.ts",
+            "integrity": "sha1:6ebfcc6155ba93de34c1232b374e792eb6734045"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-updated-customers.event-handler.ts",
+            "integrity": "sha1:ce7b8547d35842f139f4fcd7341acaf281427526"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-updated-customers.event.ts",
+            "integrity": "sha1:56008103519d066efc070f2ac7d8a22324375f73"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-updated-customer.event-handler.ts",
+            "integrity": "sha1:7136ae54076f8a2d2d242830cc652dce560c95f2"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/events/app-health-updated-customer.event.ts",
+            "integrity": "sha1:c72bfaaf7db55f9eba69e3d8ecb0bc2e06282f99"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer-by-id.query-handler.spec.ts",
+            "integrity": "sha1:f045b79829faff85e6b05f9dc2280717a7215dca"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer-by-id.query-handler.ts",
+            "integrity": "sha1:3a538718557d2a618b404e20c354c0731f9926a9"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer-by-id.query.ts",
+            "integrity": "sha1:a9b8cde58c69cded4f6da40ebe6e9e5f2c59e4c2"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer-by-id.service.spec.ts",
+            "integrity": "sha1:0417d3052f11d98f9238551535168485c62f1aee"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer-by-id.service.ts",
+            "integrity": "sha1:09a72f7507db05155a60ed8b47f42e361c877a5d"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer.query-handler.spec.ts",
+            "integrity": "sha1:945f8676e02ae5835cec837b5bfa05c24ea6a3ea"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer.query-handler.ts",
+            "integrity": "sha1:4b5dd457c58bb95ad70cd737a0f25ef06284263e"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer.query.ts",
+            "integrity": "sha1:fe2aa0918d24896f3f67754a12095ee70ef0598a"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer.service.spec.ts",
+            "integrity": "sha1:1a798c17cf9aaba31537a041c20916556b8f0b9a"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/find/app-health-find-customer.service.ts",
+            "integrity": "sha1:26a4de93bbb41a7e3c8826f0f3bcc89d6c432143"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/get/app-health-get-customers.query-handler.spec.ts",
+            "integrity": "sha1:60dfa98f7556cc967abb931225b2d38d073ca375"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/get/app-health-get-customers.query-handler.ts",
+            "integrity": "sha1:f1af3bd1c4e84be0d191d790bf3b8428445c5b9f"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/get/app-health-get-customers.query.ts",
+            "integrity": "sha1:ca071d9e5989eb8922707034d6e0a576c2129a32"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/get/app-health-get-customers.service.spec.ts",
+            "integrity": "sha1:8fd393c9200d0d8ce0d0ecf2786cd6b2c0d2be1b"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/get/app-health-get-customers.service.ts",
+            "integrity": "sha1:0502c176ef4d2f5816d8828fef7dd553487591b2"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/paginate/app-health-paginate-customers.query-handler.spec.ts",
+            "integrity": "sha1:21e77f47da3ae1ebf0d36ed4e235ee0280c5f394"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/paginate/app-health-paginate-customers.query-handler.ts",
+            "integrity": "sha1:705f7b7aded4fc8d49d72aa3db42a1741d35d22b"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/paginate/app-health-paginate-customers.query.ts",
+            "integrity": "sha1:457f50b00f48f9bde59ebecccd4cb5f9ea015056"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/paginate/app-health-paginate-customers.service.spec.ts",
+            "integrity": "sha1:5e7513c67812043e2a549aef17b039a90ec417f0"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/paginate/app-health-paginate-customers.service.ts",
+            "integrity": "sha1:a8bb9928c70360ab2d23c8f4bebc1621c1098819"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/raw-sql/app-health-raw-sql-customers.query-handler.spec.ts",
+            "integrity": "sha1:7eecacb77dae13f0e39e8fa81c2f97b677fa4187"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/raw-sql/app-health-raw-sql-customers.query-handler.ts",
+            "integrity": "sha1:556b2db374263545122712ef5a9ca994ad5d3928"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/raw-sql/app-health-raw-sql-customers.query.ts",
+            "integrity": "sha1:8301a97487dbb190bdb8676efea01ecd43449b08"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/raw-sql/app-health-raw-sql-customers.service.spec.ts",
+            "integrity": "sha1:481b4cb8719ff9ae3487e45bbb79b2ccd313f84d"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/raw-sql/app-health-raw-sql-customers.service.ts",
+            "integrity": "sha1:dcd3fffe1bfb3d4d53c2d717ee44629b582f8346"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/sagas/app-health-customer.sagas.ts",
+            "integrity": "sha1:5a4801d15fc1fada6357b1f812d89d86bab9b0a9"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customers.command-handler.spec.ts",
+            "integrity": "sha1:5b6bb0c4c8c12e32f2049f5490f2f77f0116438f"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customers.command-handler.ts",
+            "integrity": "sha1:6670cbcf318864e9bbefaba72f5a58c92051c818"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customers.command.ts",
+            "integrity": "sha1:64f91a39f93d5a6d52de2904f1c7f07b9821dbaf"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customers.service.spec.ts",
+            "integrity": "sha1:64d4cb199391effef1967b1444cc9dbab2e3ac65"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customers.service.ts",
+            "integrity": "sha1:5b9bf365cd231e4090e1288f26b0f552167115e3"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customer-by-id.command-handler.spec.ts",
+            "integrity": "sha1:3041cf709260103884a540f6f3286b9353c728d7"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customer-by-id.command-handler.ts",
+            "integrity": "sha1:c567ecf3b73b5f747a4e923cde1ed104b74d011a"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customer-by-id.command.ts",
+            "integrity": "sha1:4af311b0b417201ff32743c4f40ce63ba75a871f"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customer-by-id.service.spec.ts",
+            "integrity": "sha1:41f17a88261ccbae60e0e06f3908519b1ab18485"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/update/app-health-update-customer-by-id.service.ts",
+            "integrity": "sha1:e2838dcc52a3f09d25674b24fb51c21c1b5c2f46"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/upsert/app-health-upsert-customer.command-handler.spec.ts",
+            "integrity": "sha1:15452daef8dc71c04ba7f9a0fd46693ca8d98425"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/upsert/app-health-upsert-customer.command-handler.ts",
+            "integrity": "sha1:966d010e41e6eb58e74bf4819ad4371663b4705d"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/upsert/app-health-upsert-customer.command.ts",
+            "integrity": "sha1:fb8cdfff821d6a4f778cbabb61c2ecb747099153"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/upsert/app-health-upsert-customer.service.spec.ts",
+            "integrity": "sha1:32c663e27589fb40f97e6c6d03f34957cf3db2d0"
+        },
+        {
+            "path": "src/@app/app-health/customer/application/upsert/app-health-upsert-customer.service.ts",
+            "integrity": "sha1:a9af2eed87518ff8878b276afb32f829685757a8"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/value-objects/index.ts",
+            "integrity": "sha1:932c89685143c33bce3d8bd93aab30f795dc794a"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/app-health-customer.aggregate.ts",
+            "integrity": "sha1:c05f47fd24dff0bc30c98f3f0493e2ec7e49661f"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/app-health-customer.mapper.ts",
+            "integrity": "sha1:de4621b1d61d8ea710ccd07835ba23652c93252e"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/app-health-customer.repository.ts",
+            "integrity": "sha1:707b5c9dbe2dc2cf154a9ed0ebe701beeea74c8e"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/app-health-customer.response.ts",
+            "integrity": "sha1:cf0bae74a2223ce65ceef1609d95120f32a61c0c"
+        },
+        {
+            "path": "src/@app/app-health/customer/index.ts",
+            "integrity": "sha1:3539b30df29ca4ea3de689eee667646ece25fbdf"
+        },
+        {
+            "path": "src/@app/app-health/customer/infrastructure/mock/app-health-mock-customer.data.ts",
+            "integrity": "sha1:e6f0e8cc683fcb7c9849994312007bca890f5dbe"
+        },
+        {
+            "path": "src/@app/app-health/customer/infrastructure/mock/app-health-mock-customer.repository.ts",
+            "integrity": "sha1:6497d76c7a4952f552b885de53ecd393899cee91"
+        },
+        {
+            "path": "src/@app/app-health/customer/infrastructure/mock/app-health-mock-customer.seeder.ts",
+            "integrity": "sha1:9930749b6553d93f0504a7a6423d7427f1aa64a3"
+        },
+        {
+            "path": "src/@app/app-health/customer/infrastructure/sequelize/app-health-sequelize-customer.model.ts",
+            "integrity": "sha1:2de46eef9a20324ac071c18069a49f83dc3c8256"
+        },
+        {
+            "path": "src/@app/app-health/customer/infrastructure/sequelize/app-health-sequelize-customer.repository.ts",
+            "integrity": "sha1:4e0c61bc5a28081cf1d1b09b855bc6061eeded9e"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/value-objects/app-health-customer-id.ts",
+            "integrity": "sha1:3fb4cec4d96505c24cb84c3e389ccc0a91664193"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/value-objects/app-health-customer-name.ts",
+            "integrity": "sha1:8264e3b04316849f211fd74d4289b79bb3a4b3d4"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/value-objects/app-health-customer-created-at.ts",
+            "integrity": "sha1:16c04c4210c3ceca519ca76bb70a6e2d2525bdbc"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/value-objects/app-health-customer-updated-at.ts",
+            "integrity": "sha1:9aa6cf2984a6d581103e3ee63db2f24187feba3f"
+        },
+        {
+            "path": "src/@app/app-health/customer/domain/value-objects/app-health-customer-deleted-at.ts",
+            "integrity": "sha1:431d2dc8bd79411bcddffd982892e77c6cb233d7"
+        },
+        {
+            "path": "src/@api/app-health/app-health.seeder.ts",
+            "integrity": "sha1:5d4a4566b536b35b8f5849d4a788dac722137ecd"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-create-customers.controller.spec.ts",
+            "integrity": "sha1:cfc242427f64f8a8468854419b73bad447b9ae84"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-create-customers.controller.ts",
+            "integrity": "sha1:7bfa93fb068c247ed563bfa37007926d97b9ca54"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-create-customer.controller.spec.ts",
+            "integrity": "sha1:8ac6fddca828858b44e17da22f200c39c4ebf62e"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-create-customer.controller.ts",
+            "integrity": "sha1:b6255b64d8d9353c1aa5918aa423cfac2f81ed39"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-delete-customers.controller.spec.ts",
+            "integrity": "sha1:4b22919e4a5116fb224a52a4215f5b7fccb9ff21"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-delete-customers.controller.ts",
+            "integrity": "sha1:6c45c0e3f0f1a21c94b280b82005a7d9f7487374"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-delete-customer-by-id.controller.spec.ts",
+            "integrity": "sha1:3810065437fe54e48de05b9c67cf487ee573a888"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-delete-customer-by-id.controller.ts",
+            "integrity": "sha1:57ae7f07e146e89c2e07239c80de14a43f0a2f3c"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-find-customer-by-id.controller.spec.ts",
+            "integrity": "sha1:b37e969e1abe328f66805d54fa1d48a9c92ab50c"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-find-customer-by-id.controller.ts",
+            "integrity": "sha1:60668bd2684e674d47a2b7cc1d5a973ae5e3ec9b"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-find-customer.controller.spec.ts",
+            "integrity": "sha1:c300508672ee371ecb083c3543dcfc9c575ec0dd"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-find-customer.controller.ts",
+            "integrity": "sha1:57b7bd18027d831c201f62ad416c18c17d7c09be"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-get-customers.controller.spec.ts",
+            "integrity": "sha1:67934d9fdee7f69b73ffd8497d6b97a8949ac036"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-get-customers.controller.ts",
+            "integrity": "sha1:12bd56c950c1456d65327269bf7ec4397cd146e7"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-paginate-customers.controller.spec.ts",
+            "integrity": "sha1:ea300738c7b992ec8cd04fcff5720b611713be26"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-paginate-customers.controller.ts",
+            "integrity": "sha1:8f9a200d7cfdbf59cda1a49501acc8f797fc7596"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-update-customers.controller.spec.ts",
+            "integrity": "sha1:9ab460a2a51e08922788488dc21c23a62f3b593d"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-update-customers.controller.ts",
+            "integrity": "sha1:f58b2f3045f577c8fb1ee731c9a66a7f7408e63b"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-update-customer-by-id.controller.spec.ts",
+            "integrity": "sha1:89263d7751ad48198aa3b8e6472b556f2e49a17b"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-update-customer-by-id.controller.ts",
+            "integrity": "sha1:0bcf78e53446b0ca6761e79760b1f991be7d7669"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-upsert-customer.controller.spec.ts",
+            "integrity": "sha1:c5b19ba2a7a34b82b9173ad5873b011a97aabdb4"
+        },
+        {
+            "path": "src/@api/app-health/customer/controllers/app-health-upsert-customer.controller.ts",
+            "integrity": "sha1:23f23b9ca5368132686b02fdeedcd32f25f23be1"
+        },
+        {
+            "path": "src/@api/app-health/customer/dto/index.ts",
+            "integrity": "sha1:87876b221628874293be4f3add0a39c5570b229e"
+        },
+        {
+            "path": "src/@api/app-health/customer/dto/app-health-create-customer.dto.ts",
+            "integrity": "sha1:7395dff5f3808e15261e227ce0eb9f076b405c47"
+        },
+        {
+            "path": "src/@api/app-health/customer/dto/app-health-update-customers.dto.ts",
+            "integrity": "sha1:14a603d1f216a3f9795a8090d5f6c810b58f3830"
+        },
+        {
+            "path": "src/@api/app-health/customer/dto/app-health-update-customer-by-id.dto.ts",
+            "integrity": "sha1:a5db67ef3d23fcdfe373f58ade25c33ef4a0d3f0"
+        },
+        {
+            "path": "src/@api/app-health/customer/dto/app-health-customer.dto.ts",
+            "integrity": "sha1:6510ded09b4dc528d74b4f9130e2deac0b2ce4f5"
+        },
+        {
+            "path": "src/@api/app-health/customer/graphql/app-health-customer.graphql",
+            "integrity": "sha1:7186351786272042a73e207b45ef73839652f39b"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-create-customers.handler.spec.ts",
+            "integrity": "sha1:790529fca025b8088b912c75a8e0b135044644fb"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-create-customers.handler.ts",
+            "integrity": "sha1:4bbcb75c0145d8d2475a822ed21986523844e878"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-create-customer.handler.spec.ts",
+            "integrity": "sha1:11b467dc0c4936e63598eb425fa55c5f056218dd"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-create-customer.handler.ts",
+            "integrity": "sha1:daac84217270f688259c07ca2098045898f07b1a"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-delete-customers.handler.spec.ts",
+            "integrity": "sha1:266bee90600c19c055da2de68fd6151ca7105afc"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-delete-customers.handler.ts",
+            "integrity": "sha1:889819e7f9c4a0e1e232032c59b45f594a98959d"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-delete-customer-by-id.handler.spec.ts",
+            "integrity": "sha1:45474432cc57fbfe977075819f7a6e4bc2567eef"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-delete-customer-by-id.handler.ts",
+            "integrity": "sha1:8d9dada0fd97c8400d483e07ce1633423336ed82"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-find-customer-by-id.handler.spec.ts",
+            "integrity": "sha1:dfc8e309dd65aa399320be3f9f90fbc1b126b8d6"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-find-customer-by-id.handler.ts",
+            "integrity": "sha1:e122dace3702e9ff6caf3015dc684b0c93e4427a"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-find-customer.handler.spec.ts",
+            "integrity": "sha1:0a550af7dde0476d24b6ee10905240ba0fdf56c1"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-find-customer.handler.ts",
+            "integrity": "sha1:f1a7073c5f7dca60180d308b3fb48cfe2b24a626"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-get-customers.handler.spec.ts",
+            "integrity": "sha1:73c0f463db580fc93ccacae8912c62f1ad622ccd"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-get-customers.handler.ts",
+            "integrity": "sha1:13923f825f1469a5fb4073c44776d2a09ea552fc"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-paginate-customers.handler.spec.ts",
+            "integrity": "sha1:375d3fbd01b31db63ddacac066cb3435dcb5b289"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-paginate-customers.handler.ts",
+            "integrity": "sha1:6ebf0454905ee3514e7f992b44a72ee64f9a1174"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-update-customers.handler.spec.ts",
+            "integrity": "sha1:88aa0592678c43ab32186df14dbc6867e3505cc2"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-update-customers.handler.ts",
+            "integrity": "sha1:515eea086e70249abc2cb23a04d77ae47d766972"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-update-customer-by-id.handler.spec.ts",
+            "integrity": "sha1:56578242e6abb7dc89880e4e86e8318102c172d7"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-update-customer-by-id.handler.ts",
+            "integrity": "sha1:de2b4520b860436322fe6ff385c4a66dd4a9c54b"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-upsert-customer.handler.spec.ts",
+            "integrity": "sha1:67d8229c53df23ea06df973b733809888ab2ee65"
+        },
+        {
+            "path": "src/@api/app-health/customer/handlers/app-health-upsert-customer.handler.ts",
+            "integrity": "sha1:c1da863071eafe1589638261c4f9b87f262a44b4"
+        },
+        {
+            "path": "src/@api/app-health/customer/index.ts",
+            "integrity": "sha1:330fb597b16b4d56ccb39689d1e9a20763067b77"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-create-customers.resolver.spec.ts",
+            "integrity": "sha1:b7f06857c952d23e853b02d53f05687a82832437"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-create-customers.resolver.ts",
+            "integrity": "sha1:2a562d76d4d02039e3664be13ca83dbdb07811fe"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-create-customer.resolver.spec.ts",
+            "integrity": "sha1:1f7c2662f0fefdb92c0208f08904929ea97876cb"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-create-customer.resolver.ts",
+            "integrity": "sha1:ffb683a02379f2a7c9d422df17f851da781bb4bc"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-delete-customers.resolver.spec.ts",
+            "integrity": "sha1:68cb8a3c88027221d0eda73e0f40ad843e700b6e"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-delete-customers.resolver.ts",
+            "integrity": "sha1:79ef173238173c7cd9e858d683f792bc0d53362a"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-delete-customer-by-id.resolver.spec.ts",
+            "integrity": "sha1:de8f6812241e02029e8ccd86398213d9126453d0"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-delete-customer-by-id.resolver.ts",
+            "integrity": "sha1:7b608d91a3f88b1f643f2fdbfd0353f39f758edc"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-find-customer-by-id.resolver.spec.ts",
+            "integrity": "sha1:622c471057888b195f241bc0c05d515930652b82"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-find-customer-by-id.resolver.ts",
+            "integrity": "sha1:ee8c55c91b6a15c9f94d6a728cb23603f0b9d538"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-find-customer.resolver.spec.ts",
+            "integrity": "sha1:612da4e22e11621730e84654c4245cf47827c095"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-find-customer.resolver.ts",
+            "integrity": "sha1:95b06f311d48d061a29c39023efe33f77071498c"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-get-customers.resolver.spec.ts",
+            "integrity": "sha1:7f23571d2443d4aa2e0fb2373c74a456f8c553e2"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-get-customers.resolver.ts",
+            "integrity": "sha1:4d1c9d4f13a9c8221a14504a73dec6b8460b19ef"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-paginate-customers.resolver.spec.ts",
+            "integrity": "sha1:ac552ba0365baaed0839fe3ac38b66f661a42197"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-paginate-customers.resolver.ts",
+            "integrity": "sha1:9386c4945f519f39898a8cfc133df1d0adf1c62b"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-update-customers.resolver.spec.ts",
+            "integrity": "sha1:7f938893c5845794a0b90642644982a7a4a5a39a"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-update-customers.resolver.ts",
+            "integrity": "sha1:4ebbd4a5eab4aeb05e8d2575100ff95ec350c5fb"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-update-customer-by-id.resolver.spec.ts",
+            "integrity": "sha1:d6fdf3a3b086bc9bce56260908e466d9f7fe9d17"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-update-customer-by-id.resolver.ts",
+            "integrity": "sha1:9e35e6f098bbfd823c5567130dd8fa681de0a414"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-upsert-customer.resolver.spec.ts",
+            "integrity": "sha1:961ac05fd535c7b949ec8b2a521c38948e9cde02"
+        },
+        {
+            "path": "src/@api/app-health/customer/resolvers/app-health-upsert-customer.resolver.ts",
+            "integrity": "sha1:bb2de551e23d94acaf64be148df41b626f280b48"
+        },
+        {
+            "path": "src/@api/app-health/customer/seeder/app-health-customer.seeder.ts",
+            "integrity": "sha1:ea3daba251a5aca7ea37c0f8cd5c68f834797e54"
+        },
+        {
+            "path": "test/acceptance/app-health/customer.e2e-spec.ts",
+            "integrity": "sha1:c1a7968cf6fbbcc819b004dd1749e8c1737ee0d5"
+        },
+        {
+            "path": "postman/app-health/app-health.customer.postman.json",
+            "integrity": "sha1:62c9eb7cbebe7f7cc5b0a102410171a17f438949"
+        }
+    ]
+}

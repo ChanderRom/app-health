@@ -1,0 +1,673 @@
+{
+    "version": "0.0.1",
+    "files": [
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-languages.command-handler.spec.ts",
+            "integrity": "sha1:dc2f532b67c6698d14ec007290ea971829f64782"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-languages.command-handler.ts",
+            "integrity": "sha1:6bf31cd0647186531e893296fbd3205d2793a2ce"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-languages.command.ts",
+            "integrity": "sha1:94930aa88fbd4a8fff4793a278e1b72ba80a4381"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-languages.service.spec.ts",
+            "integrity": "sha1:b8677ac37432ed665aad12738633bcd0739c917e"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-languages.service.ts",
+            "integrity": "sha1:e5be66a488d45988e2c2324dde8a074569b0e0e6"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-language.command-handler.spec.ts",
+            "integrity": "sha1:a0ea48d20c29e99a834c7883c93bdcdae39f234a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-language.command-handler.ts",
+            "integrity": "sha1:e10eb0f3841490fd2b2392b89f9a5d55198fd3a3"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-language.command.ts",
+            "integrity": "sha1:598cbc36a5ddee9a98b0b40d4f0a6f85e36bb69a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-language.service.spec.ts",
+            "integrity": "sha1:55bee623b513fdf1d99b54b3e879cf2f181309ed"
+        },
+        {
+            "path": "src/@app/app-health/language/application/create/app-health-create-language.service.ts",
+            "integrity": "sha1:ccefb148b6deb999752e9f75f5cb355a646b5c0a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-languages.command-handler.spec.ts",
+            "integrity": "sha1:8d4b90794dc1ef290c274140fe54d83fdbea0013"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-languages.command-handler.ts",
+            "integrity": "sha1:5d3c23dd7b415a4d20df59ad70479996fec10393"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-languages.command.ts",
+            "integrity": "sha1:9e8046b16b5cc7280e8998bc8e60bb6e2e449c2f"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-languages.service.spec.ts",
+            "integrity": "sha1:39411d41cfadf75789a8120c42da9bfeb43ec325"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-languages.service.ts",
+            "integrity": "sha1:7b7e1d001a013c356c15e0f57a48c7a29911c1bc"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-language-by-id.command-handler.spec.ts",
+            "integrity": "sha1:e4c37a6468d30c4a8eaad324253132d4e5fa3f1f"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-language-by-id.command-handler.ts",
+            "integrity": "sha1:965f78da643917b4b2b7010595ba5d102515bc85"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-language-by-id.command.ts",
+            "integrity": "sha1:7b3d7cc565e908c65dcd7342c2a311d74385a82f"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-language-by-id.service.spec.ts",
+            "integrity": "sha1:6478e17ad663450d7894ddded911a83dfc88175a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/delete/app-health-delete-language-by-id.service.ts",
+            "integrity": "sha1:608980d76be625134a9b7fa6172bc936a5076444"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-add-languages-context.event.ts",
+            "integrity": "sha1:8435f912f5e988ce208875936494f70a75680a2b"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-created-languages.event-handler.ts",
+            "integrity": "sha1:91342fa6385e29bd7d38d23a7b4b653f30e61315"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-created-languages.event.ts",
+            "integrity": "sha1:9ec0207d46d92b73a9efa76f7f14ff996aaa9577"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-created-language.event-handler.ts",
+            "integrity": "sha1:56e688ea4f1bd91b4ed6779622f26d837e83f56e"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-created-language.event.ts",
+            "integrity": "sha1:562130e7f174fb7b96fdc463ca1a00685e3a437c"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-deleted-languages.event-handler.ts",
+            "integrity": "sha1:9bbd7a8e1af71815788047db25363fcd4c316667"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-deleted-languages.event.ts",
+            "integrity": "sha1:9a61f0022fd14d69080c62523b0d9a529a51d15d"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-deleted-language.event-handler.ts",
+            "integrity": "sha1:0564a3882d4540b2c3901f1494b7d847d0c1dd61"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-deleted-language.event.ts",
+            "integrity": "sha1:a51af1ff7d0e3aa1a5ec713663143494fc26bd6e"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-updated-languages.event-handler.ts",
+            "integrity": "sha1:0a6c58f2f8385c916218f5f1278e9123a121cdef"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-updated-languages.event.ts",
+            "integrity": "sha1:54c449189c454cbc81bfe84d2fc37a15c0dcac3a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-updated-language.event-handler.ts",
+            "integrity": "sha1:e29688d4c6ec693eddea8bd0c0a21653819f5658"
+        },
+        {
+            "path": "src/@app/app-health/language/application/events/app-health-updated-language.event.ts",
+            "integrity": "sha1:9bb7acf8bdfb42592fd8552880ae04f6475adc26"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language-by-id.query-handler.spec.ts",
+            "integrity": "sha1:b3c64ea5b620088928b43a252fed2797a28a805a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language-by-id.query-handler.ts",
+            "integrity": "sha1:fc47169f9100ed50492b8b1ec614e0de8a7f6daa"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language-by-id.query.ts",
+            "integrity": "sha1:15d82103b0faebd7d46c385c973937024b969260"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language-by-id.service.spec.ts",
+            "integrity": "sha1:e7944c6bdacaa7e7223013798eeb55ebbf165470"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language-by-id.service.ts",
+            "integrity": "sha1:56ba4021ce6d3748be5d7774ce2ca308cebfe40b"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language.query-handler.spec.ts",
+            "integrity": "sha1:77226a0d0d65de324bd322fc6e3d7f2b1e55c069"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language.query-handler.ts",
+            "integrity": "sha1:12d7db888c7f93dcf1239695e587402e44fcf707"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language.query.ts",
+            "integrity": "sha1:f4a32b50f51518be6a2eafb7abb47873fb54dd8d"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language.service.spec.ts",
+            "integrity": "sha1:64fe6ed09392a6404187ba1d23f6568967d6e221"
+        },
+        {
+            "path": "src/@app/app-health/language/application/find/app-health-find-language.service.ts",
+            "integrity": "sha1:ca7ec6eea13a72b36954c07ef71ac7a87cbace85"
+        },
+        {
+            "path": "src/@app/app-health/language/application/get/app-health-get-languages.query-handler.spec.ts",
+            "integrity": "sha1:974d9db9655276f1809d02674da70b3946c46901"
+        },
+        {
+            "path": "src/@app/app-health/language/application/get/app-health-get-languages.query-handler.ts",
+            "integrity": "sha1:02574a17cb1314a23735cdba8092a37ed7e17fb5"
+        },
+        {
+            "path": "src/@app/app-health/language/application/get/app-health-get-languages.query.ts",
+            "integrity": "sha1:92b2a69e4ad7601b08f00a2de7817be3df10ef8a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/get/app-health-get-languages.service.spec.ts",
+            "integrity": "sha1:fec5a41321df3349f2145641c3d86baffaa00e15"
+        },
+        {
+            "path": "src/@app/app-health/language/application/get/app-health-get-languages.service.ts",
+            "integrity": "sha1:0147bd76d06be10c7b5bc84dd2e01b4613082021"
+        },
+        {
+            "path": "src/@app/app-health/language/application/paginate/app-health-paginate-languages.query-handler.spec.ts",
+            "integrity": "sha1:0b3bbac5caee9045ec0b6f14d708735ca4342343"
+        },
+        {
+            "path": "src/@app/app-health/language/application/paginate/app-health-paginate-languages.query-handler.ts",
+            "integrity": "sha1:e3e312a0279ec513de9b054926c46638833b92cb"
+        },
+        {
+            "path": "src/@app/app-health/language/application/paginate/app-health-paginate-languages.query.ts",
+            "integrity": "sha1:9f76a7ed26fce896c28685c534a53542a97b1ac0"
+        },
+        {
+            "path": "src/@app/app-health/language/application/paginate/app-health-paginate-languages.service.spec.ts",
+            "integrity": "sha1:81ec68615cac870e224639b01a19a8017029b770"
+        },
+        {
+            "path": "src/@app/app-health/language/application/paginate/app-health-paginate-languages.service.ts",
+            "integrity": "sha1:fd008e9de093259468d2cd8732ac8382154a52a1"
+        },
+        {
+            "path": "src/@app/app-health/language/application/raw-sql/app-health-raw-sql-languages.query-handler.spec.ts",
+            "integrity": "sha1:9911754a134befabae865f906fe54d53dd23766e"
+        },
+        {
+            "path": "src/@app/app-health/language/application/raw-sql/app-health-raw-sql-languages.query-handler.ts",
+            "integrity": "sha1:076264887dbec5aed64ec338e1b0a425492ff3e9"
+        },
+        {
+            "path": "src/@app/app-health/language/application/raw-sql/app-health-raw-sql-languages.query.ts",
+            "integrity": "sha1:87404951ce797322b8e2defa57d22ef38c9e3200"
+        },
+        {
+            "path": "src/@app/app-health/language/application/raw-sql/app-health-raw-sql-languages.service.spec.ts",
+            "integrity": "sha1:6ae09e7a0e9080e1613ee745e5f0df2d46a28edc"
+        },
+        {
+            "path": "src/@app/app-health/language/application/raw-sql/app-health-raw-sql-languages.service.ts",
+            "integrity": "sha1:9b49c6847f9c7d0eb0392b723e6c3c85ffbb2f9b"
+        },
+        {
+            "path": "src/@app/app-health/language/application/sagas/app-health-language.sagas.ts",
+            "integrity": "sha1:a4df34432d55068615d3b1d3f6b8730a8db4a70a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-languages.command-handler.spec.ts",
+            "integrity": "sha1:be67c5f6387680dcd616bd910540ea3bcf295a27"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-languages.command-handler.ts",
+            "integrity": "sha1:ae05577b25a461e99a734fff6c0f7ac7d8bf785d"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-languages.command.ts",
+            "integrity": "sha1:03885f25357a57317c3df0555302c19358b80742"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-languages.service.spec.ts",
+            "integrity": "sha1:a0ab6f92fe2ee3c68698d9f539bd53c525d3b7a1"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-languages.service.ts",
+            "integrity": "sha1:eb53ac78af4eb5dc2c9e15f5c7162a7ad1798f1a"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-language-by-id.command-handler.spec.ts",
+            "integrity": "sha1:415f65202232af8726d5145d11fda54c82b2e4cc"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-language-by-id.command-handler.ts",
+            "integrity": "sha1:e9db852c113f27cd8910f72e3b92b788aead115c"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-language-by-id.command.ts",
+            "integrity": "sha1:f2f0cb7ae96e09f238cb17d552f2b0a2ad41e48d"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-language-by-id.service.spec.ts",
+            "integrity": "sha1:03c1897dea34a9a35cff9f1edbe2f4907a845c03"
+        },
+        {
+            "path": "src/@app/app-health/language/application/update/app-health-update-language-by-id.service.ts",
+            "integrity": "sha1:0053b035d7c55b9a7f286b25aa3b788d253d11e6"
+        },
+        {
+            "path": "src/@app/app-health/language/application/upsert/app-health-upsert-language.command-handler.spec.ts",
+            "integrity": "sha1:4c75d54ab09cd883e8584af1265ed2906f362945"
+        },
+        {
+            "path": "src/@app/app-health/language/application/upsert/app-health-upsert-language.command-handler.ts",
+            "integrity": "sha1:4bf805776b60ea7ebc0500ed0a86c1f3f47c4d83"
+        },
+        {
+            "path": "src/@app/app-health/language/application/upsert/app-health-upsert-language.command.ts",
+            "integrity": "sha1:69fd5b53b220b5416cc7a759bac1779e4e02b033"
+        },
+        {
+            "path": "src/@app/app-health/language/application/upsert/app-health-upsert-language.service.spec.ts",
+            "integrity": "sha1:27bc88bd336bd53300a8f2ef9c2c2a7c318e2fc9"
+        },
+        {
+            "path": "src/@app/app-health/language/application/upsert/app-health-upsert-language.service.ts",
+            "integrity": "sha1:ec3a980b5492a7c0c7a017dbf3573a07635545ca"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/index.ts",
+            "integrity": "sha1:03e3f09d4020a65587177f9f149a9f0c2ab0cedc"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/app-health-language.aggregate.ts",
+            "integrity": "sha1:ea5b2e19bde4acf584b848040fd144a53d2e3d5a"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/app-health-language.mapper.ts",
+            "integrity": "sha1:a655e6de7a29348449fb20e2daf99d47177acf11"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/app-health-language.repository.ts",
+            "integrity": "sha1:cde16c65a567c425d414a30c43d3a620924fff6f"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/app-health-language.response.ts",
+            "integrity": "sha1:7b7f0b6f87fc77d323fd41871369d311f8d79b2d"
+        },
+        {
+            "path": "src/@app/app-health/language/index.ts",
+            "integrity": "sha1:fce324d9cb96d5a0cab6da3628303e8b6785b553"
+        },
+        {
+            "path": "src/@app/app-health/language/infrastructure/mock/app-health-mock-language.data.ts",
+            "integrity": "sha1:90b6fbb4725b068d3b8ed519a15cce169da8ba34"
+        },
+        {
+            "path": "src/@app/app-health/language/infrastructure/mock/app-health-mock-language.repository.ts",
+            "integrity": "sha1:e0a02346adbc7710760ceb6f5ec3cf705f7c3bb1"
+        },
+        {
+            "path": "src/@app/app-health/language/infrastructure/mock/app-health-mock-language.seeder.ts",
+            "integrity": "sha1:309a1ca03e9978f25a994ec130f9dc8eb304c2a9"
+        },
+        {
+            "path": "src/@app/app-health/language/infrastructure/sequelize/app-health-sequelize-language.model.ts",
+            "integrity": "sha1:4b25271178059f2895b74df1cfcc5c4f8492a9b0"
+        },
+        {
+            "path": "src/@app/app-health/language/infrastructure/sequelize/app-health-sequelize-language.repository.ts",
+            "integrity": "sha1:8a65ee4f22f6f355270c385d2945a4ee0749e57f"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/app-health-language-id.ts",
+            "integrity": "sha1:7e6e5b13c52babbd98a48e3cfc3c5cdc5b0fdcaf"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/app-health-language-name.ts",
+            "integrity": "sha1:7dfc750ded1798c0f78a2f7596534793eb7ebe49"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/app-health-language-versions.ts",
+            "integrity": "sha1:b2cefd42d7d8d49a9aa2fecf24f9a5de61dc2248"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/app-health-language-created-at.ts",
+            "integrity": "sha1:bd8ee88196ca1b6ad9a663c66a76416d5efa5714"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/app-health-language-updated-at.ts",
+            "integrity": "sha1:ef29e907b032d08182aecf0cd0ec1a1ca6fb2e1d"
+        },
+        {
+            "path": "src/@app/app-health/language/domain/value-objects/app-health-language-deleted-at.ts",
+            "integrity": "sha1:7c47324519d649da7a3998c0a79094d5ec53019d"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-create-languages.controller.spec.ts",
+            "integrity": "sha1:462edbda3c45b7273a81b9508bbb843276435e98"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-create-languages.controller.ts",
+            "integrity": "sha1:896763c2759bbdcb3f2eb92557d23bfd6d718a7b"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-create-language.controller.spec.ts",
+            "integrity": "sha1:89a0274384d180ade4713d7fde9a1bc25f7ff830"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-create-language.controller.ts",
+            "integrity": "sha1:fb2ea0856c2b3066a54a5e764c13c631dce2ce5b"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-delete-languages.controller.spec.ts",
+            "integrity": "sha1:4988f29e20e207103b29881e57f60c26ef31d4e5"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-delete-languages.controller.ts",
+            "integrity": "sha1:e6f8afd1005242f0bf520fd3a01c4a9710f1ab04"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-delete-language-by-id.controller.spec.ts",
+            "integrity": "sha1:53658c5a7751fe0d8ed323ecaf32fb1c4f334ab5"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-delete-language-by-id.controller.ts",
+            "integrity": "sha1:d8e0f5e9558da997b3342b46a0408b684d6584e1"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-find-language-by-id.controller.spec.ts",
+            "integrity": "sha1:bad63ce4e563759c849be2f49ddff66652a80e60"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-find-language-by-id.controller.ts",
+            "integrity": "sha1:2ab44f2eece9609d92bb2173939331a761aa7280"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-find-language.controller.spec.ts",
+            "integrity": "sha1:582e7e43f81795290bb93c3d86ce2f3432b98fef"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-find-language.controller.ts",
+            "integrity": "sha1:b56bbc35b8a6c6f4ce66cfa7fdd0a51db650ec99"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-get-languages.controller.spec.ts",
+            "integrity": "sha1:610393494289d7e43e1e5197de50f6b4d92eaadc"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-get-languages.controller.ts",
+            "integrity": "sha1:4d0b45200d2336b53398110eb7c5dc8054858248"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-paginate-languages.controller.spec.ts",
+            "integrity": "sha1:c7291a71937bf19d723a1de184fc944d1c148075"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-paginate-languages.controller.ts",
+            "integrity": "sha1:f85234931b0fd86a8c4d052d5e0274f85dec4228"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-update-languages.controller.spec.ts",
+            "integrity": "sha1:7a6af42c0e7135e4409ca62fc009dcae0a79b33d"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-update-languages.controller.ts",
+            "integrity": "sha1:1b930146abe31612babd275f7d2f7beff8343bbb"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-update-language-by-id.controller.spec.ts",
+            "integrity": "sha1:2895b066ecef2805e315fd2a9b522ba0b6e3b014"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-update-language-by-id.controller.ts",
+            "integrity": "sha1:82ca965e36b648dbe90a1ceaf919d09c619fe406"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-upsert-language.controller.spec.ts",
+            "integrity": "sha1:7eb1ec419a67263a3100d81b39f181b9ba0362db"
+        },
+        {
+            "path": "src/@api/app-health/language/controllers/app-health-upsert-language.controller.ts",
+            "integrity": "sha1:97dd92264f3b0173643a7f23a354ce0d33ca8609"
+        },
+        {
+            "path": "src/@api/app-health/language/dto/index.ts",
+            "integrity": "sha1:c4ab37f5ee4dca665330d409f9f120d82580cb7b"
+        },
+        {
+            "path": "src/@api/app-health/language/dto/app-health-create-language.dto.ts",
+            "integrity": "sha1:62ce3035eda944961095c0cb08086214d53936c9"
+        },
+        {
+            "path": "src/@api/app-health/language/dto/app-health-update-languages.dto.ts",
+            "integrity": "sha1:543e8c9306a1c8eb8bbd58372ee0f30260b00e5b"
+        },
+        {
+            "path": "src/@api/app-health/language/dto/app-health-update-language-by-id.dto.ts",
+            "integrity": "sha1:e43780d1a88d681907a57fb699c8fc61aba647ea"
+        },
+        {
+            "path": "src/@api/app-health/language/dto/app-health-language.dto.ts",
+            "integrity": "sha1:6b46af31709b44f89d0e80b71b518fdac984f475"
+        },
+        {
+            "path": "src/@api/app-health/language/graphql/app-health-language.graphql",
+            "integrity": "sha1:0a21d6b760ef516f5ebc8a6db8a20e475870401c"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-create-languages.handler.spec.ts",
+            "integrity": "sha1:10b9b603e8d6ab9d4dcfc45b791ea3672fa55943"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-create-languages.handler.ts",
+            "integrity": "sha1:21f140ff8ef527b7a7ef4b0a446581e6ee403d43"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-create-language.handler.spec.ts",
+            "integrity": "sha1:8b6e8e645c8b4b255fc99981a5b9709dd003b305"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-create-language.handler.ts",
+            "integrity": "sha1:a1dbcdbd1b45d04f8fc4f5bcd566f106a42875f9"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-delete-languages.handler.spec.ts",
+            "integrity": "sha1:a676449526f1f001b6ab16d09cad3ed9b97c385b"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-delete-languages.handler.ts",
+            "integrity": "sha1:54abdbae5b092326b01f07f90baf01a894cdfe25"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-delete-language-by-id.handler.spec.ts",
+            "integrity": "sha1:7e852dd29a97f0d914a92e3bf48e31d92b76fa1f"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-delete-language-by-id.handler.ts",
+            "integrity": "sha1:a9a5918a6b93a22c72baa3f0396cb688091fd6e3"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-find-language-by-id.handler.spec.ts",
+            "integrity": "sha1:ea9c3b24a670996747f035fe98f9d1acba3937dd"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-find-language-by-id.handler.ts",
+            "integrity": "sha1:82941b36f63c67514dc1616680fa43a24618c2a2"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-find-language.handler.spec.ts",
+            "integrity": "sha1:0dac90920319a0e8dc1a7e387436ea2aee61a59c"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-find-language.handler.ts",
+            "integrity": "sha1:2c3c97ee2d11df67de2154ddd7671a7066af9288"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-get-languages.handler.spec.ts",
+            "integrity": "sha1:1306ccbcd8002ba0e914e25a8d3aac0532e275f5"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-get-languages.handler.ts",
+            "integrity": "sha1:cce6b7f38ed25d1ea661303132bb3672d43efb25"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-paginate-languages.handler.spec.ts",
+            "integrity": "sha1:c026f9affadc911f25fe8b3842f8c20a8e6f42fc"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-paginate-languages.handler.ts",
+            "integrity": "sha1:4ed00baa05899982776bb62979a9011f2a52e3b7"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-update-languages.handler.spec.ts",
+            "integrity": "sha1:f1cccfcad29162575597b8af8cf05ae7a0552a12"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-update-languages.handler.ts",
+            "integrity": "sha1:768fc1328c74609c2e66686384c4bc7182033c2e"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-update-language-by-id.handler.spec.ts",
+            "integrity": "sha1:3c3ea44e86e2b828bfb5d589a2eb74ae09d28332"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-update-language-by-id.handler.ts",
+            "integrity": "sha1:5ab6e79d27e40ba4fad3286d50a6bfec73a0058c"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-upsert-language.handler.spec.ts",
+            "integrity": "sha1:60aed2ce91f995b57ed36c25928aae8115d1fb03"
+        },
+        {
+            "path": "src/@api/app-health/language/handlers/app-health-upsert-language.handler.ts",
+            "integrity": "sha1:89b9eafb32aea6075fecf21c32e3827f775ac978"
+        },
+        {
+            "path": "src/@api/app-health/language/index.ts",
+            "integrity": "sha1:f7adc97d1da7af633db94d0a354a9cdc7d0fde51"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-create-languages.resolver.spec.ts",
+            "integrity": "sha1:1d5ec46679bea8fd55576af741e7d96390c98341"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-create-languages.resolver.ts",
+            "integrity": "sha1:70c20d0eeccde0ca48480f341ef268e488ddb10a"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-create-language.resolver.spec.ts",
+            "integrity": "sha1:8fa62a53213e74974b5bc94e6ca768c31f4a90d8"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-create-language.resolver.ts",
+            "integrity": "sha1:14ef04ad604b2e0d14dcc4df2028de2a7d1b2dee"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-delete-languages.resolver.spec.ts",
+            "integrity": "sha1:e76e231ac888da7a53adc8b58b3b92cda6f36b18"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-delete-languages.resolver.ts",
+            "integrity": "sha1:0a428c49d2aba50ca2d60e11897b2442d2649b4b"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-delete-language-by-id.resolver.spec.ts",
+            "integrity": "sha1:df2e30ee936d34784ccee7c735b5da7ee8cbc162"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-delete-language-by-id.resolver.ts",
+            "integrity": "sha1:5a6e320ac9fd7f569da255c688821dce1a4d7537"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-find-language-by-id.resolver.spec.ts",
+            "integrity": "sha1:8f95150e538de1941991960633bb80001e5a3bbe"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-find-language-by-id.resolver.ts",
+            "integrity": "sha1:b117425b0f6e44f19ea5d8c70f7003c826546c43"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-find-language.resolver.spec.ts",
+            "integrity": "sha1:cfa92698a927a4b8a7a19d87fb9175e0c1c0dd02"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-find-language.resolver.ts",
+            "integrity": "sha1:8cfd741da8ce22167f823da80a2d8690e8e49962"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-get-languages.resolver.spec.ts",
+            "integrity": "sha1:85712e36237a2a92b61f63e5c74c10b4dbdde5a2"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-get-languages.resolver.ts",
+            "integrity": "sha1:de5ca2f49d1bfbb67831e1c0f5d2022224931efe"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-paginate-languages.resolver.spec.ts",
+            "integrity": "sha1:801018a912933ffb6ac30d7d2c3bc235800a2506"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-paginate-languages.resolver.ts",
+            "integrity": "sha1:b32c9cc9ba059e688a089ef95798364bdef03c1a"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-update-languages.resolver.spec.ts",
+            "integrity": "sha1:a34943452d26dcde9b15bab31da57b88e799fedb"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-update-languages.resolver.ts",
+            "integrity": "sha1:d149af1e51dbe742ed0d19d038ac2ebf835b2a71"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-update-language-by-id.resolver.spec.ts",
+            "integrity": "sha1:90541566523d38b7b7eb3ab812193565d7c19fba"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-update-language-by-id.resolver.ts",
+            "integrity": "sha1:92ddf7c219ff91df491cbbe932c1292eda3f7e6a"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-upsert-language.resolver.spec.ts",
+            "integrity": "sha1:4f20bf14b640ef631318ea77bbc6b7194dce5fb7"
+        },
+        {
+            "path": "src/@api/app-health/language/resolvers/app-health-upsert-language.resolver.ts",
+            "integrity": "sha1:04cdb7fd01c0979fafd8c1cdcae772f410c0d759"
+        },
+        {
+            "path": "src/@api/app-health/language/seeder/app-health-language.seeder.ts",
+            "integrity": "sha1:a890c44c0736d572c305c603fe19bec57ea7b489"
+        },
+        {
+            "path": "test/acceptance/app-health/language.e2e-spec.ts",
+            "integrity": "sha1:cc963febfbd6f2dda0884321ff31df7e92592dba"
+        },
+        {
+            "path": "postman/app-health/app-health.language.postman.json",
+            "integrity": "sha1:fc527be4c2bdf92722450a726af37c1b9fde421f"
+        }
+    ]
+}
