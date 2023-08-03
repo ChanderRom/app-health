@@ -1,0 +1,65 @@
+{
+    "version": "0.0.1",
+    "files": [
+        {
+            "path": "src/assets/i18n/app-health/en.json",
+            "integrity": "sha1:0b56d40c0630a74abec5398e01c6cd83263feddc"
+        },
+        {
+            "path": "src/assets/i18n/app-health/es.json",
+            "integrity": "sha1:0b56d40c0630a74abec5398e01c6cd83263feddc"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.html",
+            "integrity": "sha1:a6aab421500581830708e34385e2166e7a039ba7"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.ts",
+            "integrity": "sha1:b08af674a795e6b78f4a0f78881a1f879aff574e"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.navigation.ts",
+            "integrity": "sha1:7d9802102336d4d7d6fa8c78bd392ec2d34eea19"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.routes.ts",
+            "integrity": "sha1:61e690f84b99036cba03f5f593bcf326f66cf6ff"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.types.ts",
+            "integrity": "sha1:da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer-detail.component.html",
+            "integrity": "sha1:df0292662711136cc316bf03a52f3572cef69761"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer-detail.component.ts",
+            "integrity": "sha1:c79961351cd26c81f21f0767212efe4d89fe85b7"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer-list.component.html",
+            "integrity": "sha1:b9343b4f8bcbf112d2a858b41c1ce7b1fb6ce1fa"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer-list.component.ts",
+            "integrity": "sha1:5e75df89da785a8118f3ae80e1d81252a4a164df"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer.columns-config.ts",
+            "integrity": "sha1:210730ab81af774744e4514317c47c0bd4f002b9"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer.graphql.ts",
+            "integrity": "sha1:97472012ef322b7e50c275187066ca250e885bf0"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer.resolvers.ts",
+            "integrity": "sha1:138980c2e383f3dc0e184c725bd39926a7465c07"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/customer/customer.service.ts",
+            "integrity": "sha1:799ab1e8cfb5f5185b4f27f308a8b67a39b9ea1c"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "version": "0.0.1",
+    "files": [
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.html",
+            "integrity": "sha1:a6aab421500581830708e34385e2166e7a039ba7"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.ts",
+            "integrity": "sha1:b08af674a795e6b78f4a0f78881a1f879aff574e"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language-detail.component.html",
+            "integrity": "sha1:54ac64287d6eff20e10ea84c0b440ae3603353bb"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language-detail.component.ts",
+            "integrity": "sha1:366af3ab21aa4e5656649918af3c9f11b593f186"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language-list.component.html",
+            "integrity": "sha1:86599dfdc5158bc32d5b79835f99537d04d4bb22"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language-list.component.ts",
+            "integrity": "sha1:b7ceebb1d5f4dca8c435df4a5be142a65b535c4f"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language.columns-config.ts",
+            "integrity": "sha1:bee2ad0da07f4693ac262433d3bccd7c28671c3d"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language.graphql.ts",
+            "integrity": "sha1:0aecf6b74af15690e2ed6ef0f06a023c5becbff9"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language.resolvers.ts",
+            "integrity": "sha1:7d10833d39b2c8a5b2161ff38f02900a558f3bf2"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-language/application-language.service.ts",
+            "integrity": "sha1:b7353d34590f9ae2064805fa1783a40b39e792b3"
+        }
+    ]
+}
