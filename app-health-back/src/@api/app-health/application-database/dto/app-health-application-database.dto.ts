@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 import { AppHealthApplicationDto } from '@api/app-health/application';
+import { AppHealthApplicationInfrastructureServiceDto } from '@api/app-health/application-infrastructure-service';
 import { AppHealthDatabaseDto } from '@api/app-health/database';
 import { ApiProperty } from '@nestjs/swagger';
 
@@ -36,6 +37,19 @@ export class AppHealthApplicationDatabaseDto
         description: 'AppHealthDatabase [input here api field description]',
     })
     database?: AppHealthDatabaseDto;
+
+    @ApiProperty({
+        type       : String,
+        description: 'applicationInfrastructureServiceId [input here api field description]',
+        example    : '4500f7d8-50e3-58a0-8426-7e7b78402710',
+    })
+    applicationInfrastructureServiceId: string;
+
+    @ApiProperty({
+        type       : () => AppHealthApplicationInfrastructureServiceDto,
+        description: 'AppHealthApplicationInfrastructureService [input here api field description]',
+    })
+    applicationInfrastructureService?: AppHealthApplicationInfrastructureServiceDto;
 
     @ApiProperty({
         type       : String,

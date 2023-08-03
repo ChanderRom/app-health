@@ -6,6 +6,7 @@ import {
     AppHealthApplicationAuthenticationId,
     AppHealthApplicationAuthenticationApplicationId,
     AppHealthApplicationAuthenticationAuthenticationInterfaceId,
+    AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
     AppHealthApplicationAuthenticationTotalUsers,
     AppHealthApplicationAuthenticationScore,
     AppHealthApplicationAuthenticationCreatedAt,
@@ -31,6 +32,7 @@ export class AppHealthCreateApplicationAuthenticationsCommandHandler implements 
                         id: new AppHealthApplicationAuthenticationId(applicationAuthentication.id),
                         applicationId: new AppHealthApplicationAuthenticationApplicationId(applicationAuthentication.applicationId),
                         authenticationInterfaceId: new AppHealthApplicationAuthenticationAuthenticationInterfaceId(applicationAuthentication.authenticationInterfaceId),
+                        applicationInfrastructureServiceId: new AppHealthApplicationAuthenticationApplicationInfrastructureServiceId(applicationAuthentication.applicationInfrastructureServiceId),
                         totalUsers: new AppHealthApplicationAuthenticationTotalUsers(applicationAuthentication.totalUsers),
                         score: new AppHealthApplicationAuthenticationScore(applicationAuthentication.score),
                     };

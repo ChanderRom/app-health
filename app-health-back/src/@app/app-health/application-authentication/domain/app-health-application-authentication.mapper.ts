@@ -5,6 +5,7 @@ import {
     AppHealthApplicationAuthenticationId,
     AppHealthApplicationAuthenticationApplicationId,
     AppHealthApplicationAuthenticationAuthenticationInterfaceId,
+    AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
     AppHealthApplicationAuthenticationTotalUsers,
     AppHealthApplicationAuthenticationScore,
     AppHealthApplicationAuthenticationCreatedAt,
@@ -13,6 +14,7 @@ import {
 } from './value-objects';
 import { AppHealthApplicationMapper } from '@app/app-health/application';
 import { AppHealthAuthenticationInterfaceMapper } from '@app/app-health/authentication-interface';
+import { AppHealthApplicationInfrastructureServiceMapper } from '@app/app-health/application-infrastructure-service';
 
 export class AppHealthApplicationAuthenticationMapper implements IMapper
 {
@@ -68,6 +70,7 @@ export class AppHealthApplicationAuthenticationMapper implements IMapper
             new AppHealthApplicationAuthenticationId(applicationAuthentication.id, { undefinable: true }),
             new AppHealthApplicationAuthenticationApplicationId(applicationAuthentication.applicationId, { undefinable: true }),
             new AppHealthApplicationAuthenticationAuthenticationInterfaceId(applicationAuthentication.authenticationInterfaceId, { undefinable: true }),
+            new AppHealthApplicationAuthenticationApplicationInfrastructureServiceId(applicationAuthentication.applicationInfrastructureServiceId, { undefinable: true }),
             new AppHealthApplicationAuthenticationTotalUsers(applicationAuthentication.totalUsers, { undefinable: true }),
             new AppHealthApplicationAuthenticationScore(applicationAuthentication.score, { undefinable: true }),
             new AppHealthApplicationAuthenticationCreatedAt(applicationAuthentication.createdAt, { undefinable: true }, { addTimezone: cQMetadata?.timezone }),
@@ -75,6 +78,7 @@ export class AppHealthApplicationAuthenticationMapper implements IMapper
             new AppHealthApplicationAuthenticationDeletedAt(applicationAuthentication.deletedAt, { undefinable: true }, { addTimezone: cQMetadata?.timezone }),
             this.options.eagerLoading ? new AppHealthApplicationMapper({ eagerLoading: true }).mapModelToAggregate(applicationAuthentication.application, cQMetadata) : undefined,
             this.options.eagerLoading ? new AppHealthAuthenticationInterfaceMapper({ eagerLoading: true }).mapModelToAggregate(applicationAuthentication.authenticationInterface, cQMetadata) : undefined,
+            this.options.eagerLoading ? new AppHealthApplicationInfrastructureServiceMapper({ eagerLoading: true }).mapModelToAggregate(applicationAuthentication.applicationInfrastructureService, cQMetadata) : undefined,
         );
     }
 
@@ -86,6 +90,7 @@ export class AppHealthApplicationAuthenticationMapper implements IMapper
             applicationAuthentication.id.value,
             applicationAuthentication.applicationId.value,
             applicationAuthentication.authenticationInterfaceId.value,
+            applicationAuthentication.applicationInfrastructureServiceId.value,
             applicationAuthentication.totalUsers.value,
             applicationAuthentication.score.value,
             applicationAuthentication.createdAt.value,
@@ -93,6 +98,7 @@ export class AppHealthApplicationAuthenticationMapper implements IMapper
             applicationAuthentication.deletedAt.value,
             this.options.eagerLoading ? new AppHealthApplicationMapper({ eagerLoading: true }).mapAggregateToResponse(applicationAuthentication.application) : undefined,
             this.options.eagerLoading ? new AppHealthAuthenticationInterfaceMapper({ eagerLoading: true }).mapAggregateToResponse(applicationAuthentication.authenticationInterface) : undefined,
+            this.options.eagerLoading ? new AppHealthApplicationInfrastructureServiceMapper({ eagerLoading: true }).mapAggregateToResponse(applicationAuthentication.applicationInfrastructureService) : undefined,
         );
     }
 }

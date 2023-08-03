@@ -1,6 +1,7 @@
 import { AppHealthAddApplicationAuthenticationsContextEvent, AppHealthApplicationAuthentication, AppHealthIApplicationAuthenticationRepository } from '@app/app-health/application-authentication';
 import {
     AppHealthApplicationAuthenticationApplicationId,
+    AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
     AppHealthApplicationAuthenticationAuthenticationInterfaceId,
     AppHealthApplicationAuthenticationCreatedAt,
     AppHealthApplicationAuthenticationDeletedAt,
@@ -26,6 +27,7 @@ export class AppHealthCreateApplicationAuthenticationsService
             id: AppHealthApplicationAuthenticationId;
             applicationId: AppHealthApplicationAuthenticationApplicationId;
             authenticationInterfaceId: AppHealthApplicationAuthenticationAuthenticationInterfaceId;
+            applicationInfrastructureServiceId: AppHealthApplicationAuthenticationApplicationInfrastructureServiceId;
             totalUsers: AppHealthApplicationAuthenticationTotalUsers;
             score: AppHealthApplicationAuthenticationScore;
         } [],
@@ -37,6 +39,7 @@ export class AppHealthCreateApplicationAuthenticationsService
             applicationAuthentication.id,
             applicationAuthentication.applicationId,
             applicationAuthentication.authenticationInterfaceId,
+            applicationAuthentication.applicationInfrastructureServiceId,
             applicationAuthentication.totalUsers,
             applicationAuthentication.score,
             new AppHealthApplicationAuthenticationCreatedAt({ currentTimestamp: true }),

@@ -6,6 +6,7 @@ import {
     AppHealthApplicationDatabaseId,
     AppHealthApplicationDatabaseApplicationId,
     AppHealthApplicationDatabaseDatabaseId,
+    AppHealthApplicationDatabaseApplicationInfrastructureServiceId,
     AppHealthApplicationDatabaseVersion,
     AppHealthApplicationDatabaseSize,
     AppHealthApplicationDatabaseScore,
@@ -32,6 +33,7 @@ export class AppHealthUpdateApplicationDatabasesService
             id?: AppHealthApplicationDatabaseId;
             applicationId?: AppHealthApplicationDatabaseApplicationId;
             databaseId?: AppHealthApplicationDatabaseDatabaseId;
+            applicationInfrastructureServiceId?: AppHealthApplicationDatabaseApplicationInfrastructureServiceId;
             version?: AppHealthApplicationDatabaseVersion;
             size?: AppHealthApplicationDatabaseSize;
             score?: AppHealthApplicationDatabaseScore;
@@ -48,6 +50,7 @@ export class AppHealthUpdateApplicationDatabasesService
             payload.id,
             payload.applicationId,
             payload.databaseId,
+            payload.applicationInfrastructureServiceId,
             payload.version,
             payload.size,
             payload.score,

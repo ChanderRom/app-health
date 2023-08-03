@@ -6,6 +6,8 @@ type AppHealthApplicationAuthentication
     application: AppHealthApplication
     authenticationInterfaceId: ID!
     authenticationInterface: AppHealthAuthenticationInterface
+    applicationInfrastructureServiceId: ID!
+    applicationInfrastructureService: AppHealthApplicationInfrastructureService
     totalUsers: GraphQLInt!
     score: GraphQLInt!
     createdAt: GraphQLTimestamp
@@ -18,6 +20,7 @@ input AppHealthCreateApplicationAuthenticationInput
     id: ID!
     applicationId: ID!
     authenticationInterfaceId: ID!
+    applicationInfrastructureServiceId: ID!
     totalUsers: GraphQLInt!
     score: GraphQLInt!
 }
@@ -27,6 +30,7 @@ input AppHealthUpdateApplicationAuthenticationByIdInput
     id: ID!
     applicationId: ID
     authenticationInterfaceId: ID
+    applicationInfrastructureServiceId: ID
     totalUsers: GraphQLInt
     score: GraphQLInt
 }
@@ -36,6 +40,7 @@ input AppHealthUpdateApplicationAuthenticationsInput
     id: ID
     applicationId: ID
     authenticationInterfaceId: ID
+    applicationInfrastructureServiceId: ID
     totalUsers: GraphQLInt
     score: GraphQLInt
 }

@@ -24,6 +24,13 @@ export class AppHealthUpdateApplicationAuthenticationByIdDto
     authenticationInterfaceId?: string;
 
     @ApiProperty({
+        type       : String,
+        description: 'applicationInfrastructureServiceId [input here api field description]',
+        example    : '4500f7d8-50e3-58a0-8426-7e7b78402710',
+    })
+    applicationInfrastructureServiceId?: string;
+
+    @ApiProperty({
         type       : Number,
         description: 'totalUsers [input here api field description]',
     })

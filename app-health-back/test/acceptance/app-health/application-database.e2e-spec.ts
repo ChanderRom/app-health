@@ -119,6 +119,22 @@ describe('application-database', () =>
             });
     });
 
+    test('/REST:POST app-health/application-database/create - Got 400 Conflict, ApplicationDatabaseApplicationInfrastructureServiceId property can not to be null', () =>
+    {
+        return request(app.getHttpServer())
+            .post('/app-health/application-database/create')
+            .set('Accept', 'application/json')
+            .send({
+                ...mockData[0],
+                applicationInfrastructureServiceId: null,
+            })
+            .expect(400)
+            .then(res =>
+            {
+                expect(res.body.message).toContain('Value for ApplicationDatabaseApplicationInfrastructureServiceId must be defined, can not be null');
+            });
+    });
+
     test('/REST:POST app-health/application-database/create - Got 400 Conflict, ApplicationDatabaseVersion property can not to be null', () =>
     {
         return request(app.getHttpServer())
@@ -247,6 +263,22 @@ describe('application-database', () =>
             });
     });
 
+    test('/REST:POST app-health/application-database/create - Got 400 Conflict, ApplicationDatabaseApplicationInfrastructureServiceId property can not to be undefined', () =>
+    {
+        return request(app.getHttpServer())
+            .post('/app-health/application-database/create')
+            .set('Accept', 'application/json')
+            .send({
+                ...mockData[0],
+                applicationInfrastructureServiceId: undefined,
+            })
+            .expect(400)
+            .then(res =>
+            {
+                expect(res.body.message).toContain('Value for ApplicationDatabaseApplicationInfrastructureServiceId must be defined, can not be undefined');
+            });
+    });
+
     test('/REST:POST app-health/application-database/create - Got 400 Conflict, ApplicationDatabaseVersion property can not to be undefined', () =>
     {
         return request(app.getHttpServer())
@@ -372,6 +404,22 @@ describe('application-database', () =>
             .then(res =>
             {
                 expect(res.body.message).toContain('Value for ApplicationDatabaseDatabaseId is not allowed, must be a length of 36');
+            });
+    });
+
+    test('/REST:POST app-health/application-database/create - Got 400 Conflict, ApplicationDatabaseApplicationInfrastructureServiceId is not allowed, must be a length of 36', () =>
+    {
+        return request(app.getHttpServer())
+            .post('/app-health/application-database/create')
+            .set('Accept', 'application/json')
+            .send({
+                ...mockData[0],
+                applicationInfrastructureServiceId: '*************************************',
+            })
+            .expect(400)
+            .then(res =>
+            {
+                expect(res.body.message).toContain('Value for ApplicationDatabaseApplicationInfrastructureServiceId is not allowed, must be a length of 36');
             });
     });
 
@@ -660,6 +708,7 @@ describe('application-database', () =>
                             id
                             applicationId
                             databaseId
+                            applicationInfrastructureServiceId
                             version
                             size
                             score
@@ -767,6 +816,7 @@ describe('application-database', () =>
                             id
                             applicationId
                             databaseId
+                            applicationInfrastructureServiceId
                             version
                             size
                             score

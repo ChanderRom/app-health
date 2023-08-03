@@ -16,6 +16,9 @@ import { AppHealthApplicationAuthenticationControllers, AppHealthApplicationAuth
 import { AppHealthApiInterfaceTypeControllers, AppHealthApiInterfaceTypeResolvers, AppHealthApiInterfaceTypeApiHandlers, AppHealthApiInterfaceTypeServices } from './api-interface-type';
 import { AppHealthApplicationApiControllers, AppHealthApplicationApiResolvers, AppHealthApplicationApiApiHandlers, AppHealthApplicationApiServices } from './application-api';
 import { AppHealthApplicationIntegrationControllers, AppHealthApplicationIntegrationResolvers, AppHealthApplicationIntegrationApiHandlers, AppHealthApplicationIntegrationServices } from './application-integration';
+import { AppHealthInfrastructureProviderControllers, AppHealthInfrastructureProviderResolvers, AppHealthInfrastructureProviderApiHandlers, AppHealthInfrastructureProviderServices } from './infrastructure-provider';
+import { AppHealthInfrastructureServiceControllers, AppHealthInfrastructureServiceResolvers, AppHealthInfrastructureServiceApiHandlers, AppHealthInfrastructureServiceServices } from './infrastructure-service';
+import { AppHealthApplicationInfrastructureServiceControllers, AppHealthApplicationInfrastructureServiceResolvers, AppHealthApplicationInfrastructureServiceApiHandlers, AppHealthApplicationInfrastructureServiceServices } from './application-infrastructure-service';
 
 @Module({
     imports: [
@@ -37,7 +40,10 @@ import { AppHealthApplicationIntegrationControllers, AppHealthApplicationIntegra
         ...AppHealthApplicationAuthenticationControllers,
         ...AppHealthApiInterfaceTypeControllers,
         ...AppHealthApplicationApiControllers,
-        ...AppHealthApplicationIntegrationControllers
+        ...AppHealthApplicationIntegrationControllers,
+        ...AppHealthInfrastructureProviderControllers,
+        ...AppHealthInfrastructureServiceControllers,
+        ...AppHealthApplicationInfrastructureServiceControllers
     ],
     providers: [
         AppHealthSeeder,
@@ -83,7 +89,16 @@ import { AppHealthApplicationIntegrationControllers, AppHealthApplicationIntegra
         ...AppHealthApplicationApiServices,
         ...AppHealthApplicationIntegrationResolvers,
         ...AppHealthApplicationIntegrationApiHandlers,
-        ...AppHealthApplicationIntegrationServices
+        ...AppHealthApplicationIntegrationServices,
+        ...AppHealthInfrastructureProviderResolvers,
+        ...AppHealthInfrastructureProviderApiHandlers,
+        ...AppHealthInfrastructureProviderServices,
+        ...AppHealthInfrastructureServiceResolvers,
+        ...AppHealthInfrastructureServiceApiHandlers,
+        ...AppHealthInfrastructureServiceServices,
+        ...AppHealthApplicationInfrastructureServiceResolvers,
+        ...AppHealthApplicationInfrastructureServiceApiHandlers,
+        ...AppHealthApplicationInfrastructureServiceServices
     ],
 })
 export class AppHealthModule {}

@@ -7,6 +7,7 @@ export class  AppHealthCreateApplicationDatabasesCommand
             id: string;
             applicationId: string;
             databaseId: string;
+            applicationInfrastructureServiceId: string;
             version: string;
             size: number;
             score: number;

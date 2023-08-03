@@ -1,5 +1,6 @@
 import { AppHealthApplicationResponse } from '@app/app-health/application';
 import { AppHealthAuthenticationInterfaceResponse } from '@app/app-health/authentication-interface';
+import { AppHealthApplicationInfrastructureServiceResponse } from '@app/app-health/application-infrastructure-service';
 
 export class AppHealthApplicationAuthenticationResponse
 {
@@ -7,6 +8,7 @@ export class AppHealthApplicationAuthenticationResponse
         public readonly id: string,
         public readonly applicationId: string,
         public readonly authenticationInterfaceId: string,
+        public readonly applicationInfrastructureServiceId: string,
         public readonly totalUsers: number,
         public readonly score: number,
         public readonly createdAt: string,
@@ -14,5 +16,6 @@ export class AppHealthApplicationAuthenticationResponse
         public readonly deletedAt: string,
         public readonly application: AppHealthApplicationResponse,
         public readonly authenticationInterface: AppHealthAuthenticationInterfaceResponse,
+        public readonly applicationInfrastructureService: AppHealthApplicationInfrastructureServiceResponse,
     ) {}
 }

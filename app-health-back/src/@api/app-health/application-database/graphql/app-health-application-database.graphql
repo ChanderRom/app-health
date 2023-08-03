@@ -6,6 +6,8 @@ type AppHealthApplicationDatabase
     application: AppHealthApplication
     databaseId: ID!
     database: AppHealthDatabase
+    applicationInfrastructureServiceId: ID!
+    applicationInfrastructureService: AppHealthApplicationInfrastructureService
     version: GraphQLString!
     size: GraphQLInt!
     score: GraphQLInt!
@@ -21,6 +23,7 @@ input AppHealthCreateApplicationDatabaseInput
     id: ID!
     applicationId: ID!
     databaseId: ID!
+    applicationInfrastructureServiceId: ID!
     version: GraphQLString!
     size: GraphQLInt!
     score: GraphQLInt!
@@ -33,6 +36,7 @@ input AppHealthUpdateApplicationDatabaseByIdInput
     id: ID!
     applicationId: ID
     databaseId: ID
+    applicationInfrastructureServiceId: ID
     version: GraphQLString
     size: GraphQLInt
     score: GraphQLInt
@@ -45,6 +49,7 @@ input AppHealthUpdateApplicationDatabasesInput
     id: ID
     applicationId: ID
     databaseId: ID
+    applicationInfrastructureServiceId: ID
     version: GraphQLString
     size: GraphQLInt
     score: GraphQLInt

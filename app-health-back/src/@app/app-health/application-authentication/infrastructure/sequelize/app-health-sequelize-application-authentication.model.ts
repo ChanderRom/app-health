@@ -4,6 +4,7 @@ import { Column, Model, Table, ForeignKey, BelongsTo, HasMany, BelongsToMany, Ha
 import { DataTypes } from 'sequelize';
 import { AppHealthApplicationModel } from '@app/app-health/application';
 import { AppHealthAuthenticationInterfaceModel } from '@app/app-health/authentication-interface';
+import { AppHealthApplicationInfrastructureServiceModel } from '@app/app-health/application-infrastructure-service';
 
 @Table({
     modelName: 'AppHealthApplicationAuthentication',
@@ -47,6 +48,20 @@ export class AppHealthApplicationAuthenticationModel extends Model<AppHealthAppl
         foreignKey: 'authenticationInterfaceId',
     })
     authenticationInterface: AppHealthAuthenticationInterfaceModel;
+
+    @ForeignKey(() => AppHealthApplicationInfrastructureServiceModel)
+    @Column({
+        field: 'applicationInfrastructureServiceId',
+        allowNull: false,
+        type: DataTypes.UUID,
+    })
+    applicationInfrastructureServiceId: string;
+
+    @BelongsTo(() => AppHealthApplicationInfrastructureServiceModel, {
+        constraints: false,
+        foreignKey: 'applicationInfrastructureServiceId',
+    })
+    applicationInfrastructureService: AppHealthApplicationInfrastructureServiceModel;
 
     @Column({
         field: 'totalUsers',

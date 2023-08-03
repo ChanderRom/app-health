@@ -42,6 +42,7 @@ describe('AppHealthCreateApplicationAuthenticationCommandHandler', () =>
                         id: appHealthMockApplicationAuthenticationData[0].id,
                         applicationId: appHealthMockApplicationAuthenticationData[0].applicationId,
                         authenticationInterfaceId: appHealthMockApplicationAuthenticationData[0].authenticationInterfaceId,
+                        applicationInfrastructureServiceId: appHealthMockApplicationAuthenticationData[0].applicationInfrastructureServiceId,
                         totalUsers: appHealthMockApplicationAuthenticationData[0].totalUsers,
                         score: appHealthMockApplicationAuthenticationData[0].score,
                     },

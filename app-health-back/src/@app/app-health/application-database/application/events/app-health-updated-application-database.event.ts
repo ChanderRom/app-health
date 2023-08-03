@@ -4,6 +4,7 @@ export class AppHealthUpdatedApplicationDatabaseEvent
         public readonly id: string,
         public readonly applicationId: string,
         public readonly databaseId: string,
+        public readonly applicationInfrastructureServiceId: string,
         public readonly version: string,
         public readonly size: number,
         public readonly score: number,

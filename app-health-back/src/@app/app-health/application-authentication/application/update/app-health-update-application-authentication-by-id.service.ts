@@ -1,6 +1,7 @@
 import { AppHealthApplicationAuthentication, AppHealthIApplicationAuthenticationRepository } from '@app/app-health/application-authentication';
 import {
     AppHealthApplicationAuthenticationApplicationId,
+    AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
     AppHealthApplicationAuthenticationAuthenticationInterfaceId,
     AppHealthApplicationAuthenticationCreatedAt,
     AppHealthApplicationAuthenticationDeletedAt,
@@ -26,6 +27,7 @@ export class AppHealthUpdateApplicationAuthenticationByIdService
             id: AppHealthApplicationAuthenticationId;
             applicationId?: AppHealthApplicationAuthenticationApplicationId;
             authenticationInterfaceId?: AppHealthApplicationAuthenticationAuthenticationInterfaceId;
+            applicationInfrastructureServiceId?: AppHealthApplicationAuthenticationApplicationInfrastructureServiceId;
             totalUsers?: AppHealthApplicationAuthenticationTotalUsers;
             score?: AppHealthApplicationAuthenticationScore;
         },
@@ -38,6 +40,7 @@ export class AppHealthUpdateApplicationAuthenticationByIdService
             payload.id,
             payload.applicationId,
             payload.authenticationInterfaceId,
+            payload.applicationInfrastructureServiceId,
             payload.totalUsers,
             payload.score,
             null, // createdAt

@@ -5,6 +5,7 @@ import {
     AppHealthApplicationDatabaseId,
     AppHealthApplicationDatabaseApplicationId,
     AppHealthApplicationDatabaseDatabaseId,
+    AppHealthApplicationDatabaseApplicationInfrastructureServiceId,
     AppHealthApplicationDatabaseVersion,
     AppHealthApplicationDatabaseSize,
     AppHealthApplicationDatabaseScore,
@@ -19,12 +20,14 @@ import { AppHealthUpdatedApplicationDatabaseEvent } from '../application/events/
 import { AppHealthDeletedApplicationDatabaseEvent } from '../application/events/app-health-deleted-application-database.event';
 import { AppHealthApplication } from '@app/app-health/application';
 import { AppHealthDatabase } from '@app/app-health/database';
+import { AppHealthApplicationInfrastructureService } from '@app/app-health/application-infrastructure-service';
 
 export class AppHealthApplicationDatabase extends AggregateRoot
 {
     id: AppHealthApplicationDatabaseId;
     applicationId: AppHealthApplicationDatabaseApplicationId;
     databaseId: AppHealthApplicationDatabaseDatabaseId;
+    applicationInfrastructureServiceId: AppHealthApplicationDatabaseApplicationInfrastructureServiceId;
     version: AppHealthApplicationDatabaseVersion;
     size: AppHealthApplicationDatabaseSize;
     score: AppHealthApplicationDatabaseScore;
@@ -37,11 +40,13 @@ export class AppHealthApplicationDatabase extends AggregateRoot
     // eager relationship
     application: AppHealthApplication;
     database: AppHealthDatabase;
+    applicationInfrastructureService: AppHealthApplicationInfrastructureService;
 
     constructor(
         id: AppHealthApplicationDatabaseId,
         applicationId: AppHealthApplicationDatabaseApplicationId,
         databaseId: AppHealthApplicationDatabaseDatabaseId,
+        applicationInfrastructureServiceId: AppHealthApplicationDatabaseApplicationInfrastructureServiceId,
         version: AppHealthApplicationDatabaseVersion,
         size: AppHealthApplicationDatabaseSize,
         score: AppHealthApplicationDatabaseScore,
@@ -53,12 +58,14 @@ export class AppHealthApplicationDatabase extends AggregateRoot
 
         application?: AppHealthApplication,
         database?: AppHealthDatabase,
+        applicationInfrastructureService?: AppHealthApplicationInfrastructureService,
     )
     {
         super();
         this.id = id;
         this.applicationId = applicationId;
         this.databaseId = databaseId;
+        this.applicationInfrastructureServiceId = applicationInfrastructureServiceId;
         this.version = version;
         this.size = size;
         this.score = score;
@@ -71,12 +78,14 @@ export class AppHealthApplicationDatabase extends AggregateRoot
         // eager relationship
         this.application = application;
         this.database = database;
+        this.applicationInfrastructureService = applicationInfrastructureService;
     }
 
     static register (
         id: AppHealthApplicationDatabaseId,
         applicationId: AppHealthApplicationDatabaseApplicationId,
         databaseId: AppHealthApplicationDatabaseDatabaseId,
+        applicationInfrastructureServiceId: AppHealthApplicationDatabaseApplicationInfrastructureServiceId,
         version: AppHealthApplicationDatabaseVersion,
         size: AppHealthApplicationDatabaseSize,
         score: AppHealthApplicationDatabaseScore,
@@ -88,12 +97,14 @@ export class AppHealthApplicationDatabase extends AggregateRoot
 
         application?: AppHealthApplication,
         database?: AppHealthDatabase,
+        applicationInfrastructureService?: AppHealthApplicationInfrastructureService,
     ): AppHealthApplicationDatabase
     {
         return new AppHealthApplicationDatabase(
             id,
             applicationId,
             databaseId,
+            applicationInfrastructureServiceId,
             version,
             size,
             score,
@@ -105,6 +116,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
 
             application,
             database,
+            applicationInfrastructureService,
         );
     }
 
@@ -115,6 +127,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
                 applicationDatabase.id.value,
                 applicationDatabase.applicationId.value,
                 applicationDatabase.databaseId.value,
+                applicationDatabase.applicationInfrastructureServiceId.value,
                 applicationDatabase.version.value,
                 applicationDatabase.size.value,
                 applicationDatabase.score.value,
@@ -134,6 +147,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
                 applicationDatabase.id?.value,
                 applicationDatabase.applicationId?.value,
                 applicationDatabase.databaseId?.value,
+                applicationDatabase.applicationInfrastructureServiceId?.value,
                 applicationDatabase.version?.value,
                 applicationDatabase.size?.value,
                 applicationDatabase.score?.value,
@@ -153,6 +167,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
                 applicationDatabase.id.value,
                 applicationDatabase.applicationId.value,
                 applicationDatabase.databaseId.value,
+                applicationDatabase.applicationInfrastructureServiceId.value,
                 applicationDatabase.version.value,
                 applicationDatabase.size.value,
                 applicationDatabase.score.value,
@@ -171,6 +186,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
             id: this.id.value,
             applicationId: this.applicationId.value,
             databaseId: this.databaseId.value,
+            applicationInfrastructureServiceId: this.applicationInfrastructureServiceId.value,
             version: this.version.value,
             size: this.size.value,
             score: this.score.value,
@@ -183,6 +199,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
             // eager relationship
             application: this.application?.toDTO(),
             database: this.database?.toDTO(),
+            applicationInfrastructureService: this.applicationInfrastructureService?.toDTO(),
         };
     }
 
@@ -193,6 +210,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
             id: this.id.value,
             applicationId: this.applicationId.value,
             databaseId: this.databaseId.value,
+            applicationInfrastructureServiceId: this.applicationInfrastructureServiceId.value,
             version: this.version.value,
             size: this.size.value,
             score: this.score.value,
@@ -205,6 +223,7 @@ export class AppHealthApplicationDatabase extends AggregateRoot
             // eager relationship
             application: this.application?.toDTO(),
             database: this.database?.toDTO(),
+            applicationInfrastructureService: this.applicationInfrastructureService?.toDTO(),
         };
     }
 }

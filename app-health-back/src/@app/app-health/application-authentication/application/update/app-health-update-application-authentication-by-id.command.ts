@@ -8,6 +8,7 @@ export class AppHealthUpdateApplicationAuthenticationByIdCommand
             id: string;
             applicationId?: string;
             authenticationInterfaceId?: string;
+            applicationInfrastructureServiceId?: string;
             totalUsers?: number;
             score?: number;
         },

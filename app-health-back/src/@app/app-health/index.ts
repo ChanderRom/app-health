@@ -11,6 +11,9 @@ import { AppHealthApplicationAuthenticationHandlers, AppHealthApplicationAuthent
 import { AppHealthApiInterfaceTypeHandlers, AppHealthApiInterfaceTypeServices, AppHealthApiInterfaceTypeModel, AppHealthIApiInterfaceTypeRepository, AppHealthSequelizeApiInterfaceTypeRepository, AppHealthApiInterfaceTypeSagas } from './api-interface-type';
 import { AppHealthApplicationApiHandlers, AppHealthApplicationApiServices, AppHealthApplicationApiModel, AppHealthIApplicationApiRepository, AppHealthSequelizeApplicationApiRepository, AppHealthApplicationApiSagas } from './application-api';
 import { AppHealthApplicationIntegrationHandlers, AppHealthApplicationIntegrationServices, AppHealthApplicationIntegrationModel, AppHealthIApplicationIntegrationRepository, AppHealthSequelizeApplicationIntegrationRepository, AppHealthApplicationIntegrationSagas } from './application-integration';
+import { AppHealthInfrastructureProviderHandlers, AppHealthInfrastructureProviderServices, AppHealthInfrastructureProviderModel, AppHealthIInfrastructureProviderRepository, AppHealthSequelizeInfrastructureProviderRepository, AppHealthInfrastructureProviderSagas } from './infrastructure-provider';
+import { AppHealthInfrastructureServiceHandlers, AppHealthInfrastructureServiceServices, AppHealthInfrastructureServiceModel, AppHealthIInfrastructureServiceRepository, AppHealthSequelizeInfrastructureServiceRepository, AppHealthInfrastructureServiceSagas } from './infrastructure-service';
+import { AppHealthApplicationInfrastructureServiceHandlers, AppHealthApplicationInfrastructureServiceServices, AppHealthApplicationInfrastructureServiceModel, AppHealthIApplicationInfrastructureServiceRepository, AppHealthSequelizeApplicationInfrastructureServiceRepository, AppHealthApplicationInfrastructureServiceSagas } from './application-infrastructure-service';
 
 export const AppHealthHandlers = [
     ...AppHealthCustomerHandlers,
@@ -25,7 +28,10 @@ export const AppHealthHandlers = [
     ...AppHealthApplicationAuthenticationHandlers,
     ...AppHealthApiInterfaceTypeHandlers,
     ...AppHealthApplicationApiHandlers,
-    ...AppHealthApplicationIntegrationHandlers
+    ...AppHealthApplicationIntegrationHandlers,
+    ...AppHealthInfrastructureProviderHandlers,
+    ...AppHealthInfrastructureServiceHandlers,
+    ...AppHealthApplicationInfrastructureServiceHandlers
 ];
 export const AppHealthServices = [
     ...AppHealthCustomerServices,
@@ -40,7 +46,10 @@ export const AppHealthServices = [
     ...AppHealthApplicationAuthenticationServices,
     ...AppHealthApiInterfaceTypeServices,
     ...AppHealthApplicationApiServices,
-    ...AppHealthApplicationIntegrationServices
+    ...AppHealthApplicationIntegrationServices,
+    ...AppHealthInfrastructureProviderServices,
+    ...AppHealthInfrastructureServiceServices,
+    ...AppHealthApplicationInfrastructureServiceServices
 ];
 export const AppHealthModels = [
     AppHealthCustomerModel,
@@ -55,7 +64,10 @@ export const AppHealthModels = [
     AppHealthApplicationAuthenticationModel,
     AppHealthApiInterfaceTypeModel,
     AppHealthApplicationApiModel,
-    AppHealthApplicationIntegrationModel
+    AppHealthApplicationIntegrationModel,
+    AppHealthInfrastructureProviderModel,
+    AppHealthInfrastructureServiceModel,
+    AppHealthApplicationInfrastructureServiceModel
 ];
 export const AppHealthRepositories = [
     {
@@ -109,6 +121,18 @@ export const AppHealthRepositories = [
     {
         provide : AppHealthIApplicationIntegrationRepository,
         useClass: AppHealthSequelizeApplicationIntegrationRepository
+    },
+    {
+        provide : AppHealthIInfrastructureProviderRepository,
+        useClass: AppHealthSequelizeInfrastructureProviderRepository
+    },
+    {
+        provide : AppHealthIInfrastructureServiceRepository,
+        useClass: AppHealthSequelizeInfrastructureServiceRepository
+    },
+    {
+        provide : AppHealthIApplicationInfrastructureServiceRepository,
+        useClass: AppHealthSequelizeApplicationInfrastructureServiceRepository
     }
 ];
 export const AppHealthSagas = [
@@ -124,5 +148,8 @@ export const AppHealthSagas = [
     AppHealthApplicationAuthenticationSagas,
     AppHealthApiInterfaceTypeSagas,
     AppHealthApplicationApiSagas,
-    AppHealthApplicationIntegrationSagas
+    AppHealthApplicationIntegrationSagas,
+    AppHealthInfrastructureProviderSagas,
+    AppHealthInfrastructureServiceSagas,
+    AppHealthApplicationInfrastructureServiceSagas
 ];

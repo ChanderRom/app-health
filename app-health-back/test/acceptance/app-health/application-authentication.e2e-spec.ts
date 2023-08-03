@@ -119,6 +119,22 @@ describe('application-authentication', () =>
             });
     });
 
+    test('/REST:POST app-health/application-authentication/create - Got 400 Conflict, ApplicationAuthenticationApplicationInfrastructureServiceId property can not to be null', () =>
+    {
+        return request(app.getHttpServer())
+            .post('/app-health/application-authentication/create')
+            .set('Accept', 'application/json')
+            .send({
+                ...mockData[0],
+                applicationInfrastructureServiceId: null,
+            })
+            .expect(400)
+            .then(res =>
+            {
+                expect(res.body.message).toContain('Value for ApplicationAuthenticationApplicationInfrastructureServiceId must be defined, can not be null');
+            });
+    });
+
     test('/REST:POST app-health/application-authentication/create - Got 400 Conflict, ApplicationAuthenticationTotalUsers property can not to be null', () =>
     {
         return request(app.getHttpServer())
@@ -199,6 +215,22 @@ describe('application-authentication', () =>
             });
     });
 
+    test('/REST:POST app-health/application-authentication/create - Got 400 Conflict, ApplicationAuthenticationApplicationInfrastructureServiceId property can not to be undefined', () =>
+    {
+        return request(app.getHttpServer())
+            .post('/app-health/application-authentication/create')
+            .set('Accept', 'application/json')
+            .send({
+                ...mockData[0],
+                applicationInfrastructureServiceId: undefined,
+            })
+            .expect(400)
+            .then(res =>
+            {
+                expect(res.body.message).toContain('Value for ApplicationAuthenticationApplicationInfrastructureServiceId must be defined, can not be undefined');
+            });
+    });
+
     test('/REST:POST app-health/application-authentication/create - Got 400 Conflict, ApplicationAuthenticationTotalUsers property can not to be undefined', () =>
     {
         return request(app.getHttpServer())
@@ -276,6 +308,22 @@ describe('application-authentication', () =>
             .then(res =>
             {
                 expect(res.body.message).toContain('Value for ApplicationAuthenticationAuthenticationInterfaceId is not allowed, must be a length of 36');
+            });
+    });
+
+    test('/REST:POST app-health/application-authentication/create - Got 400 Conflict, ApplicationAuthenticationApplicationInfrastructureServiceId is not allowed, must be a length of 36', () =>
+    {
+        return request(app.getHttpServer())
+            .post('/app-health/application-authentication/create')
+            .set('Accept', 'application/json')
+            .send({
+                ...mockData[0],
+                applicationInfrastructureServiceId: '*************************************',
+            })
+            .expect(400)
+            .then(res =>
+            {
+                expect(res.body.message).toContain('Value for ApplicationAuthenticationApplicationInfrastructureServiceId is not allowed, must be a length of 36');
             });
     });
 
@@ -516,6 +564,7 @@ describe('application-authentication', () =>
                             id
                             applicationId
                             authenticationInterfaceId
+                            applicationInfrastructureServiceId
                             totalUsers
                             score
                         }
@@ -617,6 +666,7 @@ describe('application-authentication', () =>
                             id
                             applicationId
                             authenticationInterfaceId
+                            applicationInfrastructureServiceId
                             totalUsers
                             score
                         }

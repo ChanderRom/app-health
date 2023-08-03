@@ -5,6 +5,7 @@ import {
     AppHealthApplicationAuthenticationId,
     AppHealthApplicationAuthenticationApplicationId,
     AppHealthApplicationAuthenticationAuthenticationInterfaceId,
+    AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
     AppHealthApplicationAuthenticationTotalUsers,
     AppHealthApplicationAuthenticationScore,
     AppHealthApplicationAuthenticationCreatedAt,
@@ -16,12 +17,14 @@ import { AppHealthUpdatedApplicationAuthenticationEvent } from '../application/e
 import { AppHealthDeletedApplicationAuthenticationEvent } from '../application/events/app-health-deleted-application-authentication.event';
 import { AppHealthApplication } from '@app/app-health/application';
 import { AppHealthAuthenticationInterface } from '@app/app-health/authentication-interface';
+import { AppHealthApplicationInfrastructureService } from '@app/app-health/application-infrastructure-service';
 
 export class AppHealthApplicationAuthentication extends AggregateRoot
 {
     id: AppHealthApplicationAuthenticationId;
     applicationId: AppHealthApplicationAuthenticationApplicationId;
     authenticationInterfaceId: AppHealthApplicationAuthenticationAuthenticationInterfaceId;
+    applicationInfrastructureServiceId: AppHealthApplicationAuthenticationApplicationInfrastructureServiceId;
     totalUsers: AppHealthApplicationAuthenticationTotalUsers;
     score: AppHealthApplicationAuthenticationScore;
     createdAt: AppHealthApplicationAuthenticationCreatedAt;
@@ -31,11 +34,13 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
     // eager relationship
     application: AppHealthApplication;
     authenticationInterface: AppHealthAuthenticationInterface;
+    applicationInfrastructureService: AppHealthApplicationInfrastructureService;
 
     constructor(
         id: AppHealthApplicationAuthenticationId,
         applicationId: AppHealthApplicationAuthenticationApplicationId,
         authenticationInterfaceId: AppHealthApplicationAuthenticationAuthenticationInterfaceId,
+        applicationInfrastructureServiceId: AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
         totalUsers: AppHealthApplicationAuthenticationTotalUsers,
         score: AppHealthApplicationAuthenticationScore,
         createdAt: AppHealthApplicationAuthenticationCreatedAt,
@@ -44,12 +49,14 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
 
         application?: AppHealthApplication,
         authenticationInterface?: AppHealthAuthenticationInterface,
+        applicationInfrastructureService?: AppHealthApplicationInfrastructureService,
     )
     {
         super();
         this.id = id;
         this.applicationId = applicationId;
         this.authenticationInterfaceId = authenticationInterfaceId;
+        this.applicationInfrastructureServiceId = applicationInfrastructureServiceId;
         this.totalUsers = totalUsers;
         this.score = score;
         this.createdAt = createdAt;
@@ -59,12 +66,14 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
         // eager relationship
         this.application = application;
         this.authenticationInterface = authenticationInterface;
+        this.applicationInfrastructureService = applicationInfrastructureService;
     }
 
     static register (
         id: AppHealthApplicationAuthenticationId,
         applicationId: AppHealthApplicationAuthenticationApplicationId,
         authenticationInterfaceId: AppHealthApplicationAuthenticationAuthenticationInterfaceId,
+        applicationInfrastructureServiceId: AppHealthApplicationAuthenticationApplicationInfrastructureServiceId,
         totalUsers: AppHealthApplicationAuthenticationTotalUsers,
         score: AppHealthApplicationAuthenticationScore,
         createdAt: AppHealthApplicationAuthenticationCreatedAt,
@@ -73,12 +82,14 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
 
         application?: AppHealthApplication,
         authenticationInterface?: AppHealthAuthenticationInterface,
+        applicationInfrastructureService?: AppHealthApplicationInfrastructureService,
     ): AppHealthApplicationAuthentication
     {
         return new AppHealthApplicationAuthentication(
             id,
             applicationId,
             authenticationInterfaceId,
+            applicationInfrastructureServiceId,
             totalUsers,
             score,
             createdAt,
@@ -87,6 +98,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
 
             application,
             authenticationInterface,
+            applicationInfrastructureService,
         );
     }
 
@@ -97,6 +109,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
                 applicationAuthentication.id.value,
                 applicationAuthentication.applicationId.value,
                 applicationAuthentication.authenticationInterfaceId.value,
+                applicationAuthentication.applicationInfrastructureServiceId.value,
                 applicationAuthentication.totalUsers.value,
                 applicationAuthentication.score.value,
                 applicationAuthentication.createdAt?.value,
@@ -113,6 +126,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
                 applicationAuthentication.id?.value,
                 applicationAuthentication.applicationId?.value,
                 applicationAuthentication.authenticationInterfaceId?.value,
+                applicationAuthentication.applicationInfrastructureServiceId?.value,
                 applicationAuthentication.totalUsers?.value,
                 applicationAuthentication.score?.value,
                 applicationAuthentication.createdAt?.value,
@@ -129,6 +143,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
                 applicationAuthentication.id.value,
                 applicationAuthentication.applicationId.value,
                 applicationAuthentication.authenticationInterfaceId.value,
+                applicationAuthentication.applicationInfrastructureServiceId.value,
                 applicationAuthentication.totalUsers.value,
                 applicationAuthentication.score.value,
                 applicationAuthentication.createdAt?.value,
@@ -144,6 +159,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
             id: this.id.value,
             applicationId: this.applicationId.value,
             authenticationInterfaceId: this.authenticationInterfaceId.value,
+            applicationInfrastructureServiceId: this.applicationInfrastructureServiceId.value,
             totalUsers: this.totalUsers.value,
             score: this.score.value,
             createdAt: this.createdAt?.value,
@@ -153,6 +169,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
             // eager relationship
             application: this.application?.toDTO(),
             authenticationInterface: this.authenticationInterface?.toDTO(),
+            applicationInfrastructureService: this.applicationInfrastructureService?.toDTO(),
         };
     }
 
@@ -163,6 +180,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
             id: this.id.value,
             applicationId: this.applicationId.value,
             authenticationInterfaceId: this.authenticationInterfaceId.value,
+            applicationInfrastructureServiceId: this.applicationInfrastructureServiceId.value,
             totalUsers: this.totalUsers.value,
             score: this.score.value,
             createdAt: this.createdAt?.value,
@@ -172,6 +190,7 @@ export class AppHealthApplicationAuthentication extends AggregateRoot
             // eager relationship
             application: this.application?.toDTO(),
             authenticationInterface: this.authenticationInterface?.toDTO(),
+            applicationInfrastructureService: this.applicationInfrastructureService?.toDTO(),
         };
     }
 }

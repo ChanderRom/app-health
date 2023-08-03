@@ -25,6 +25,13 @@ export class AppHealthCreateApplicationDatabaseDto
 
     @ApiProperty({
         type       : String,
+        description: 'applicationInfrastructureServiceId [input here api field description]',
+        example    : '4500f7d8-50e3-58a0-8426-7e7b78402710',
+    })
+    applicationInfrastructureServiceId: string;
+
+    @ApiProperty({
+        type       : String,
         description: 'version [input here api field description]',
     })
     version: string;

@@ -5,6 +5,7 @@ import {
     AppHealthApplicationDatabaseId,
     AppHealthApplicationDatabaseApplicationId,
     AppHealthApplicationDatabaseDatabaseId,
+    AppHealthApplicationDatabaseApplicationInfrastructureServiceId,
     AppHealthApplicationDatabaseVersion,
     AppHealthApplicationDatabaseSize,
     AppHealthApplicationDatabaseScore,
@@ -16,6 +17,7 @@ import {
 } from './value-objects';
 import { AppHealthApplicationMapper } from '@app/app-health/application';
 import { AppHealthDatabaseMapper } from '@app/app-health/database';
+import { AppHealthApplicationInfrastructureServiceMapper } from '@app/app-health/application-infrastructure-service';
 
 export class AppHealthApplicationDatabaseMapper implements IMapper
 {
@@ -71,6 +73,7 @@ export class AppHealthApplicationDatabaseMapper implements IMapper
             new AppHealthApplicationDatabaseId(applicationDatabase.id, { undefinable: true }),
             new AppHealthApplicationDatabaseApplicationId(applicationDatabase.applicationId, { undefinable: true }),
             new AppHealthApplicationDatabaseDatabaseId(applicationDatabase.databaseId, { undefinable: true }),
+            new AppHealthApplicationDatabaseApplicationInfrastructureServiceId(applicationDatabase.applicationInfrastructureServiceId, { undefinable: true }),
             new AppHealthApplicationDatabaseVersion(applicationDatabase.version, { undefinable: true }),
             new AppHealthApplicationDatabaseSize(applicationDatabase.size, { undefinable: true }),
             new AppHealthApplicationDatabaseScore(applicationDatabase.score, { undefinable: true }),
@@ -81,6 +84,7 @@ export class AppHealthApplicationDatabaseMapper implements IMapper
             new AppHealthApplicationDatabaseDeletedAt(applicationDatabase.deletedAt, { undefinable: true }, { addTimezone: cQMetadata?.timezone }),
             this.options.eagerLoading ? new AppHealthApplicationMapper({ eagerLoading: true }).mapModelToAggregate(applicationDatabase.application, cQMetadata) : undefined,
             this.options.eagerLoading ? new AppHealthDatabaseMapper({ eagerLoading: true }).mapModelToAggregate(applicationDatabase.database, cQMetadata) : undefined,
+            this.options.eagerLoading ? new AppHealthApplicationInfrastructureServiceMapper({ eagerLoading: true }).mapModelToAggregate(applicationDatabase.applicationInfrastructureService, cQMetadata) : undefined,
         );
     }
 
@@ -92,6 +96,7 @@ export class AppHealthApplicationDatabaseMapper implements IMapper
             applicationDatabase.id.value,
             applicationDatabase.applicationId.value,
             applicationDatabase.databaseId.value,
+            applicationDatabase.applicationInfrastructureServiceId.value,
             applicationDatabase.version.value,
             applicationDatabase.size.value,
             applicationDatabase.score.value,
@@ -102,6 +107,7 @@ export class AppHealthApplicationDatabaseMapper implements IMapper
             applicationDatabase.deletedAt.value,
             this.options.eagerLoading ? new AppHealthApplicationMapper({ eagerLoading: true }).mapAggregateToResponse(applicationDatabase.application) : undefined,
             this.options.eagerLoading ? new AppHealthDatabaseMapper({ eagerLoading: true }).mapAggregateToResponse(applicationDatabase.database) : undefined,
+            this.options.eagerLoading ? new AppHealthApplicationInfrastructureServiceMapper({ eagerLoading: true }).mapAggregateToResponse(applicationDatabase.applicationInfrastructureService) : undefined,
         );
     }
 }

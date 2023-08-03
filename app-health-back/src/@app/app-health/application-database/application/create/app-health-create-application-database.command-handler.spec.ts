@@ -42,6 +42,7 @@ describe('AppHealthCreateApplicationDatabaseCommandHandler', () =>
                         id: appHealthMockApplicationDatabaseData[0].id,
                         applicationId: appHealthMockApplicationDatabaseData[0].applicationId,
                         databaseId: appHealthMockApplicationDatabaseData[0].databaseId,
+                        applicationInfrastructureServiceId: appHealthMockApplicationDatabaseData[0].applicationInfrastructureServiceId,
                         version: appHealthMockApplicationDatabaseData[0].version,
                         size: appHealthMockApplicationDatabaseData[0].size,
                         score: appHealthMockApplicationDatabaseData[0].score,

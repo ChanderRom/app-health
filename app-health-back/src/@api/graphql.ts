@@ -108,6 +108,7 @@ export interface AppHealthCreateApplicationAuthenticationInput {
     id: string;
     applicationId: string;
     authenticationInterfaceId: string;
+    applicationInfrastructureServiceId: string;
     totalUsers: GraphQLInt;
     score: GraphQLInt;
 }
@@ -116,6 +117,7 @@ export interface AppHealthUpdateApplicationAuthenticationByIdInput {
     id: string;
     applicationId?: Nullable<string>;
     authenticationInterfaceId?: Nullable<string>;
+    applicationInfrastructureServiceId?: Nullable<string>;
     totalUsers?: Nullable<GraphQLInt>;
     score?: Nullable<GraphQLInt>;
 }
@@ -124,6 +126,7 @@ export interface AppHealthUpdateApplicationAuthenticationsInput {
     id?: Nullable<string>;
     applicationId?: Nullable<string>;
     authenticationInterfaceId?: Nullable<string>;
+    applicationInfrastructureServiceId?: Nullable<string>;
     totalUsers?: Nullable<GraphQLInt>;
     score?: Nullable<GraphQLInt>;
 }
@@ -132,6 +135,7 @@ export interface AppHealthCreateApplicationDatabaseInput {
     id: string;
     applicationId: string;
     databaseId: string;
+    applicationInfrastructureServiceId: string;
     version: GraphQLString;
     size: GraphQLInt;
     score: GraphQLInt;
@@ -143,6 +147,7 @@ export interface AppHealthUpdateApplicationDatabaseByIdInput {
     id: string;
     applicationId?: Nullable<string>;
     databaseId?: Nullable<string>;
+    applicationInfrastructureServiceId?: Nullable<string>;
     version?: Nullable<GraphQLString>;
     size?: Nullable<GraphQLInt>;
     score?: Nullable<GraphQLInt>;
@@ -154,11 +159,36 @@ export interface AppHealthUpdateApplicationDatabasesInput {
     id?: Nullable<string>;
     applicationId?: Nullable<string>;
     databaseId?: Nullable<string>;
+    applicationInfrastructureServiceId?: Nullable<string>;
     version?: Nullable<GraphQLString>;
     size?: Nullable<GraphQLInt>;
     score?: Nullable<GraphQLInt>;
     totalCollectionTables?: Nullable<GraphQLInt>;
     totalFields?: Nullable<GraphQLInt>;
+}
+
+export interface AppHealthCreateApplicationInfrastructureServiceInput {
+    id: string;
+    applicationId: string;
+    infrastructureServiceId: string;
+    avarageCostPerYear: GraphQLInt;
+    score: GraphQLInt;
+}
+
+export interface AppHealthUpdateApplicationInfrastructureServiceByIdInput {
+    id: string;
+    applicationId?: Nullable<string>;
+    infrastructureServiceId?: Nullable<string>;
+    avarageCostPerYear?: Nullable<GraphQLInt>;
+    score?: Nullable<GraphQLInt>;
+}
+
+export interface AppHealthUpdateApplicationInfrastructureServicesInput {
+    id?: Nullable<string>;
+    applicationId?: Nullable<string>;
+    infrastructureServiceId?: Nullable<string>;
+    avarageCostPerYear?: Nullable<GraphQLInt>;
+    score?: Nullable<GraphQLInt>;
 }
 
 export interface AppHealthCreateApplicationIntegrationInput {
@@ -350,6 +380,45 @@ export interface AppHealthUpdateDatabasesInput {
     versions?: Nullable<JSON>;
 }
 
+export interface AppHealthCreateInfrastructureProviderInput {
+    id: string;
+    name: GraphQLString;
+    score: GraphQLInt;
+}
+
+export interface AppHealthUpdateInfrastructureProviderByIdInput {
+    id: string;
+    name?: Nullable<GraphQLString>;
+    score?: Nullable<GraphQLInt>;
+}
+
+export interface AppHealthUpdateInfrastructureProvidersInput {
+    id?: Nullable<string>;
+    name?: Nullable<GraphQLString>;
+    score?: Nullable<GraphQLInt>;
+}
+
+export interface AppHealthCreateInfrastructureServiceInput {
+    id: string;
+    providerId: string;
+    name: GraphQLString;
+    score: GraphQLInt;
+}
+
+export interface AppHealthUpdateInfrastructureServiceByIdInput {
+    id: string;
+    providerId?: Nullable<string>;
+    name?: Nullable<GraphQLString>;
+    score?: Nullable<GraphQLInt>;
+}
+
+export interface AppHealthUpdateInfrastructureServicesInput {
+    id?: Nullable<string>;
+    providerId?: Nullable<string>;
+    name?: Nullable<GraphQLString>;
+    score?: Nullable<GraphQLInt>;
+}
+
 export interface AppHealthCreateLanguageInput {
     id: string;
     name: GraphQLString;
@@ -433,6 +502,10 @@ export interface IQuery {
     appHealthFindApplicationDatabaseById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
     appHealthGetApplicationDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase>[] | Promise<Nullable<AppHealthApplicationDatabase>[]>;
     appHealthPaginateApplicationDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
+    appHealthFindApplicationInfrastructureService(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService> | Promise<Nullable<AppHealthApplicationInfrastructureService>>;
+    appHealthFindApplicationInfrastructureServiceById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService> | Promise<Nullable<AppHealthApplicationInfrastructureService>>;
+    appHealthGetApplicationInfrastructureServices(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService>[] | Promise<Nullable<AppHealthApplicationInfrastructureService>[]>;
+    appHealthPaginateApplicationInfrastructureServices(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
     appHealthFindApplicationIntegration(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationIntegration> | Promise<Nullable<AppHealthApplicationIntegration>>;
     appHealthFindApplicationIntegrationById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationIntegration> | Promise<Nullable<AppHealthApplicationIntegration>>;
     appHealthGetApplicationIntegrations(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationIntegration>[] | Promise<Nullable<AppHealthApplicationIntegration>[]>;
@@ -461,6 +534,14 @@ export interface IQuery {
     appHealthFindDatabaseById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthDatabase> | Promise<Nullable<AppHealthDatabase>>;
     appHealthGetDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthDatabase>[] | Promise<Nullable<AppHealthDatabase>[]>;
     appHealthPaginateDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
+    appHealthFindInfrastructureProvider(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider> | Promise<Nullable<AppHealthInfrastructureProvider>>;
+    appHealthFindInfrastructureProviderById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider> | Promise<Nullable<AppHealthInfrastructureProvider>>;
+    appHealthGetInfrastructureProviders(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider>[] | Promise<Nullable<AppHealthInfrastructureProvider>[]>;
+    appHealthPaginateInfrastructureProviders(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
+    appHealthFindInfrastructureService(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService> | Promise<Nullable<AppHealthInfrastructureService>>;
+    appHealthFindInfrastructureServiceById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService> | Promise<Nullable<AppHealthInfrastructureService>>;
+    appHealthGetInfrastructureServices(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService>[] | Promise<Nullable<AppHealthInfrastructureService>[]>;
+    appHealthPaginateInfrastructureServices(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
     appHealthFindLanguage(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthLanguage> | Promise<Nullable<AppHealthLanguage>>;
     appHealthFindLanguageById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthLanguage> | Promise<Nullable<AppHealthLanguage>>;
     appHealthGetLanguages(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthLanguage>[] | Promise<Nullable<AppHealthLanguage>[]>;
@@ -504,6 +585,13 @@ export interface IMutation {
     appHealthUpsertApplicationDatabase(payload: AppHealthUpdateApplicationDatabaseByIdInput): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
     appHealthDeleteApplicationDatabaseById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
     appHealthDeleteApplicationDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase>[] | Promise<Nullable<AppHealthApplicationDatabase>[]>;
+    appHealthCreateApplicationInfrastructureService(payload: AppHealthCreateApplicationInfrastructureServiceInput): Nullable<AppHealthApplicationInfrastructureService> | Promise<Nullable<AppHealthApplicationInfrastructureService>>;
+    appHealthCreateApplicationInfrastructureServices(payload: Nullable<AppHealthCreateApplicationInfrastructureServiceInput>[]): boolean | Promise<boolean>;
+    appHealthUpdateApplicationInfrastructureServiceById(payload: AppHealthUpdateApplicationInfrastructureServiceByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService> | Promise<Nullable<AppHealthApplicationInfrastructureService>>;
+    appHealthUpdateApplicationInfrastructureServices(payload: AppHealthUpdateApplicationInfrastructureServicesInput, query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService>[] | Promise<Nullable<AppHealthApplicationInfrastructureService>[]>;
+    appHealthUpsertApplicationInfrastructureService(payload: AppHealthUpdateApplicationInfrastructureServiceByIdInput): Nullable<AppHealthApplicationInfrastructureService> | Promise<Nullable<AppHealthApplicationInfrastructureService>>;
+    appHealthDeleteApplicationInfrastructureServiceById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService> | Promise<Nullable<AppHealthApplicationInfrastructureService>>;
+    appHealthDeleteApplicationInfrastructureServices(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationInfrastructureService>[] | Promise<Nullable<AppHealthApplicationInfrastructureService>[]>;
     appHealthCreateApplicationIntegration(payload: AppHealthCreateApplicationIntegrationInput): Nullable<AppHealthApplicationIntegration> | Promise<Nullable<AppHealthApplicationIntegration>>;
     appHealthCreateApplicationIntegrations(payload: Nullable<AppHealthCreateApplicationIntegrationInput>[]): boolean | Promise<boolean>;
     appHealthUpdateApplicationIntegrationById(payload: AppHealthUpdateApplicationIntegrationByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationIntegration> | Promise<Nullable<AppHealthApplicationIntegration>>;
@@ -553,6 +641,20 @@ export interface IMutation {
     appHealthUpsertDatabase(payload: AppHealthUpdateDatabaseByIdInput): Nullable<AppHealthDatabase> | Promise<Nullable<AppHealthDatabase>>;
     appHealthDeleteDatabaseById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthDatabase> | Promise<Nullable<AppHealthDatabase>>;
     appHealthDeleteDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthDatabase>[] | Promise<Nullable<AppHealthDatabase>[]>;
+    appHealthCreateInfrastructureProvider(payload: AppHealthCreateInfrastructureProviderInput): Nullable<AppHealthInfrastructureProvider> | Promise<Nullable<AppHealthInfrastructureProvider>>;
+    appHealthCreateInfrastructureProviders(payload: Nullable<AppHealthCreateInfrastructureProviderInput>[]): boolean | Promise<boolean>;
+    appHealthUpdateInfrastructureProviderById(payload: AppHealthUpdateInfrastructureProviderByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider> | Promise<Nullable<AppHealthInfrastructureProvider>>;
+    appHealthUpdateInfrastructureProviders(payload: AppHealthUpdateInfrastructureProvidersInput, query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider>[] | Promise<Nullable<AppHealthInfrastructureProvider>[]>;
+    appHealthUpsertInfrastructureProvider(payload: AppHealthUpdateInfrastructureProviderByIdInput): Nullable<AppHealthInfrastructureProvider> | Promise<Nullable<AppHealthInfrastructureProvider>>;
+    appHealthDeleteInfrastructureProviderById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider> | Promise<Nullable<AppHealthInfrastructureProvider>>;
+    appHealthDeleteInfrastructureProviders(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureProvider>[] | Promise<Nullable<AppHealthInfrastructureProvider>[]>;
+    appHealthCreateInfrastructureService(payload: AppHealthCreateInfrastructureServiceInput): Nullable<AppHealthInfrastructureService> | Promise<Nullable<AppHealthInfrastructureService>>;
+    appHealthCreateInfrastructureServices(payload: Nullable<AppHealthCreateInfrastructureServiceInput>[]): boolean | Promise<boolean>;
+    appHealthUpdateInfrastructureServiceById(payload: AppHealthUpdateInfrastructureServiceByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService> | Promise<Nullable<AppHealthInfrastructureService>>;
+    appHealthUpdateInfrastructureServices(payload: AppHealthUpdateInfrastructureServicesInput, query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService>[] | Promise<Nullable<AppHealthInfrastructureService>[]>;
+    appHealthUpsertInfrastructureService(payload: AppHealthUpdateInfrastructureServiceByIdInput): Nullable<AppHealthInfrastructureService> | Promise<Nullable<AppHealthInfrastructureService>>;
+    appHealthDeleteInfrastructureServiceById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService> | Promise<Nullable<AppHealthInfrastructureService>>;
+    appHealthDeleteInfrastructureServices(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthInfrastructureService>[] | Promise<Nullable<AppHealthInfrastructureService>[]>;
     appHealthCreateLanguage(payload: AppHealthCreateLanguageInput): Nullable<AppHealthLanguage> | Promise<Nullable<AppHealthLanguage>>;
     appHealthCreateLanguages(payload: Nullable<AppHealthCreateLanguageInput>[]): boolean | Promise<boolean>;
     appHealthUpdateLanguageById(payload: AppHealthUpdateLanguageByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthLanguage> | Promise<Nullable<AppHealthLanguage>>;
@@ -589,6 +691,8 @@ export interface AppHealthApplicationAuthentication {
     application?: Nullable<AppHealthApplication>;
     authenticationInterfaceId: string;
     authenticationInterface?: Nullable<AppHealthAuthenticationInterface>;
+    applicationInfrastructureServiceId: string;
+    applicationInfrastructureService?: Nullable<AppHealthApplicationInfrastructureService>;
     totalUsers: GraphQLInt;
     score: GraphQLInt;
     createdAt?: Nullable<GraphQLTimestamp>;
@@ -602,11 +706,26 @@ export interface AppHealthApplicationDatabase {
     application?: Nullable<AppHealthApplication>;
     databaseId: string;
     database?: Nullable<AppHealthDatabase>;
+    applicationInfrastructureServiceId: string;
+    applicationInfrastructureService?: Nullable<AppHealthApplicationInfrastructureService>;
     version: GraphQLString;
     size: GraphQLInt;
     score: GraphQLInt;
     totalCollectionTables: GraphQLInt;
     totalFields: GraphQLInt;
+    createdAt?: Nullable<GraphQLTimestamp>;
+    updatedAt?: Nullable<GraphQLTimestamp>;
+    deletedAt?: Nullable<GraphQLTimestamp>;
+}
+
+export interface AppHealthApplicationInfrastructureService {
+    id: string;
+    applicationId: string;
+    application?: Nullable<AppHealthApplication>;
+    infrastructureServiceId: string;
+    infrastructureService?: Nullable<AppHealthInfrastructureService>;
+    avarageCostPerYear: GraphQLInt;
+    score: GraphQLInt;
     createdAt?: Nullable<GraphQLTimestamp>;
     updatedAt?: Nullable<GraphQLTimestamp>;
     deletedAt?: Nullable<GraphQLTimestamp>;
@@ -696,6 +815,26 @@ export interface AppHealthDatabase {
     name: GraphQLString;
     type: AppHealthDatabaseType;
     versions: JSON;
+    createdAt?: Nullable<GraphQLTimestamp>;
+    updatedAt?: Nullable<GraphQLTimestamp>;
+    deletedAt?: Nullable<GraphQLTimestamp>;
+}
+
+export interface AppHealthInfrastructureProvider {
+    id: string;
+    name: GraphQLString;
+    score: GraphQLInt;
+    createdAt?: Nullable<GraphQLTimestamp>;
+    updatedAt?: Nullable<GraphQLTimestamp>;
+    deletedAt?: Nullable<GraphQLTimestamp>;
+}
+
+export interface AppHealthInfrastructureService {
+    id: string;
+    providerId: string;
+    provider?: Nullable<AppHealthInfrastructureProvider>;
+    name: GraphQLString;
+    score: GraphQLInt;
     createdAt?: Nullable<GraphQLTimestamp>;
     updatedAt?: Nullable<GraphQLTimestamp>;
     deletedAt?: Nullable<GraphQLTimestamp>;

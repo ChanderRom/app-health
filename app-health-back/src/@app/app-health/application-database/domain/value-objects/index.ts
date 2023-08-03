@@ -1,6 +1,7 @@
 export { AppHealthApplicationDatabaseId } from './app-health-application-database-id';
 export { AppHealthApplicationDatabaseApplicationId } from './app-health-application-database-application-id';
 export { AppHealthApplicationDatabaseDatabaseId } from './app-health-application-database-database-id';
+export { AppHealthApplicationDatabaseApplicationInfrastructureServiceId } from './app-health-application-database-application-infrastructure-service-id';
 export { AppHealthApplicationDatabaseVersion } from './app-health-application-database-version';
 export { AppHealthApplicationDatabaseSize } from './app-health-application-database-size';
 export { AppHealthApplicationDatabaseScore } from './app-health-application-database-score';

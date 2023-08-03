@@ -1,6 +1,7 @@
 import { AppHealthApplicationDatabase, AppHealthIApplicationDatabaseRepository } from '@app/app-health/application-database';
 import {
     AppHealthApplicationDatabaseApplicationId,
+    AppHealthApplicationDatabaseApplicationInfrastructureServiceId,
     AppHealthApplicationDatabaseCreatedAt,
     AppHealthApplicationDatabaseDatabaseId,
     AppHealthApplicationDatabaseDeletedAt,
@@ -29,6 +30,7 @@ export class AppHealthUpsertApplicationDatabaseService
             id: AppHealthApplicationDatabaseId;
             applicationId: AppHealthApplicationDatabaseApplicationId;
             databaseId: AppHealthApplicationDatabaseDatabaseId;
+            applicationInfrastructureServiceId: AppHealthApplicationDatabaseApplicationInfrastructureServiceId;
             version: AppHealthApplicationDatabaseVersion;
             size: AppHealthApplicationDatabaseSize;
             score: AppHealthApplicationDatabaseScore;
@@ -43,6 +45,7 @@ export class AppHealthUpsertApplicationDatabaseService
             payload.id,
             payload.applicationId,
             payload.databaseId,
+            payload.applicationInfrastructureServiceId,
             payload.version,
             payload.size,
             payload.score,
