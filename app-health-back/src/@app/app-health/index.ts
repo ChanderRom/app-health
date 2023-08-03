@@ -7,6 +7,10 @@ import { AppHealthApplicationDatabaseHandlers, AppHealthApplicationDatabaseServi
 import { AppHealthLanguageHandlers, AppHealthLanguageServices, AppHealthLanguageModel, AppHealthILanguageRepository, AppHealthSequelizeLanguageRepository, AppHealthLanguageSagas } from './language';
 import { AppHealthApplicationLanguageHandlers, AppHealthApplicationLanguageServices, AppHealthApplicationLanguageModel, AppHealthIApplicationLanguageRepository, AppHealthSequelizeApplicationLanguageRepository, AppHealthApplicationLanguageSagas } from './application-language';
 import { AppHealthAuthenticationInterfaceHandlers, AppHealthAuthenticationInterfaceServices, AppHealthAuthenticationInterfaceModel, AppHealthIAuthenticationInterfaceRepository, AppHealthSequelizeAuthenticationInterfaceRepository, AppHealthAuthenticationInterfaceSagas } from './authentication-interface';
+import { AppHealthApplicationAuthenticationHandlers, AppHealthApplicationAuthenticationServices, AppHealthApplicationAuthenticationModel, AppHealthIApplicationAuthenticationRepository, AppHealthSequelizeApplicationAuthenticationRepository, AppHealthApplicationAuthenticationSagas } from './application-authentication';
+import { AppHealthApiInterfaceTypeHandlers, AppHealthApiInterfaceTypeServices, AppHealthApiInterfaceTypeModel, AppHealthIApiInterfaceTypeRepository, AppHealthSequelizeApiInterfaceTypeRepository, AppHealthApiInterfaceTypeSagas } from './api-interface-type';
+import { AppHealthApplicationApiHandlers, AppHealthApplicationApiServices, AppHealthApplicationApiModel, AppHealthIApplicationApiRepository, AppHealthSequelizeApplicationApiRepository, AppHealthApplicationApiSagas } from './application-api';
+import { AppHealthApplicationIntegrationHandlers, AppHealthApplicationIntegrationServices, AppHealthApplicationIntegrationModel, AppHealthIApplicationIntegrationRepository, AppHealthSequelizeApplicationIntegrationRepository, AppHealthApplicationIntegrationSagas } from './application-integration';
 
 export const AppHealthHandlers = [
     ...AppHealthCustomerHandlers,
@@ -17,7 +21,11 @@ export const AppHealthHandlers = [
     ...AppHealthApplicationDatabaseHandlers,
     ...AppHealthLanguageHandlers,
     ...AppHealthApplicationLanguageHandlers,
-    ...AppHealthAuthenticationInterfaceHandlers
+    ...AppHealthAuthenticationInterfaceHandlers,
+    ...AppHealthApplicationAuthenticationHandlers,
+    ...AppHealthApiInterfaceTypeHandlers,
+    ...AppHealthApplicationApiHandlers,
+    ...AppHealthApplicationIntegrationHandlers
 ];
 export const AppHealthServices = [
     ...AppHealthCustomerServices,
@@ -28,7 +36,11 @@ export const AppHealthServices = [
     ...AppHealthApplicationDatabaseServices,
     ...AppHealthLanguageServices,
     ...AppHealthApplicationLanguageServices,
-    ...AppHealthAuthenticationInterfaceServices
+    ...AppHealthAuthenticationInterfaceServices,
+    ...AppHealthApplicationAuthenticationServices,
+    ...AppHealthApiInterfaceTypeServices,
+    ...AppHealthApplicationApiServices,
+    ...AppHealthApplicationIntegrationServices
 ];
 export const AppHealthModels = [
     AppHealthCustomerModel,
@@ -39,7 +51,11 @@ export const AppHealthModels = [
     AppHealthApplicationDatabaseModel,
     AppHealthLanguageModel,
     AppHealthApplicationLanguageModel,
-    AppHealthAuthenticationInterfaceModel
+    AppHealthAuthenticationInterfaceModel,
+    AppHealthApplicationAuthenticationModel,
+    AppHealthApiInterfaceTypeModel,
+    AppHealthApplicationApiModel,
+    AppHealthApplicationIntegrationModel
 ];
 export const AppHealthRepositories = [
     {
@@ -77,6 +93,22 @@ export const AppHealthRepositories = [
     {
         provide : AppHealthIAuthenticationInterfaceRepository,
         useClass: AppHealthSequelizeAuthenticationInterfaceRepository
+    },
+    {
+        provide : AppHealthIApplicationAuthenticationRepository,
+        useClass: AppHealthSequelizeApplicationAuthenticationRepository
+    },
+    {
+        provide : AppHealthIApiInterfaceTypeRepository,
+        useClass: AppHealthSequelizeApiInterfaceTypeRepository
+    },
+    {
+        provide : AppHealthIApplicationApiRepository,
+        useClass: AppHealthSequelizeApplicationApiRepository
+    },
+    {
+        provide : AppHealthIApplicationIntegrationRepository,
+        useClass: AppHealthSequelizeApplicationIntegrationRepository
     }
 ];
 export const AppHealthSagas = [
@@ -88,5 +120,9 @@ export const AppHealthSagas = [
     AppHealthApplicationDatabaseSagas,
     AppHealthLanguageSagas,
     AppHealthApplicationLanguageSagas,
-    AppHealthAuthenticationInterfaceSagas
+    AppHealthAuthenticationInterfaceSagas,
+    AppHealthApplicationAuthenticationSagas,
+    AppHealthApiInterfaceTypeSagas,
+    AppHealthApplicationApiSagas,
+    AppHealthApplicationIntegrationSagas
 ];

@@ -1,0 +1,63 @@
+import { AppHealthApplicationAuthentication, AppHealthIApplicationAuthenticationRepository } from '@app/app-health/application-authentication';
+import {
+    AppHealthApplicationAuthenticationApplicationId,
+    AppHealthApplicationAuthenticationAuthenticationInterfaceId,
+    AppHealthApplicationAuthenticationCreatedAt,
+    AppHealthApplicationAuthenticationDeletedAt,
+    AppHealthApplicationAuthenticationId,
+    AppHealthApplicationAuthenticationScore,
+    AppHealthApplicationAuthenticationTotalUsers,
+    AppHealthApplicationAuthenticationUpdatedAt,
+} from '@app/app-health/application-authentication/domain/value-objects';
+import { CQMetadata, Utils } from '@aurorajs.dev/core';
+import { Injectable } from '@nestjs/common';
+import { EventPublisher } from '@nestjs/cqrs';
+
+@Injectable()
+export class AppHealthUpsertApplicationAuthenticationService
+{
+    constructor(
+        private readonly publisher: EventPublisher,
+        private readonly repository: AppHealthIApplicationAuthenticationRepository,
+    ) {}
+
+    async main(
+        payload: {
+            id: AppHealthApplicationAuthenticationId;
+            applicationId: AppHealthApplicationAuthenticationApplicationId;
+            authenticationInterfaceId: AppHealthApplicationAuthenticationAuthenticationInterfaceId;
+            totalUsers: AppHealthApplicationAuthenticationTotalUsers;
+            score: AppHealthApplicationAuthenticationScore;
+        },
+        cQMetadata?: CQMetadata,
+    ): Promise<void>
+    {
+        // upsert aggregate with factory pattern
+        const applicationAuthentication = AppHealthApplicationAuthentication.register(
+            payload.id,
+            payload.applicationId,
+            payload.authenticationInterfaceId,
+            payload.totalUsers,
+            payload.score,
+            new AppHealthApplicationAuthenticationCreatedAt({ currentTimestamp: true }),
+            new AppHealthApplicationAuthenticationUpdatedAt({ currentTimestamp: true }),
+            null, // deletedAt
+        );
+
+        await this.repository
+            .upsert(
+                applicationAuthentication,
+                {
+                    upsertOptions: cQMetadata?.repositoryOptions,
+                },
+            );
+
+        // merge EventBus methods with object returned by the repository, to be able to apply and commit events
+        const applicationAuthenticationRegister = this.publisher.mergeObjectContext(
+            applicationAuthentication,
+        );
+
+        applicationAuthenticationRegister.created(applicationAuthentication); // apply event to model events
+        applicationAuthenticationRegister.commit(); // commit all events of model
+    }
+}

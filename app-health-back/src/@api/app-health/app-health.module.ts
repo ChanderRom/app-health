@@ -12,6 +12,10 @@ import { AppHealthApplicationDatabaseControllers, AppHealthApplicationDatabaseRe
 import { AppHealthLanguageControllers, AppHealthLanguageResolvers, AppHealthLanguageApiHandlers, AppHealthLanguageServices } from './language';
 import { AppHealthApplicationLanguageControllers, AppHealthApplicationLanguageResolvers, AppHealthApplicationLanguageApiHandlers, AppHealthApplicationLanguageServices } from './application-language';
 import { AppHealthAuthenticationInterfaceControllers, AppHealthAuthenticationInterfaceResolvers, AppHealthAuthenticationInterfaceApiHandlers, AppHealthAuthenticationInterfaceServices } from './authentication-interface';
+import { AppHealthApplicationAuthenticationControllers, AppHealthApplicationAuthenticationResolvers, AppHealthApplicationAuthenticationApiHandlers, AppHealthApplicationAuthenticationServices } from './application-authentication';
+import { AppHealthApiInterfaceTypeControllers, AppHealthApiInterfaceTypeResolvers, AppHealthApiInterfaceTypeApiHandlers, AppHealthApiInterfaceTypeServices } from './api-interface-type';
+import { AppHealthApplicationApiControllers, AppHealthApplicationApiResolvers, AppHealthApplicationApiApiHandlers, AppHealthApplicationApiServices } from './application-api';
+import { AppHealthApplicationIntegrationControllers, AppHealthApplicationIntegrationResolvers, AppHealthApplicationIntegrationApiHandlers, AppHealthApplicationIntegrationServices } from './application-integration';
 
 @Module({
     imports: [
@@ -29,7 +33,11 @@ import { AppHealthAuthenticationInterfaceControllers, AppHealthAuthenticationInt
         ...AppHealthApplicationDatabaseControllers,
         ...AppHealthLanguageControllers,
         ...AppHealthApplicationLanguageControllers,
-        ...AppHealthAuthenticationInterfaceControllers
+        ...AppHealthAuthenticationInterfaceControllers,
+        ...AppHealthApplicationAuthenticationControllers,
+        ...AppHealthApiInterfaceTypeControllers,
+        ...AppHealthApplicationApiControllers,
+        ...AppHealthApplicationIntegrationControllers
     ],
     providers: [
         AppHealthSeeder,
@@ -63,7 +71,19 @@ import { AppHealthAuthenticationInterfaceControllers, AppHealthAuthenticationInt
         ...AppHealthApplicationLanguageServices,
         ...AppHealthAuthenticationInterfaceResolvers,
         ...AppHealthAuthenticationInterfaceApiHandlers,
-        ...AppHealthAuthenticationInterfaceServices
+        ...AppHealthAuthenticationInterfaceServices,
+        ...AppHealthApplicationAuthenticationResolvers,
+        ...AppHealthApplicationAuthenticationApiHandlers,
+        ...AppHealthApplicationAuthenticationServices,
+        ...AppHealthApiInterfaceTypeResolvers,
+        ...AppHealthApiInterfaceTypeApiHandlers,
+        ...AppHealthApiInterfaceTypeServices,
+        ...AppHealthApplicationApiResolvers,
+        ...AppHealthApplicationApiApiHandlers,
+        ...AppHealthApplicationApiServices,
+        ...AppHealthApplicationIntegrationResolvers,
+        ...AppHealthApplicationIntegrationApiHandlers,
+        ...AppHealthApplicationIntegrationServices
     ],
 })
 export class AppHealthModule {}
