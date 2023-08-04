@@ -1,0 +1,45 @@
+{
+    "version": "0.0.1",
+    "files": [
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.html",
+            "integrity": "sha1:a6aab421500581830708e34385e2166e7a039ba7"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.ts",
+            "integrity": "sha1:b08af674a795e6b78f4a0f78881a1f879aff574e"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service-detail.component.html",
+            "integrity": "sha1:341bb7a32b721f3be2b527098fe86fb680fbba3d"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service-detail.component.ts",
+            "integrity": "sha1:38fe8e1db58160da2bc61852e00cf1636aa95228"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service-list.component.html",
+            "integrity": "sha1:05bb63e6c6f1b18e5e5da0d31515ab6eec8c86b5"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service-list.component.ts",
+            "integrity": "sha1:612573b810352a85c6a5398a2684f7f92e745145"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service.columns-config.ts",
+            "integrity": "sha1:29f371ba90027d815da19c7e3808bf52ca9d7c87"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service.graphql.ts",
+            "integrity": "sha1:865939b7e3c998f544e8209c827c29e83f4c4b2d"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service.resolvers.ts",
+            "integrity": "sha1:6392b3186900c4a592291a81cdb121ce649cc5aa"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-infrastructure-service/application-infrastructure-service.service.ts",
+            "integrity": "sha1:45b215731a10808ff342a5282385dd254d2bec28"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "version": "0.0.1",
+    "files": [
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.html",
+            "integrity": "sha1:a6aab421500581830708e34385e2166e7a039ba7"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/app-health.component.ts",
+            "integrity": "sha1:b08af674a795e6b78f4a0f78881a1f879aff574e"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration-detail.component.html",
+            "integrity": "sha1:bdd47d6c5147614f39c7d977cdc06c7ee97cb6f6"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration-detail.component.ts",
+            "integrity": "sha1:a52ce2078d20e852ce1ca06d2fea9424a7677a5a"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration-list.component.html",
+            "integrity": "sha1:39e566509f77c50fd13bb05898cdbd3c245d5d19"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration-list.component.ts",
+            "integrity": "sha1:9349d827382d7c9c221ec8eccfd66b2d99df0ac8"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration.columns-config.ts",
+            "integrity": "sha1:df0ddea0791d3337d40487c360b12e03d159c35b"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration.graphql.ts",
+            "integrity": "sha1:a3c2fdcb8468a81f062c48f33c5a427ea30fd111"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration.resolvers.ts",
+            "integrity": "sha1:cd3a052ef68062ac626eb3eb0e5cc48b79303556"
+        },
+        {
+            "path": "src/app/modules/admin/apps/app-health/application-integration/application-integration.service.ts",
+            "integrity": "sha1:8c4aa94dc49bd7d51045499907a1d163eb9d9aaf"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+version: 0.0.1
+boundedContextName: app-health
+moduleName: application
+moduleNames: apllications
+aggregateName: AppHealthApplication
+hasOAuth: false
+hasTenant: false
+hasAuditing: false
+aggregateProperties:
+  - name: id
+    type: id
+    primaryKey: true
+    length: 36
+    nullable: false
+  - name: technicalSolutionId
+    type: id
+    length: 36
+    nullable: false
+  - name: name
+    type: varchar
+    maxLength: 255
+    nullable: false
+  - name: description
+    type: text
+    nullable: true
+  - name: businessImpact
+    type: text
+    nullable: true
+  - name: type
+    type: enum
+    enumOptions:
+      - FRONTEND
+      - SERVER
+      - MOBILE
+      - EMBEDDED
+    nullable: false
+  - name: releaseDate
+    type: date
+    nullable: false
+  - name: architectureDiagram
+    type: varchar
+    maxLength: 255
+    nullable: false
+  - name: hasTenants
+    type: boolean
+    nullable: false
+  - name: hasLicensing
+    type: boolean
+    nullable: false
+  - name: costLicensesPerYear
+    type: int.unsigned
+    maxLength: 10
+    nullable: false
+  - name: requestsPerDay
+    type: int.unsigned
+    maxLength: 10
+    nullable: false
+  - name: createdAt
+    type: timestamp
+    nullable: true
+  - name: updatedAt
+    type: timestamp
+    nullable: true
+  - name: deletedAt
+    type: timestamp
+    nullable: true
+aggregateI18nProperties: []
+additionalApis: []
