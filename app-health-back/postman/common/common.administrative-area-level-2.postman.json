@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - common/administrative-area-level-2",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - commonCreateAdministrativeAreaLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:CommonCreateAdministrativeAreaLevel2Input!)\n{\n\tcommonCreateAdministrativeAreaLevel2 (payload:$payload)\n\t{\n\t\tid\n\t\tcountryId\n\t\tadministrativeAreaLevel1Id\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"administrativeAreaLevel1Id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"wjrju6b\", \n\t\t\"customCode\": \"dr8m3q18p\", \n\t\t\"name\": \"Handmade Steel Fish\", \n\t\t\"slug\": \"voluptatem-et-excepturi\", \n\t\t\"latitude\": 69.89025819272098, \n\t\t\"longitude\": 844.9422675818613, \n\t\t\"zoom\": 1, \n\t\t\"mapType\": 'HYBRID'\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonCreateAdministrativeAreasLevel2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[CommonCreateAdministrativeAreaLevel2Input]!)\n{\n\tcommonCreateAdministrativeAreasLevel2 (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"55eb3cb4-220f-4ff1-95e3-dea6c4ed6747\", \n\t\t\t\"countryId\": \"5bef7423-e207-414f-902d-31c32dc1e977\", \n\t\t\t\"administrativeAreaLevel1Id\": \"d2e43f1f-c953-4dfb-9ac4-a6dae8fcd864\", \n\t\t\t\"code\": \"mfobej8\", \n\t\t\t\"customCode\": \"9uunpd687\", \n\t\t\t\"name\": \"Handcrafted Fresh Salad\", \n\t\t\t\"slug\": \"saepe-possimus-deleniti\", \n\t\t\t\"latitude\": 96.65140414436418, \n\t\t\t\"longitude\": 614.9991914686881, \n\t\t\t\"zoom\": 7, \n\t\t\t\"mapType\": 'SATELLITE'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"ef76c7ef-7c59-4b61-812d-11946ee66f3b\", \n\t\t\t\"countryId\": \"a98aa73d-97ba-4fb6-a454-05e761b8666a\", \n\t\t\t\"administrativeAreaLevel1Id\": \"1163364d-cafb-4d4d-bd56-c1cc748e558e\", \n\t\t\t\"code\": \"nluruvy\", \n\t\t\t\"customCode\": \"7yoska3o4\", \n\t\t\t\"name\": \"Unbranded Plastic Sausages\", \n\t\t\t\"slug\": \"harum-quia-ut\", \n\t\t\t\"latitude\": 10.34160185953092, \n\t\t\t\"longitude\": 784.5775625520714, \n\t\t\t\"zoom\": 7, \n\t\t\t\"mapType\": 'HYBRID'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"0b71c247-8b41-480d-8ab5-123a7df88e7e\", \n\t\t\t\"countryId\": \"5315c87b-cccc-4936-bca2-5699155d7599\", \n\t\t\t\"administrativeAreaLevel1Id\": \"1bf87010-d732-45c3-8821-f710ac7fc897\", \n\t\t\t\"code\": \"p195ym3\", \n\t\t\t\"customCode\": \"5pxs8y6aj\", \n\t\t\t\"name\": \"Handcrafted Steel Towels\", \n\t\t\t\"slug\": \"eos-eos-aut\", \n\t\t\t\"latitude\": 72.71901276536808, \n\t\t\t\"longitude\": 771.4414229384796, \n\t\t\t\"zoom\": 4, \n\t\t\t\"mapType\": 'TERRAIN'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"f26749f7-361d-42e7-bab1-fc40c1a37eee\", \n\t\t\t\"countryId\": \"6c477d70-7ba0-40c5-828f-414fbeab55d0\", \n\t\t\t\"administrativeAreaLevel1Id\": \"8438ebb8-896c-4dea-9fdd-6311616ed2fc\", \n\t\t\t\"code\": \"eaa5d97\", \n\t\t\t\"customCode\": \"jfouwsw65\", \n\t\t\t\"name\": \"Unbranded Plastic Hat\", \n\t\t\t\"slug\": \"voluptatem-cumque-nesciunt\", \n\t\t\t\"latitude\": 82.7626136885089, \n\t\t\t\"longitude\": 147.88352951923704, \n\t\t\t\"zoom\": 6, \n\t\t\t\"mapType\": 'ROADMAP'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"898ecd11-95d0-4534-93cf-871b713f2f0d\", \n\t\t\t\"countryId\": \"fbe7c164-2740-4296-ad6b-5358d37d1ae9\", \n\t\t\t\"administrativeAreaLevel1Id\": \"06bbafe0-f2d3-4446-9cbd-c83ac355b58e\", \n\t\t\t\"code\": \"xyalrpu\", \n\t\t\t\"customCode\": \"r3wbsvscl\", \n\t\t\t\"name\": \"Ergonomic Steel Bacon\", \n\t\t\t\"slug\": \"delectus-velit-nobis\", \n\t\t\t\"latitude\": 38.74164292125334, \n\t\t\t\"longitude\": 774.8044053529904, \n\t\t\t\"zoom\": 4, \n\t\t\t\"mapType\": 'HYBRID'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"8c49bbe9-b05d-40f5-999d-7be89203fbf6\", \n\t\t\t\"countryId\": \"197b5dcd-f960-4fbb-88e8-6b3e1926120a\", \n\t\t\t\"administrativeAreaLevel1Id\": \"eabf1c1f-0da2-44f4-85b1-bfd5b61e9c67\", \n\t\t\t\"code\": \"kb3wbo4\", \n\t\t\t\"customCode\": \"3j81t38qr\", \n\t\t\t\"name\": \"Incredible Wooden Car\", \n\t\t\t\"slug\": \"voluptatem-quidem-nisi\", \n\t\t\t\"latitude\": 18.53211292264907, \n\t\t\t\"longitude\": 202.81764826826074, \n\t\t\t\"zoom\": 3, \n\t\t\t\"mapType\": 'ROADMAP'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"7ad6ddb9-b5da-4a34-9873-2fd15c39f6c8\", \n\t\t\t\"countryId\": \"2d00619d-b479-49f5-8630-4fdf5ad6ffce\", \n\t\t\t\"administrativeAreaLevel1Id\": \"cda0bcf2-013f-4268-8f82-babbc84a4461\", \n\t\t\t\"code\": \"b47322h\", \n\t\t\t\"customCode\": \"x03gqi8g2\", \n\t\t\t\"name\": \"Unbranded Fresh Sausages\", \n\t\t\t\"slug\": \"est-corrupti-eum\", \n\t\t\t\"latitude\": 89.59185108618082, \n\t\t\t\"longitude\": 582.1487850968304, \n\t\t\t\"zoom\": 2, \n\t\t\t\"mapType\": 'SATELLITE'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"e599b61c-beb7-461c-a2a6-df1676478e73\", \n\t\t\t\"countryId\": \"86285a7b-0fac-4f91-bb59-d85a4d89cf04\", \n\t\t\t\"administrativeAreaLevel1Id\": \"83dd2d5f-c031-4110-8e1d-27ac310b1c0a\", \n\t\t\t\"code\": \"fd7ynlo\", \n\t\t\t\"customCode\": \"j8f6lozco\", \n\t\t\t\"name\": \"Fantastic Concrete Bacon\", \n\t\t\t\"slug\": \"consequatur-voluptatem-officiis\", \n\t\t\t\"latitude\": 17.92638822473246, \n\t\t\t\"longitude\": 914.6471433438788, \n\t\t\t\"zoom\": 3, \n\t\t\t\"mapType\": 'TERRAIN'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"71ef0be2-e198-49c6-9a8d-536764de93fe\", \n\t\t\t\"countryId\": \"ae0dd56b-19a2-45da-8153-c41a989fbe8a\", \n\t\t\t\"administrativeAreaLevel1Id\": \"2b733703-9046-4181-b814-eae04f8ab364\", \n\t\t\t\"code\": \"sccbzbm\", \n\t\t\t\"customCode\": \"vbbaopet2\", \n\t\t\t\"name\": \"Fantastic Soft Cheese\", \n\t\t\t\"slug\": \"molestiae-cupiditate-natus\", \n\t\t\t\"latitude\": 25.91407147452933, \n\t\t\t\"longitude\": 368.9235956943651, \n\t\t\t\"zoom\": 3, \n\t\t\t\"mapType\": 'HYBRID'\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"9b1ebfea-041a-4da3-8315-75e9361b699f\", \n\t\t\t\"countryId\": \"affaad39-edf3-448e-850a-bc225613ee7a\", \n\t\t\t\"administrativeAreaLevel1Id\": \"276b3729-a9a8-4353-840f-18562c134b0a\", \n\t\t\t\"code\": \"mx1mmjy\", \n\t\t\t\"customCode\": \"yl7lljkdf\", \n\t\t\t\"name\": \"Practical Soft Shoes\", \n\t\t\t\"slug\": \"nihil-suscipit-voluptas\", \n\t\t\t\"latitude\": 50.81687581373675, \n\t\t\t\"longitude\": 185.60049788119028, \n\t\t\t\"zoom\": 9, \n\t\t\t\"mapType\": 'HYBRID'\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonPaginateAdministrativeAreasLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tcommonPaginateAdministrativeAreasLevel2 (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonGetAdministrativeAreasLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tcommonGetAdministrativeAreasLevel2 (query: $query)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonFindAdministrativeAreaLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tcommonFindAdministrativeAreaLevel2 (query: $query)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonFindAdministrativeAreaLevel2ById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tcommonFindAdministrativeAreaLevel2ById (id:$id)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonUpdateAdministrativeAreaLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:CommonUpdateAdministrativeAreaLevel2Input!)\n{\n\tcommonUpdateAdministrativeAreaLevel2 (payload:$payload)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"administrativeAreaLevel1Id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"zx1jr3f\", \n\t\t\"customCode\": \"p4q5tj7wg\", \n\t\t\"name\": \"Practical Fresh Bike\", \n\t\t\"slug\": \"nisi-maiores-ex\", \n\t\t\"latitude\": 25.16334559877194, \n\t\t\"longitude\": 439.67996644767044, \n\t\t\"zoom\": 5, \n\t\t\"mapType\": 'TERRAIN'\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonDeleteAdministrativeAreaLevel2ById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tcommonDeleteAdministrativeAreaLevel2ById (id:$id)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonDeleteAdministrativeAreasLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tcommonDeleteAdministrativeAreasLevel2 (query: $query)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tmapType\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-2/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"administrativeAreaLevel1Id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"x3u5831\", \n\t\"customCode\": \"kg2uvd2fm\", \n\t\"name\": \"Intelligent Cotton Hat\", \n\t\"slug\": \"ullam-iure-voluptas\", \n\t\"latitude\": 61.71919183826574, \n\t\"longitude\": 103.79497531769103, \n\t\"zoom\": 6, \n\t\"mapType\": 'ROADMAP'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-2/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-2",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-areas-level-2/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"7e141800-5f19-4953-98fb-24573f1aec99\", \n\t\t\"countryId\": \"7cffd818-f3db-4816-a3df-7f23d930f866\", \n\t\t\"administrativeAreaLevel1Id\": \"21dfc3c0-8561-4b23-8d1a-1846db1603b0\", \n\t\t\"code\": \"yh50jo6\", \n\t\t\"customCode\": \"t591lroum\", \n\t\t\"name\": \"Practical Plastic Car\", \n\t\t\"slug\": \"tenetur-ratione-provident\", \n\t\t\"latitude\": 48.48184715894838, \n\t\t\"longitude\": 683.995413338692, \n\t\t\"zoom\": 9, \n\t\t\"mapType\": 'TERRAIN'\n\t}, \n\t{\n\t\t\"id\": \"17fed7fc-5078-496a-9b53-3e38af47fb73\", \n\t\t\"countryId\": \"21ef6ce5-4824-462a-bd08-8cc5ba49ee5c\", \n\t\t\"administrativeAreaLevel1Id\": \"bd5f2baf-f0c7-4c03-9530-5ad1c2afcbeb\", \n\t\t\"code\": \"saiipkl\", \n\t\t\"customCode\": \"sijhk9ymj\", \n\t\t\"name\": \"Handmade Steel Shirt\", \n\t\t\"slug\": \"quis-sit-exercitationem\", \n\t\t\"latitude\": 66.60745746039841, \n\t\t\"longitude\": 930.7815797527405, \n\t\t\"zoom\": 8, \n\t\t\"mapType\": 'HYBRID'\n\t}, \n\t{\n\t\t\"id\": \"23decffc-049e-4dea-8227-15ca2f173dea\", \n\t\t\"countryId\": \"ca468973-6ac0-4af6-b642-8c2c8d3374f5\", \n\t\t\"administrativeAreaLevel1Id\": \"fdab6638-0535-4588-8953-fa2a436e49d7\", \n\t\t\"code\": \"ppusggj\", \n\t\t\"customCode\": \"duxqcax7g\", \n\t\t\"name\": \"Tasty Plastic Hat\", \n\t\t\"slug\": \"earum-fuga-autem\", \n\t\t\"latitude\": 19.12909731033864, \n\t\t\"longitude\": 297.63198221783153, \n\t\t\"zoom\": 1, \n\t\t\"mapType\": 'HYBRID'\n\t}, \n\t{\n\t\t\"id\": \"b597dc78-1ec6-491d-bd4b-91e7858e7c52\", \n\t\t\"countryId\": \"00276e92-0f94-482e-a6e5-049de34acd0e\", \n\t\t\"administrativeAreaLevel1Id\": \"9f63f5a2-b8d3-48f0-b3bd-518179b07388\", \n\t\t\"code\": \"izh10vp\", \n\t\t\"customCode\": \"745ln22jl\", \n\t\t\"name\": \"Fantastic Plastic Shirt\", \n\t\t\"slug\": \"accusamus-assumenda-suscipit\", \n\t\t\"latitude\": 71.42044906366411, \n\t\t\"longitude\": 400.1240978276403, \n\t\t\"zoom\": 8, \n\t\t\"mapType\": 'TERRAIN'\n\t}, \n\t{\n\t\t\"id\": \"a4f138df-7366-4694-86b8-419c27169a87\", \n\t\t\"countryId\": \"ea9d8478-cbd1-4669-bc95-cb2ed487f179\", \n\t\t\"administrativeAreaLevel1Id\": \"d3d1c0b7-4eef-40f3-88c7-fdd8e1fe8e02\", \n\t\t\"code\": \"o3uc4ge\", \n\t\t\"customCode\": \"iywpqzq41\", \n\t\t\"name\": \"Incredible Rubber Bacon\", \n\t\t\"slug\": \"occaecati-rem-ex\", \n\t\t\"latitude\": 28.44474302274149, \n\t\t\"longitude\": 862.4236831798128, \n\t\t\"zoom\": 8, \n\t\t\"mapType\": 'HYBRID'\n\t}, \n\t{\n\t\t\"id\": \"8252c090-2e9f-4c9a-a0b9-74ede4315d44\", \n\t\t\"countryId\": \"26f22c51-37b3-4a99-8800-3479b9ca833c\", \n\t\t\"administrativeAreaLevel1Id\": \"3a992ae2-93b5-4652-a2ff-60434160c705\", \n\t\t\"code\": \"w56lo27\", \n\t\t\"customCode\": \"xxb58qjsn\", \n\t\t\"name\": \"Gorgeous Plastic Shoes\", \n\t\t\"slug\": \"nemo-quia-eum\", \n\t\t\"latitude\": 52.42547774245199, \n\t\t\"longitude\": 898.24622176026, \n\t\t\"zoom\": 3, \n\t\t\"mapType\": 'SATELLITE'\n\t}, \n\t{\n\t\t\"id\": \"8af4616a-7397-489a-b0d6-77a1bc4dd4da\", \n\t\t\"countryId\": \"a4d61d6c-5967-4559-b863-bc836fe5a1db\", \n\t\t\"administrativeAreaLevel1Id\": \"72d8bf5b-33df-44fe-a0ab-da8101c23081\", \n\t\t\"code\": \"n3nambk\", \n\t\t\"customCode\": \"gzrgvzi7r\", \n\t\t\"name\": \"Intelligent Steel Soap\", \n\t\t\"slug\": \"dolorum-officia-eos\", \n\t\t\"latitude\": 30.11746692733545, \n\t\t\"longitude\": 704.509002849565, \n\t\t\"zoom\": 8, \n\t\t\"mapType\": 'TERRAIN'\n\t}, \n\t{\n\t\t\"id\": \"4f74f8a4-2099-4e45-aaa9-44ac43307eec\", \n\t\t\"countryId\": \"2765d1bd-fca9-4164-aa1c-7dff23883063\", \n\t\t\"administrativeAreaLevel1Id\": \"fdcba185-bae8-42d4-8174-7b0209818d3f\", \n\t\t\"code\": \"p1mliuw\", \n\t\t\"customCode\": \"s2jpnrthh\", \n\t\t\"name\": \"Licensed Granite Ball\", \n\t\t\"slug\": \"dolorem-voluptates-delectus\", \n\t\t\"latitude\": 43.14370019186505, \n\t\t\"longitude\": 122.74824654194276, \n\t\t\"zoom\": 1, \n\t\t\"mapType\": 'TERRAIN'\n\t}, \n\t{\n\t\t\"id\": \"ab4571c8-a2c7-4eaa-af54-ccd10edb6b7c\", \n\t\t\"countryId\": \"8f183054-d4e2-4203-9450-a858e876e6b6\", \n\t\t\"administrativeAreaLevel1Id\": \"92f4bb6e-c048-44d7-9b9d-c2da65ff5080\", \n\t\t\"code\": \"eetn2mw\", \n\t\t\"customCode\": \"rji6zrzsp\", \n\t\t\"name\": \"Awesome Plastic Shoes\", \n\t\t\"slug\": \"alias-harum-non\", \n\t\t\"latitude\": 16.26486397515912, \n\t\t\"longitude\": 248.44580180192636, \n\t\t\"zoom\": 5, \n\t\t\"mapType\": 'SATELLITE'\n\t}, \n\t{\n\t\t\"id\": \"bdb07d32-eae9-44ef-9b16-ccee1fcd8025\", \n\t\t\"countryId\": \"610afca1-49c5-4e9d-804f-4f2e9217cf4e\", \n\t\t\"administrativeAreaLevel1Id\": \"ada3e5e3-0eb5-4eb0-a1a8-fe8bebaccea9\", \n\t\t\"code\": \"2nsy5o3\", \n\t\t\"customCode\": \"m0h48f7at\", \n\t\t\"name\": \"Ergonomic Concrete Salad\", \n\t\t\"slug\": \"dolorem-excepturi-amet\", \n\t\t\"latitude\": 75.66862616453028, \n\t\t\"longitude\": 777.8414268687276, \n\t\t\"zoom\": 9, \n\t\t\"mapType\": 'HYBRID'\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-2/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-areas-level-2",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-areas-level-2/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-2/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+                        "administrative-areas-level-2",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-areas-level-2/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-2/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-areas-level-2",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-2/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-2/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-2",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-2/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-2/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-2",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-2/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"administrativeAreaLevel1Id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"6ppuiil\", \n\t\"customCode\": \"440u6oa6r\", \n\t\"name\": \"Refined Granite Bike\", \n\t\"slug\": \"eum-qui-rerum\", \n\t\"latitude\": 94.50020770846373, \n\t\"longitude\": 938.7248037651049, \n\t\"zoom\": 3, \n\t\"mapType\": 'HYBRID'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-2/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-2",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-2/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-2/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-2",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - common/administrative-areas-level-2/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-2/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-areas-level-2",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

@@ -5,6 +5,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { CqrsModule } from '@nestjs/cqrs';
 import { CqrsConfigModule } from './cqrs-config.module';
+import { CommonGetLangsFromDbService } from '@api/common/shared';
 
 @Module({
     imports: [
@@ -25,7 +26,7 @@ import { CqrsConfigModule } from './cqrs-config.module';
         },
         {
             provide : CoreGetLangsService,
-            useClass: CoreGetLangsFromJsonService,
+            useClass: CommonGetLangsFromDbService,
         },
         {
             provide : CoreGetFallbackLangService,
