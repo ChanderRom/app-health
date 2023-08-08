@@ -95,3 +95,15 @@ export { AppHealthApplicationInfrastructureServiceModel } from './@app/app-healt
 export { AppHealthApplicationInfrastructureServiceResponse } from './@app/app-health/application-infrastructure-service/domain/app-health-application-infrastructure-service.response';
 export { AppHealthApplicationInfrastructureServiceMapper } from './@app/app-health/application-infrastructure-service/domain/app-health-application-infrastructure-service.mapper';
 export { appHealthMockApplicationInfrastructureServiceData } from './@app/app-health/application-infrastructure-service/infrastructure/mock/app-health-mock-application-infrastructure-service.data';
+export { AppHealthApplicationAuthorizationDto } from './@api/app-health/application-authorization/dto/app-health-application-authorization.dto';
+export { AppHealthApplicationAuthorization } from './@app/app-health/application-authorization/domain/app-health-application-authorization.aggregate';
+export { AppHealthApplicationAuthorizationModel } from './@app/app-health/application-authorization';
+export { AppHealthApplicationAuthorizationResponse } from './@app/app-health/application-authorization/domain/app-health-application-authorization.response';
+export { AppHealthApplicationAuthorizationMapper } from './@app/app-health/application-authorization/domain/app-health-application-authorization.mapper';
+export { appHealthMockApplicationAuthorizationData } from './@app/app-health/application-authorization/infrastructure/mock/app-health-mock-application-authorization.data';
+export { AppHealthAuthorizationInterfaceDto } from './@api/app-health/authorization-interface/dto/app-health-authorization-interface.dto';
+export { AppHealthAuthorizationInterface } from './@app/app-health/authorization-interface/domain/app-health-authorization-interface.aggregate';
+export { AppHealthAuthorizationInterfaceModel } from './@app/app-health/authorization-interface';
+export { AppHealthAuthorizationInterfaceResponse } from './@app/app-health/authorization-interface/domain/app-health-authorization-interface.response';
+export { AppHealthAuthorizationInterfaceMapper } from './@app/app-health/authorization-interface/domain/app-health-authorization-interface.mapper';
+export { appHealthMockAuthorizationInterfaceData } from './@app/app-health/authorization-interface/infrastructure/mock/app-health-mock-authorization-interface.data';

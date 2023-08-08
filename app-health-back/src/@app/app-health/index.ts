@@ -14,6 +14,8 @@ import { AppHealthApplicationIntegrationHandlers, AppHealthApplicationIntegratio
 import { AppHealthInfrastructureProviderHandlers, AppHealthInfrastructureProviderServices, AppHealthInfrastructureProviderModel, AppHealthIInfrastructureProviderRepository, AppHealthSequelizeInfrastructureProviderRepository, AppHealthInfrastructureProviderSagas } from './infrastructure-provider';
 import { AppHealthInfrastructureServiceHandlers, AppHealthInfrastructureServiceServices, AppHealthInfrastructureServiceModel, AppHealthIInfrastructureServiceRepository, AppHealthSequelizeInfrastructureServiceRepository, AppHealthInfrastructureServiceSagas } from './infrastructure-service';
 import { AppHealthApplicationInfrastructureServiceHandlers, AppHealthApplicationInfrastructureServiceServices, AppHealthApplicationInfrastructureServiceModel, AppHealthIApplicationInfrastructureServiceRepository, AppHealthSequelizeApplicationInfrastructureServiceRepository, AppHealthApplicationInfrastructureServiceSagas } from './application-infrastructure-service';
+import { AppHealthApplicationAuthorizationHandlers, AppHealthApplicationAuthorizationServices, AppHealthApplicationAuthorizationModel, AppHealthIApplicationAuthorizationRepository, AppHealthSequelizeApplicationAuthorizationRepository, AppHealthApplicationAuthorizationSagas } from './application-authorization';
+import { AppHealthAuthorizationInterfaceHandlers, AppHealthAuthorizationInterfaceServices, AppHealthAuthorizationInterfaceModel, AppHealthIAuthorizationInterfaceRepository, AppHealthSequelizeAuthorizationInterfaceRepository, AppHealthAuthorizationInterfaceSagas } from './authorization-interface';
 
 export const AppHealthHandlers = [
     ...AppHealthCustomerHandlers,
@@ -31,7 +33,9 @@ export const AppHealthHandlers = [
     ...AppHealthApplicationIntegrationHandlers,
     ...AppHealthInfrastructureProviderHandlers,
     ...AppHealthInfrastructureServiceHandlers,
-    ...AppHealthApplicationInfrastructureServiceHandlers
+    ...AppHealthApplicationInfrastructureServiceHandlers,
+    ...AppHealthApplicationAuthorizationHandlers,
+    ...AppHealthAuthorizationInterfaceHandlers
 ];
 export const AppHealthServices = [
     ...AppHealthCustomerServices,
@@ -49,7 +53,9 @@ export const AppHealthServices = [
     ...AppHealthApplicationIntegrationServices,
     ...AppHealthInfrastructureProviderServices,
     ...AppHealthInfrastructureServiceServices,
-    ...AppHealthApplicationInfrastructureServiceServices
+    ...AppHealthApplicationInfrastructureServiceServices,
+    ...AppHealthApplicationAuthorizationServices,
+    ...AppHealthAuthorizationInterfaceServices
 ];
 export const AppHealthModels = [
     AppHealthCustomerModel,
@@ -67,7 +73,9 @@ export const AppHealthModels = [
     AppHealthApplicationIntegrationModel,
     AppHealthInfrastructureProviderModel,
     AppHealthInfrastructureServiceModel,
-    AppHealthApplicationInfrastructureServiceModel
+    AppHealthApplicationInfrastructureServiceModel,
+    AppHealthApplicationAuthorizationModel,
+    AppHealthAuthorizationInterfaceModel
 ];
 export const AppHealthRepositories = [
     {
@@ -133,6 +141,14 @@ export const AppHealthRepositories = [
     {
         provide : AppHealthIApplicationInfrastructureServiceRepository,
         useClass: AppHealthSequelizeApplicationInfrastructureServiceRepository
+    },
+    {
+        provide : AppHealthIApplicationAuthorizationRepository,
+        useClass: AppHealthSequelizeApplicationAuthorizationRepository
+    },
+    {
+        provide : AppHealthIAuthorizationInterfaceRepository,
+        useClass: AppHealthSequelizeAuthorizationInterfaceRepository
     }
 ];
 export const AppHealthSagas = [
@@ -151,5 +167,7 @@ export const AppHealthSagas = [
     AppHealthApplicationIntegrationSagas,
     AppHealthInfrastructureProviderSagas,
     AppHealthInfrastructureServiceSagas,
-    AppHealthApplicationInfrastructureServiceSagas
+    AppHealthApplicationInfrastructureServiceSagas,
+    AppHealthApplicationAuthorizationSagas,
+    AppHealthAuthorizationInterfaceSagas
 ];

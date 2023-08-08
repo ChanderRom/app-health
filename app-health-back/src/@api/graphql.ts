@@ -131,6 +131,33 @@ export interface AppHealthUpdateApplicationAuthenticationsInput {
     score?: Nullable<GraphQLInt>;
 }
 
+export interface AppHealthCreateApplicationAuthorizationInput {
+    id: string;
+    applicationId: string;
+    authorizationInterfaceId: string;
+    totalUsers: GraphQLInt;
+    score: GraphQLInt;
+    applicationInfrastructureServiceId: string;
+}
+
+export interface AppHealthUpdateApplicationAuthorizationByIdInput {
+    id: string;
+    applicationId?: Nullable<string>;
+    authorizationInterfaceId?: Nullable<string>;
+    totalUsers?: Nullable<GraphQLInt>;
+    score?: Nullable<GraphQLInt>;
+    applicationInfrastructureServiceId?: Nullable<string>;
+}
+
+export interface AppHealthUpdateApplicationAuthorizationsInput {
+    id?: Nullable<string>;
+    applicationId?: Nullable<string>;
+    authorizationInterfaceId?: Nullable<string>;
+    totalUsers?: Nullable<GraphQLInt>;
+    score?: Nullable<GraphQLInt>;
+    applicationInfrastructureServiceId?: Nullable<string>;
+}
+
 export interface AppHealthCreateApplicationDatabaseInput {
     id: string;
     applicationId: string;
@@ -344,6 +371,24 @@ export interface AppHealthUpdateAuthenticationInterfacesInput {
     score?: Nullable<GraphQLInt>;
 }
 
+export interface AppHealthCreateAuthorizationInterfaceInput {
+    id: string;
+    name: GraphQLString;
+    score: GraphQLInt;
+}
+
+export interface AppHealthUpdateAuthorizationInterfaceByIdInput {
+    id: string;
+    name?: Nullable<GraphQLString>;
+    score?: Nullable<GraphQLInt>;
+}
+
+export interface AppHealthUpdateAuthorizationInterfacesInput {
+    id?: Nullable<string>;
+    name?: Nullable<GraphQLString>;
+    score?: Nullable<GraphQLInt>;
+}
+
 export interface AppHealthCreateCustomerInput {
     id: string;
     name: GraphQLString;
@@ -498,6 +543,10 @@ export interface IQuery {
     appHealthFindApplicationAuthenticationById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthentication> | Promise<Nullable<AppHealthApplicationAuthentication>>;
     appHealthGetApplicationAuthentications(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthentication>[] | Promise<Nullable<AppHealthApplicationAuthentication>[]>;
     appHealthPaginateApplicationAuthentications(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
+    appHealthFindApplicationAuthorization(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization> | Promise<Nullable<AppHealthApplicationAuthorization>>;
+    appHealthFindApplicationAuthorizationById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization> | Promise<Nullable<AppHealthApplicationAuthorization>>;
+    appHealthGetApplicationAuthorizations(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization>[] | Promise<Nullable<AppHealthApplicationAuthorization>[]>;
+    appHealthPaginateApplicationAuthorizations(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
     appHealthFindApplicationDatabase(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
     appHealthFindApplicationDatabaseById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
     appHealthGetApplicationDatabases(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase>[] | Promise<Nullable<AppHealthApplicationDatabase>[]>;
@@ -526,6 +575,10 @@ export interface IQuery {
     appHealthFindAuthenticationInterfaceById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthenticationInterface> | Promise<Nullable<AppHealthAuthenticationInterface>>;
     appHealthGetAuthenticationInterfaces(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthenticationInterface>[] | Promise<Nullable<AppHealthAuthenticationInterface>[]>;
     appHealthPaginateAuthenticationInterfaces(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
+    appHealthFindAuthorizationInterface(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface> | Promise<Nullable<AppHealthAuthorizationInterface>>;
+    appHealthFindAuthorizationInterfaceById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface> | Promise<Nullable<AppHealthAuthorizationInterface>>;
+    appHealthGetAuthorizationInterfaces(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface>[] | Promise<Nullable<AppHealthAuthorizationInterface>[]>;
+    appHealthPaginateAuthorizationInterfaces(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Pagination | Promise<Pagination>;
     appHealthFindCustomer(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthCustomer> | Promise<Nullable<AppHealthCustomer>>;
     appHealthFindCustomerById(id?: Nullable<string>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthCustomer> | Promise<Nullable<AppHealthCustomer>>;
     appHealthGetCustomers(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthCustomer>[] | Promise<Nullable<AppHealthCustomer>[]>;
@@ -578,6 +631,13 @@ export interface IMutation {
     appHealthUpsertApplicationAuthentication(payload: AppHealthUpdateApplicationAuthenticationByIdInput): Nullable<AppHealthApplicationAuthentication> | Promise<Nullable<AppHealthApplicationAuthentication>>;
     appHealthDeleteApplicationAuthenticationById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthentication> | Promise<Nullable<AppHealthApplicationAuthentication>>;
     appHealthDeleteApplicationAuthentications(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthentication>[] | Promise<Nullable<AppHealthApplicationAuthentication>[]>;
+    appHealthCreateApplicationAuthorization(payload: AppHealthCreateApplicationAuthorizationInput): Nullable<AppHealthApplicationAuthorization> | Promise<Nullable<AppHealthApplicationAuthorization>>;
+    appHealthCreateApplicationAuthorizations(payload: Nullable<AppHealthCreateApplicationAuthorizationInput>[]): boolean | Promise<boolean>;
+    appHealthUpdateApplicationAuthorizationById(payload: AppHealthUpdateApplicationAuthorizationByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization> | Promise<Nullable<AppHealthApplicationAuthorization>>;
+    appHealthUpdateApplicationAuthorizations(payload: AppHealthUpdateApplicationAuthorizationsInput, query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization>[] | Promise<Nullable<AppHealthApplicationAuthorization>[]>;
+    appHealthUpsertApplicationAuthorization(payload: AppHealthUpdateApplicationAuthorizationByIdInput): Nullable<AppHealthApplicationAuthorization> | Promise<Nullable<AppHealthApplicationAuthorization>>;
+    appHealthDeleteApplicationAuthorizationById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization> | Promise<Nullable<AppHealthApplicationAuthorization>>;
+    appHealthDeleteApplicationAuthorizations(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationAuthorization>[] | Promise<Nullable<AppHealthApplicationAuthorization>[]>;
     appHealthCreateApplicationDatabase(payload: AppHealthCreateApplicationDatabaseInput): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
     appHealthCreateApplicationDatabases(payload: Nullable<AppHealthCreateApplicationDatabaseInput>[]): boolean | Promise<boolean>;
     appHealthUpdateApplicationDatabaseById(payload: AppHealthUpdateApplicationDatabaseByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthApplicationDatabase> | Promise<Nullable<AppHealthApplicationDatabase>>;
@@ -627,6 +687,13 @@ export interface IMutation {
     appHealthUpsertAuthenticationInterface(payload: AppHealthUpdateAuthenticationInterfaceByIdInput): Nullable<AppHealthAuthenticationInterface> | Promise<Nullable<AppHealthAuthenticationInterface>>;
     appHealthDeleteAuthenticationInterfaceById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthenticationInterface> | Promise<Nullable<AppHealthAuthenticationInterface>>;
     appHealthDeleteAuthenticationInterfaces(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthenticationInterface>[] | Promise<Nullable<AppHealthAuthenticationInterface>[]>;
+    appHealthCreateAuthorizationInterface(payload: AppHealthCreateAuthorizationInterfaceInput): Nullable<AppHealthAuthorizationInterface> | Promise<Nullable<AppHealthAuthorizationInterface>>;
+    appHealthCreateAuthorizationInterfaces(payload: Nullable<AppHealthCreateAuthorizationInterfaceInput>[]): boolean | Promise<boolean>;
+    appHealthUpdateAuthorizationInterfaceById(payload: AppHealthUpdateAuthorizationInterfaceByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface> | Promise<Nullable<AppHealthAuthorizationInterface>>;
+    appHealthUpdateAuthorizationInterfaces(payload: AppHealthUpdateAuthorizationInterfacesInput, query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface>[] | Promise<Nullable<AppHealthAuthorizationInterface>[]>;
+    appHealthUpsertAuthorizationInterface(payload: AppHealthUpdateAuthorizationInterfaceByIdInput): Nullable<AppHealthAuthorizationInterface> | Promise<Nullable<AppHealthAuthorizationInterface>>;
+    appHealthDeleteAuthorizationInterfaceById(id: string, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface> | Promise<Nullable<AppHealthAuthorizationInterface>>;
+    appHealthDeleteAuthorizationInterfaces(query?: Nullable<QueryStatement>, constraint?: Nullable<QueryStatement>): Nullable<AppHealthAuthorizationInterface>[] | Promise<Nullable<AppHealthAuthorizationInterface>[]>;
     appHealthCreateCustomer(payload: AppHealthCreateCustomerInput): Nullable<AppHealthCustomer> | Promise<Nullable<AppHealthCustomer>>;
     appHealthCreateCustomers(payload: Nullable<AppHealthCreateCustomerInput>[]): boolean | Promise<boolean>;
     appHealthUpdateCustomerById(payload: AppHealthUpdateCustomerByIdInput, constraint?: Nullable<QueryStatement>): Nullable<AppHealthCustomer> | Promise<Nullable<AppHealthCustomer>>;
@@ -695,6 +762,21 @@ export interface AppHealthApplicationAuthentication {
     applicationInfrastructureService?: Nullable<AppHealthApplicationInfrastructureService>;
     totalUsers: GraphQLInt;
     score: GraphQLInt;
+    createdAt?: Nullable<GraphQLTimestamp>;
+    updatedAt?: Nullable<GraphQLTimestamp>;
+    deletedAt?: Nullable<GraphQLTimestamp>;
+}
+
+export interface AppHealthApplicationAuthorization {
+    id: string;
+    applicationId: string;
+    application?: Nullable<AppHealthApplication>;
+    authorizationInterfaceId: string;
+    authenticationInterface?: Nullable<AppHealthAuthenticationInterface>;
+    totalUsers: GraphQLInt;
+    score: GraphQLInt;
+    applicationInfrastructureServiceId: string;
+    applicationInfrastructureService?: Nullable<AppHealthApplicationInfrastructureService>;
     createdAt?: Nullable<GraphQLTimestamp>;
     updatedAt?: Nullable<GraphQLTimestamp>;
     deletedAt?: Nullable<GraphQLTimestamp>;
@@ -794,6 +876,15 @@ export interface AppHealthApplication {
 }
 
 export interface AppHealthAuthenticationInterface {
+    id: string;
+    name: GraphQLString;
+    score: GraphQLInt;
+    createdAt?: Nullable<GraphQLTimestamp>;
+    updatedAt?: Nullable<GraphQLTimestamp>;
+    deletedAt?: Nullable<GraphQLTimestamp>;
+}
+
+export interface AppHealthAuthorizationInterface {
     id: string;
     name: GraphQLString;
     score: GraphQLInt;
